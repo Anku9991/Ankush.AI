@@ -12,16 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 // ─── MIDDLEWARE ───────────────────────────────────────────
 app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://*.googleapis.com"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://*.googleapis.com", "https://*.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https://*.unsplash.com", "https://images.unsplash.com"],
-      fontSrc: ["'self'", "data:", "https://*.gstatic.com"],
-      connectSrc: ["'self'"],
-    },
-  },
+  contentSecurityPolicy: false, // Handled by vercel.json for consistency
 }));
 app.use(cors({
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000', 'http://127.0.0.1:5500'],
