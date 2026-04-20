@@ -15,10 +15,10 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      imgSrc: ["'self'", "data:", "https://images.unsplash.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://*.googleapis.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://*.googleapis.com", "https://*.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https://*.unsplash.com", "https://images.unsplash.com"],
+      fontSrc: ["'self'", "data:", "https://*.gstatic.com"],
       connectSrc: ["'self'"],
     },
   },
