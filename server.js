@@ -121,6 +121,9 @@ async function sendEmailNotification(lead) {
   }
 }
 
+// ─── STATIC FILES ─────────────────────────────────────────
+app.use(express.static(path.join(__dirname)));
+
 // ─── ROUTES ──────────────────────────────────────────────
 
 // Health check
@@ -138,46 +141,19 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       return res.status(400).json({ success: false, message: 'Name, phone, and service are required.' });
     }
 
-    if (name.length > 100 || phone.length > 20) {
-      return res.status(400).json({ success: false, message: 'Invalid input.' });
-    }
-
     const lead = { name: name.trim(), phone: phone.trim(), service, message: message?.trim() || '', email: email?.trim() || '', ip: req.ip };
-
-    // Save to file
     saveLead(lead);
-
-    // Send email notification (non-blocking)
     sendEmailNotification(lead).catch(err => console.error('Email error:', err));
-
     res.json({ success: true, message: 'Lead saved. We will contact you soon!' });
-
   } catch (err) {
     console.error('Contact error:', err);
     res.status(500).json({ success: false, message: 'Server error. Please try WhatsApp instead.' });
   }
 });
 
-// Get all leads (admin, protect in production with auth!)
-app.get('/api/leads', (req, res) => {
-  const adminKey = req.headers['x-admin-key'];
-  if (adminKey !== process.env.ADMIN_KEY) {
-    return res.status(401).json({ success: false, message: 'Unauthorized' });
-  }
-  res.json({ success: true, leads: getLeads() });
-});
-
-// Delete a lead
-app.delete('/api/leads/:id', (req, res) => {
-  const adminKey = req.headers['x-admin-key'];
-  if (adminKey !== process.env.ADMIN_KEY) {
-    return res.status(401).json({ success: false, message: 'Unauthorized' });
-  }
-  ensureDataDir();
-  let leads = getLeads();
-  leads = leads.filter(l => l.id !== parseInt(req.params.id));
-  fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2));
-  res.json({ success: true });
+// Catch-all route to serve index.html for frontend navigation
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // ─── START ───────────────────────────────────────────────
