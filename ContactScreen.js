@@ -155,9 +155,9 @@ export default function ContactScreen() {
           <Text style={styles.methodIcon}>💬</Text>
           <View><Text style={styles.methodLabel}>WhatsApp</Text><Text style={styles.methodValue}>+91 73078 52235</Text></View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('mailto:ankush@ankush.ai')}>
-          <Text style={styles.methodIcon}>📧</Text>
-          <View><Text style={styles.methodLabel}>Email</Text><Text style={styles.methodValue}>ankush@ankush.ai</Text></View>
+        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('mailto:Ankush.AI2026@gmail.com')}>
+          <View style={styles.iconContainer}><Ionicons name="mail" size={24} color={COLORS.yellow} /></View>
+          <View><Text style={styles.methodLabel}>Email</Text><Text style={styles.methodValue}>Ankush.AI2026@gmail.com</Text></View>
         </TouchableOpacity>
         <View style={styles.method}>
           <Text style={styles.methodIcon}>📍</Text>

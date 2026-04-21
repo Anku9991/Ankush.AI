@@ -57,8 +57,8 @@ export default function AboutScreen() {
           <TouchableOpacity style={styles.waBtnSmall} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
             <Text style={styles.waBtnSmallText}>💬 WhatsApp</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mailBtnSmall} onPress={() => Linking.openURL('mailto:ankush@ankush.ai')}>
-            <Text style={styles.mailBtnSmallText}>📧 Email</Text>
+          <TouchableOpacity style={styles.mailBtnSmall} onPress={() => Linking.openURL('mailto:Ankush.AI2026@gmail.com')}>
+            <Ionicons name="mail" size={20} color={COLORS.yellow} />
           </TouchableOpacity>
         </View>
       </View>

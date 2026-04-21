@@ -179,7 +179,7 @@ cd android
 
 ## 🔧 Customization Checklist
 
-- [ ] Replace `ankush.ai2026@gmail.com` with your real email
+- [ ] Replace `Ankush.AI2026@gmail.com` with your real email
 - [ ] Update phone number `917307852235` if different
 - [ ] Add real portfolio project images
 - [ ] Set strong `ADMIN_KEY` in `.env`
@@ -193,5 +193,5 @@ cd android
 ## 📞 Support
 
 WhatsApp: +91 73078 52235  
-Email: ankush.ai2026@gmail.com 
+Email: Ankush.AI2026@gmail.com 🚀
 Built with ❤️ in Lucknow, India 🇮🇳
