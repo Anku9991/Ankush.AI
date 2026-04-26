@@ -175,18 +175,22 @@ const INTENTS = {
 
 function detectIntent(text) {
   text = text.toLowerCase();
-  if (/\b(hi|hello|hey|namaste)\b/.test(text)) return "greeting";
+  if (/\b(hi|hello|hey|namaste|fresh|start)\b/.test(text)) return "greeting";
   if (/\b(price|pricing|cost|charge|how much|budget)\b/.test(text)) return "pricing";
   if (/\b(service|services|what do you do|build|create)\b/.test(text)) return "services";
-  if (/\b(trust|reliable|experience|reviews|portfolio)\b/.test(text)) return "trust";
+  if (/\b(trust|reliable|experience|reviews|portfolio|done)\b/.test(text)) return "trust";
   if (/\b(call|contact|whatsapp|number|talk to human)\b/.test(text)) return "contact";
+  if (/\b(hospital|clinic|doctor|patient|medical|appointment)\b/.test(text)) return "hospital";
+  if (/\b(website|web|site|portal|e-commerce)\b/.test(text)) return "website";
+  if (/\b(app|mobile|flutter|android|ios)\b/.test(text)) return "mobile";
+  if (/\b(yes|yeah|sure|ok|okay|definitely)\b/.test(text)) return "affirmative";
   return null;
 }
 
 app.post('/api/chat', (req, res) => {
   const userMsg = req.body.message || "";
   
-  // 1. Detect Leads
+  // 1. Detect Leads (Phone/Email)
   const emailMatch = userMsg.match(/[\w\.-]+@[\w\.-]+\.\w+/);
   const phoneMatch = userMsg.match(/(\+?\d{10,12})/);
   
@@ -200,15 +204,28 @@ app.post('/api/chat', (req, res) => {
     };
     saveLead(lead); 
     return res.json({
-      reply: "Got it! I've saved your contact details. Our team will reach out to you within 2 hours. Anything else you'd like to know?",
+      reply: "Got it! I've saved your contact details. 🚀 Ankush will call you within 2 hours to discuss. Is there anything else you'd like to ask?",
       is_lead: true
     });
   }
 
   // 2. Hybrid Intent Detection
   const intent = detectIntent(userMsg);
-  if (intent) {
-    return res.json({ reply: INTENTS[intent][0] });
+  
+  const replies = {
+    greeting: INTENTS.greeting[0],
+    pricing: INTENTS.pricing[0],
+    services: INTENTS.services[0],
+    trust: INTENTS.trust[0],
+    contact: INTENTS.contact[0],
+    hospital: "Our Hospital Portal (₹25k+) includes appointment booking, patient records, and billing. It's built to make your clinic 100% paperless. Would you like to share your number for a live demo?",
+    website: "We build premium SEO-optimized websites (starting ₹5k). From landing pages to full e-commerce sites. Shall I connect you with Ankush to discuss your specific requirements?",
+    mobile: "We specialize in high-performance Flutter apps for iOS & Android. Our apps are smooth, fast, and secure. Do you have a specific app idea in mind?",
+    affirmative: "Great! Please share your phone number or email address, and I'll have our expert reach out to you immediately to get started."
+  };
+
+  if (intent && replies[intent]) {
+    return res.json({ reply: replies[intent] });
   }
 
   // 3. Fallback
