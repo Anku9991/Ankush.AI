@@ -2090,6 +2090,8 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // Trigger counters on hero visibility
+    const heroObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) animateCounters();
     }, { threshold: 0.5 });
     heroObserver.observe(document.getElementById('hero'));
 
