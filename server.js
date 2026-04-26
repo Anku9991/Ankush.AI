@@ -244,7 +244,7 @@ app.post('/api/chat', (req, res) => {
 
   // 3. Fallback
   res.json({
-    reply: "That sounds interesting! I'm still learning about specific custom requests, but I'd love to discuss this further. Should I connect you with Ankush on WhatsApp for a quick consultation?"
+    reply: "That sounds like a great project! 🚀 I'd love to discuss the specific details and provide you with a custom quote. Should I connect you with Ankush on WhatsApp right now?"
   });
 });
 
