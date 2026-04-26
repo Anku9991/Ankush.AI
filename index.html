@@ -1964,6 +1964,39 @@
     <button class="wa-btn" onclick="toggleWA()" title="Chat on WhatsApp">💬
       <div class="wa-pulse">1</div>
     </button>
+  <!-- ═══ AI CHATBOT WIDGET ═══ -->
+  <div id="ai-chatbot">
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="status-dot"></div>
+        <h4>Ankush.AI Assistant</h4>
+      </div>
+      <div class="chat-messages">
+        <!-- Messages will appear here -->
+        <div class="typing-indicator">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div style="width:100%">
+          <div class="quick-replies">
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Check Pricing')">💰 Check Pricing</button>
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Services Offered')">🚀 Services</button>
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Talk to Expert')">👨‍💻 Talk to Expert</button>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <input type="text" class="chat-input" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') chatbot.sendMessage()">
+            <button class="chat-send" onclick="chatbot.sendMessage()">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-bubble" onclick="chatbot.toggle()">
+      <i class="fa-solid fa-robot"></i>
+      <span style="font-size: 10px; font-weight: 700; color: var(--bg-dark); margin-left: 5px;">AI BOT</span>
+    </div>
   </div>
 
   <script>
@@ -2191,40 +2224,7 @@
     }
   </script>
 
-  <!-- ═══ AI CHATBOT WIDGET ═══ -->
-  <div id="ai-chatbot">
-    <div class="chat-window">
-      <div class="chat-header">
-        <div class="status-dot"></div>
-        <h4>Ankush.AI Assistant</h4>
-      </div>
-      <div class="chat-messages">
-        <!-- Messages will appear here -->
-        <div class="typing-indicator">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-      <div class="chat-input-area">
-        <div style="width:100%">
-          <div class="quick-replies">
-            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Check Pricing')">💰 Check Pricing</button>
-            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Services Offered')">🚀 Services</button>
-            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Talk to Expert')">👨‍💻 Talk to Expert</button>
-          </div>
-          <div style="display:flex; gap:10px;">
-            <input type="text" class="chat-input" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') chatbot.sendMessage()">
-            <button class="chat-send" onclick="chatbot.sendMessage()">
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="chat-bubble" onclick="chatbot.toggle()">
-      <i class="fa-solid fa-robot"></i>
-      <span style="font-size: 10px; font-weight: 700; color: var(--bg-dark); margin-left: 5px;">AI BOT</span>
-    </div>
-  </div>
+
 
 </body>
 
