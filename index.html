@@ -1309,7 +1309,7 @@
       position: absolute;
       bottom: 80px;
       left: 0;
-      width: 380px;
+      width: min(380px, calc(100vw - 60px));
       height: 520px;
       background: rgba(10, 20, 15, 0.95);
       backdrop-filter: blur(20px);
@@ -1488,7 +1488,7 @@
       .chat-window {
         width: calc(100vw - 40px);
         height: 70vh;
-        right: -10px;
+        left: -10px;
         bottom: 70px;
       }
     }
