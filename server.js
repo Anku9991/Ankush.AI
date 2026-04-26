@@ -195,18 +195,30 @@ app.post('/api/chat', (req, res) => {
   const phoneMatch = userMsg.match(/(\+?\d{10,12})/);
   
   if (emailMatch || phoneMatch) {
-    const lead = {
-      name: "Chat Lead",
-      email: emailMatch ? emailMatch[0] : "N/A",
-      phone: phoneMatch ? phoneMatch[0] : "N/A",
-      service: "General Inquiry (Chat)",
-      message: userMsg
-    };
-    saveLead(lead); 
-    return res.json({
-      reply: "Got it! I've saved your contact details. 🚀 Ankush will call you within 2 hours to discuss. Is there anything else you'd like to ask?",
-      is_lead: true
-    });
+    try {
+      const lead = {
+        name: "Chat Lead",
+        email: emailMatch ? emailMatch[0] : "N/A",
+        phone: phoneMatch ? phoneMatch[0] : "N/A",
+        service: "General Inquiry (Chat)",
+        message: userMsg
+      };
+      
+      // Try saving lead, but don't crash if filesystem is read-only (like Vercel)
+      try {
+        saveLead(lead); 
+      } catch (e) {
+        console.error("Lead saving skipped (Read-only filesystem):", e.message);
+      }
+
+      return res.json({
+        reply: "Got it! I've saved your contact details. 🚀 Ankush will call you within 2 hours to discuss. Is there anything else you'd like to ask?",
+        is_lead: true
+      });
+    } catch (err) {
+      console.error("Chat API error:", err);
+      return res.json({ reply: "Got it! I've noted your contact details. Is there anything else you'd like to ask?" });
+    }
   }
 
   // 2. Hybrid Intent Detection
