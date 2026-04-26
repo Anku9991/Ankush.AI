@@ -1276,8 +1276,9 @@
     /* ─── AI CHATBOT ─── */
     #ai-chatbot {
       position: fixed;
-      bottom: 30px;
-      left: 30px;
+      bottom: 20px !important;
+      left: 20px !important;
+      right: auto !important;
       z-index: 10000;
       font-family: var(--font-main);
     }
@@ -1373,6 +1374,9 @@
       line-height: 1.5;
       position: relative;
       animation: msgFade 0.3s ease forwards;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
     }
 
     @keyframes msgFade {
