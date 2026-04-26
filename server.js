@@ -184,6 +184,7 @@ function detectIntent(text) {
   if (/\b(website|web|site|portal|e-commerce|shop|store|sell|billing)\b/.test(text)) return "website";
   if (/\b(app|mobile|flutter|android|ios)\b/.test(text)) return "mobile";
   if (/\b(yes|yeah|sure|ok|okay|definitely)\b/.test(text)) return "affirmative";
+  if (/\b(no|nah|not now|nope|later)\b/.test(text)) return "negative";
   return null;
 }
 
@@ -233,7 +234,8 @@ app.post('/api/chat', (req, res) => {
     hospital: "Our Hospital Portal (₹25k+) includes appointment booking, patient records, and billing. It's built to make your clinic 100% paperless. Would you like to share your number for a live demo?",
     website: "We build premium SEO-optimized websites (starting ₹5k). From landing pages to full e-commerce sites. Shall I connect you with Ankush to discuss your specific requirements?",
     mobile: "We specialize in high-performance Flutter apps for iOS & Android. Our apps are smooth, fast, and secure. Do you have a specific app idea in mind?",
-    affirmative: "Great! Click here to chat on WhatsApp: https://wa.me/917307852235 or share your phone number here and I'll have our expert reach out to you."
+    affirmative: "Great! Click here to chat on WhatsApp: https://wa.me/917307852235 or share your phone number here and I'll have our expert reach out to you.",
+    negative: "No problem at all! 😊 I'm here if you have any other questions. Feel free to explore our portfolio or services whenever you're ready!"
   };
 
   if (intent && replies[intent]) {
