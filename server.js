@@ -217,11 +217,11 @@ app.post('/api/chat', (req, res) => {
     pricing: INTENTS.pricing[0],
     services: INTENTS.services[0],
     trust: INTENTS.trust[0],
-    contact: INTENTS.contact[0],
+    contact: "Sure! You can chat with Ankush directly on WhatsApp for an immediate consultation here: https://wa.me/917307852235?text=Hi!%20I%20found%20you%20through%20your%20AI%20Bot. \n\nIs there anything else I can help you with?",
     hospital: "Our Hospital Portal (₹25k+) includes appointment booking, patient records, and billing. It's built to make your clinic 100% paperless. Would you like to share your number for a live demo?",
     website: "We build premium SEO-optimized websites (starting ₹5k). From landing pages to full e-commerce sites. Shall I connect you with Ankush to discuss your specific requirements?",
     mobile: "We specialize in high-performance Flutter apps for iOS & Android. Our apps are smooth, fast, and secure. Do you have a specific app idea in mind?",
-    affirmative: "Great! Please share your phone number or email address, and I'll have our expert reach out to you immediately to get started."
+    affirmative: "Great! Click here to chat on WhatsApp: https://wa.me/917307852235 or share your phone number here and I'll have our expert reach out to you."
   };
 
   if (intent && replies[intent]) {

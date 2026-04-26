@@ -2120,7 +2120,11 @@
       addMessage(text, side) {
         const msg = document.createElement('div');
         msg.className = `message ${side}`;
-        msg.innerText = text;
+        
+        // Convert URLs to clickable links
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        msg.innerHTML = text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" style="color: inherit; text-decoration: underline;">${url}</a>`);
+        
         this.messages.appendChild(msg);
         this.messages.scrollTop = this.messages.scrollHeight;
         
