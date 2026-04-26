@@ -160,7 +160,7 @@ const INTENTS = {
     "Hey! Looking for a Website, Mobile App, or WhatsApp Automation? I'm here to provide you with the best rates and quality!"
   ],
   pricing: [
-    "Here is our transparent pricing 💰:\n\n🌐 Website Dev: ₹5,000+\n📄 Landing Page: ₹2,000 – ₹8,000\n🪪 Digital Visiting Card: ₹1,000 – ₹5,000\n🛍️ WA Catalog Setup: ₹2,000 – ₹7,000\n📱 Mobile App: ₹15,000 – ₹50,000+\n🏥 Hospital Portal: ₹25,000+\n🤖 WhatsApp Bot: ₹3,000 – ₹20,000\n\nWhich one are you interested in?"
+    "Here is our transparent pricing 💰:\n\n🌐 Website Dev: ₹5,000/- Onwards\n📄 Landing Page: ₹2,000 – ₹8,000\n🪪 Digital Visiting Card: ₹1,000 – ₹5,000\n🛍️ WA Catalog Setup: ₹2,000 – ₹7,000\n📱 Mobile App: ₹15,000 – ₹50,000+\n🏥 Hospital Portal: ₹25,000+\n🤖 WhatsApp Bot: ₹3,000 – ₹20,000\n\nWhich one are you interested in?"
   ],
   services: [
     "We build high-performance solutions 🚀:\n1. Custom Websites & SEO\n2. High-Converting Landing Pages\n3. Digital Visiting Cards (Smart QR)\n4. WhatsApp Catalog Automation\n5. Flutter Mobile Apps (iOS/Android)\n6. Hospital & Clinic Portals\n7. AI WhatsApp Bots\n\nWould you like to see a demo of any of these?"
