@@ -1270,6 +1270,227 @@
         align-items: center;
       }
     }
+    }
+
+    /* ─── AI CHATBOT ─── */
+    #ai-chatbot {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 2000;
+      font-family: var(--font-main);
+    }
+
+    .chat-bubble {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 255, 127, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+
+    .chat-bubble:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .chat-bubble i {
+      font-size: 24px;
+      color: var(--bg-dark);
+    }
+
+    .chat-window {
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+      width: 380px;
+      height: 520px;
+      background: rgba(10, 20, 15, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: var(--shadow);
+    }
+
+    .chat-window.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    .chat-header {
+      padding: 20px;
+      background: linear-gradient(90deg, rgba(0, 255, 127, 0.1), transparent);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-header .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--primary);
+    }
+
+    .chat-header h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      color: var(--primary);
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .message {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      position: relative;
+      animation: msgFade 0.3s ease forwards;
+    }
+
+    @keyframes msgFade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .message.bot {
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom-left-radius: 2px;
+      color: var(--text-main);
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: var(--primary);
+      color: var(--bg-dark);
+      font-weight: 500;
+      border-bottom-right-radius: 2px;
+    }
+
+    .chat-input-area {
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .chat-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 15px;
+      color: var(--text-main);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .chat-input:focus {
+      border-color: var(--primary);
+    }
+
+    .chat-send {
+      background: var(--primary);
+      border: none;
+      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--bg-dark);
+      transition: transform 0.2s;
+    }
+
+    .chat-send:hover {
+      transform: scale(1.05);
+    }
+
+    .typing-indicator {
+      display: none;
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 16px;
+      border-radius: 15px;
+      gap: 4px;
+    }
+
+    .typing-indicator span {
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+      animation: typing 1s infinite ease-in-out;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+      0%, 100% { transform: translateY(0); opacity: 0.4; }
+      50% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .quick-reply-btn {
+      background: rgba(0, 255, 127, 0.1);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-reply-btn:hover {
+      background: var(--primary);
+      color: var(--bg-dark);
+    }
+
+    @media (max-width: 480px) {
+      .chat-window {
+        width: calc(100vw - 40px);
+        height: 70vh;
+        right: -10px;
+        bottom: 70px;
+      }
+    }
   </style>
 </head>
 
@@ -1385,7 +1606,8 @@
         <div class="service-num">05 / VISITING CARD</div>
         <div class="service-icon-wrap">🪪</div>
         <div class="service-name">Digital Visiting Card</div>
-        <div class="service-desc">Smart QR-based cards. Scan → One-tap WhatsApp, website link, and Google Map location.</div>
+        <div class="service-desc">Smart QR-based cards. Scan → One-tap WhatsApp, website link, and Google Map location.
+        </div>
         <div class="service-price">₹1,000 – <span>₹5,000</span></div>
         <div class="service-tag">📱 Smart QR Card</div>
       </div>
@@ -1394,7 +1616,8 @@
         <div class="service-num">06 / CATALOG</div>
         <div class="service-icon-wrap">🛍️</div>
         <div class="service-name">WhatsApp Catalog Setup</div>
-        <div class="service-desc">Complete catalog automation. Scan → WhatsApp → Automatic catalog & products list display.</div>
+        <div class="service-desc">Complete catalog automation. Scan → WhatsApp → Automatic catalog & products list
+          display.</div>
         <div class="service-price">₹2,000 – <span>₹7,000</span></div>
         <div class="service-tag">📊 Auto Setup</div>
       </div>
@@ -1840,6 +2063,93 @@
       document.querySelector('.wa-pulse').style.display = 'none';
     }
 
+    // ─── AI CHATBOT LOGIC ───
+    const chatbot = {
+      window: document.querySelector('.chat-window'),
+      messages: document.querySelector('.chat-messages'),
+      input: document.querySelector('.chat-input'),
+      indicator: document.querySelector('.typing-indicator'),
+      
+      toggle() {
+        this.window.classList.toggle('open');
+        if (this.window.classList.contains('open') && this.messages.children.length === 1) {
+          // Send auto-greeting if it's the first time
+          setTimeout(() => this.addMessage("👋 Hello! I'm your AI assistant. How can I help you with your project today?", 'bot'), 500);
+        }
+      },
+
+      addMessage(text, side) {
+        const msg = document.createElement('div');
+        msg.className = `message ${side}`;
+        msg.innerText = text;
+        this.messages.appendChild(msg);
+        this.messages.scrollTop = this.messages.scrollHeight;
+        
+        // Save to local storage
+        this.saveHistory();
+      },
+
+      showTyping() {
+        this.indicator.style.display = 'flex';
+        this.messages.scrollTop = this.messages.scrollHeight;
+      },
+
+      hideTyping() {
+        this.indicator.style.display = 'none';
+      },
+
+      async sendMessage(text = null) {
+        const msgText = text || this.input.value.trim();
+        if (!msgText) return;
+
+        if (!text) this.input.value = '';
+        this.addMessage(msgText, 'user');
+
+        this.showTyping();
+
+        try {
+          // Attempt to call local Flask backend
+          const response = await fetch('http://localhost:5000/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: msgText })
+          });
+
+          const data = await response.json();
+          this.hideTyping();
+          
+          // Delay simulation for human feel
+          setTimeout(() => {
+            this.addMessage(data.reply, 'bot');
+          }, 600);
+
+        } catch (error) {
+          this.hideTyping();
+          // Failsafe reply
+          setTimeout(() => {
+            this.addMessage("I'm having trouble connecting to my AI brain right now, but you can always reach out to Ankush directly on WhatsApp for immediate help!", 'bot');
+          }, 600);
+        }
+      },
+
+      saveHistory() {
+        const history = Array.from(this.messages.children)
+          .filter(el => el.classList.contains('message'))
+          .map(el => ({ text: el.innerText, side: el.classList.contains('bot') ? 'bot' : 'user' }));
+        localStorage.setItem('ankush_ai_chat', JSON.stringify(history));
+      },
+
+      loadHistory() {
+        const history = JSON.parse(localStorage.getItem('ankush_ai_chat'));
+        if (history) {
+          history.forEach(m => this.addMessage(m.text, m.side));
+        }
+      }
+    };
+
+    // Load history on start
+    chatbot.loadHistory();
+
     function waSelect(num) {
       const msgs = {
         1: 'Hi! I need a Website Development (₹5,000+). Can you tell me more?',
@@ -1879,6 +2189,41 @@
       }, 800);
     }
   </script>
+
+  <!-- ═══ AI CHATBOT WIDGET ═══ -->
+  <div id="ai-chatbot">
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="status-dot"></div>
+        <h4>Ankush.AI Assistant</h4>
+      </div>
+      <div class="chat-messages">
+        <!-- Messages will appear here -->
+        <div class="typing-indicator">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div style="width:100%">
+          <div class="quick-replies">
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Check Pricing')">💰 Check Pricing</button>
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Services Offered')">🚀 Services</button>
+            <button class="quick-reply-btn" onclick="chatbot.sendMessage('Talk to Expert')">👨‍💻 Talk to Expert</button>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <input type="text" class="chat-input" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') chatbot.sendMessage()">
+            <button class="chat-send" onclick="chatbot.sendMessage()">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-bubble" onclick="chatbot.toggle()">
+      <i class="fa-solid fa-robot"></i>
+    </div>
+  </div>
+
 </body>
 
 </html>
