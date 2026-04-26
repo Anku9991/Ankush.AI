@@ -176,8 +176,8 @@ const INTENTS = {
 function detectIntent(text) {
   text = text.toLowerCase();
   if (/\b(hi|hello|hey|namaste)\b/.test(text)) return "greeting";
-  if (/\b(price|cost|charge|how much|budget)\b/.test(text)) return "pricing";
-  if (/\b(service|what do you do|build|create)\b/.test(text)) return "services";
+  if (/\b(price|pricing|cost|charge|how much|budget)\b/.test(text)) return "pricing";
+  if (/\b(service|services|what do you do|build|create)\b/.test(text)) return "services";
   if (/\b(trust|reliable|experience|reviews|portfolio)\b/.test(text)) return "trust";
   if (/\b(call|contact|whatsapp|number|talk to human)\b/.test(text)) return "contact";
   return null;
@@ -223,10 +223,10 @@ app.get('*', (req, res) => {
 });
 
 // ─── START ───────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 Ankush.AI Backend running on http://localhost:${PORT}`);
-  console.log(`   POST /api/chat    — AI Chatbot`);
-  console.log(`   POST /api/contact  — Submit lead`);
-  console.log(`   GET  /api/leads    — View leads`);
-  console.log(`   GET  /api/health   — Health check\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Ankush.AI Backend running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
