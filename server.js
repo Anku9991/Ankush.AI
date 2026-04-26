@@ -181,7 +181,7 @@ function detectIntent(text) {
   if (/\b(trust|reliable|experience|reviews|portfolio|done)\b/.test(text)) return "trust";
   if (/\b(call|contact|whatsapp|number|expert|human|talk)\b/.test(text)) return "contact";
   if (/\b(hospital|clinic|doctor|patient|medical|appointment)\b/.test(text)) return "hospital";
-  if (/\b(website|web|site|portal|e-commerce)\b/.test(text)) return "website";
+  if (/\b(website|web|site|portal|e-commerce|shop|store|sell|billing)\b/.test(text)) return "website";
   if (/\b(app|mobile|flutter|android|ios)\b/.test(text)) return "mobile";
   if (/\b(yes|yeah|sure|ok|okay|definitely)\b/.test(text)) return "affirmative";
   return null;
