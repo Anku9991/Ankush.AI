@@ -24,20 +24,20 @@ if not os.path.exists(LEADS_FILE):
 # ─── INTENT REPLIES (High-Conversion) ──────────────────────
 INTENTS = {
     "greeting": [
-        "👋 Namaste! I'm the Ankush.AI Virtual Assistant. How can I help you grow your digital presence today?",
-        "Hey! Looking to upgrade your business with AI or a new website? I'm here to help!"
+        "👋 Namaste! I'm the Ankush.AI Virtual Assistant. I help businesses automate their sales and build premium digital presences. How can I help you today?",
+        "Hey! Looking for a Website, Mobile App, or WhatsApp Automation? I'm here to provide you with the best rates and quality!"
     ],
     "pricing": [
-        "Our pricing is very competitive! 🚀\n- Websites: ₹5,000+\n- Landing Pages: ₹2,000+\n- Mobile Apps: ₹15,000+\n- WhatsApp Bots: ₹3,000+\n\nWhich one fits your budget?",
+        "Here is our transparent pricing 💰:\n\n🌐 Website Dev: ₹5,000+\n📄 Landing Page: ₹2,000 – ₹8,000\n🪪 Digital Visiting Card: ₹1,000 – ₹5,000\n🛍️ WA Catalog Setup: ₹2,000 – ₹7,000\n📱 Mobile App: ₹15,000 – ₹50,000+\n🏥 Hospital Portal: ₹25,000+\n🤖 WhatsApp Bot: ₹3,000 – ₹20,000\n\nWhich one are you interested in?",
     ],
     "services": [
-        "We offer a full suite of digital solutions:\n✅ Web Development (React/Next.js)\n✅ Mobile Apps (Flutter)\n✅ WhatsApp Automation\n✅ Hospital Management Systems\n\nWant to see our portfolio?",
+        "We build high-performance solutions 🚀:\n1. Custom Websites & SEO\n2. High-Converting Landing Pages\n3. Digital Visiting Cards (Smart QR)\n4. WhatsApp Catalog Automation\n5. Flutter Mobile Apps (iOS/Android)\n6. Hospital & Clinic Portals\n7. AI WhatsApp Bots\n\nWould you like to see a demo of any of these?",
     ],
     "trust": [
-        "We've delivered 50+ successful projects across India. 🏆 We offer 1 year of free support and a 100% satisfaction guarantee. You're in safe hands!",
+        "We take pride in our work! 🏆 We have delivered 50+ projects like Mishra Dental Clinic, Patient Tracker, and Zoya AI. We offer 1 year of free support and guaranteed delivery in 7-10 days.",
     ],
     "contact": [
-        "The best way to get a custom quote is via WhatsApp: +91 73078 52235. Or leave your number here and I'll have Ankush call you!",
+        "You can chat with Ankush directly on WhatsApp here: +91 73078 52235. Or just drop your number here, and we'll call you back within 2 hours!",
     ]
 }
 

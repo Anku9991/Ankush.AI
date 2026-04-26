@@ -153,6 +153,70 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   }
 });
 
+// ─── AI CHATBOT LOGIC ──────────────────────────────────────
+const INTENTS = {
+  greeting: [
+    "👋 Namaste! I'm the Ankush.AI Virtual Assistant. I help businesses automate their sales and build premium digital presences. How can I help you today?",
+    "Hey! Looking for a Website, Mobile App, or WhatsApp Automation? I'm here to provide you with the best rates and quality!"
+  ],
+  pricing: [
+    "Here is our transparent pricing 💰:\n\n🌐 Website Dev: ₹5,000+\n📄 Landing Page: ₹2,000 – ₹8,000\n🪪 Digital Visiting Card: ₹1,000 – ₹5,000\n🛍️ WA Catalog Setup: ₹2,000 – ₹7,000\n📱 Mobile App: ₹15,000 – ₹50,000+\n🏥 Hospital Portal: ₹25,000+\n🤖 WhatsApp Bot: ₹3,000 – ₹20,000\n\nWhich one are you interested in?"
+  ],
+  services: [
+    "We build high-performance solutions 🚀:\n1. Custom Websites & SEO\n2. High-Converting Landing Pages\n3. Digital Visiting Cards (Smart QR)\n4. WhatsApp Catalog Automation\n5. Flutter Mobile Apps (iOS/Android)\n6. Hospital & Clinic Portals\n7. AI WhatsApp Bots\n\nWould you like to see a demo of any of these?"
+  ],
+  trust: [
+    "We take pride in our work! 🏆 We have delivered 50+ projects like Mishra Dental Clinic, Patient Tracker, and Zoya AI. We offer 1 year of free support and guaranteed delivery in 7-10 days."
+  ],
+  contact: [
+    "You can chat with Ankush directly on WhatsApp here: +91 73078 52235. Or just drop your number here, and we'll call you back within 2 hours!"
+  ]
+};
+
+function detectIntent(text) {
+  text = text.toLowerCase();
+  if (/\b(hi|hello|hey|namaste)\b/.test(text)) return "greeting";
+  if (/\b(price|cost|charge|how much|budget)\b/.test(text)) return "pricing";
+  if (/\b(service|what do you do|build|create)\b/.test(text)) return "services";
+  if (/\b(trust|reliable|experience|reviews|portfolio)\b/.test(text)) return "trust";
+  if (/\b(call|contact|whatsapp|number|talk to human)\b/.test(text)) return "contact";
+  return null;
+}
+
+app.post('/api/chat', (req, res) => {
+  const userMsg = req.body.message || "";
+  
+  // 1. Detect Leads
+  const emailMatch = userMsg.match(/[\w\.-]+@[\w\.-]+\.\w+/);
+  const phoneMatch = userMsg.match(/(\+?\d{10,12})/);
+  
+  if (emailMatch || phoneMatch) {
+    const lead = {
+      name: "Chat Lead",
+      email: emailMatch ? emailMatch[0] : "N/A",
+      phone: phoneMatch ? phoneMatch[0] : "N/A",
+      service: "General Inquiry (Chat)",
+      message: userMsg
+    };
+    saveLead(lead); 
+    return res.json({
+      reply: "Got it! I've saved your contact details. Our team will reach out to you within 2 hours. Anything else you'd like to know?",
+      is_lead: true
+    });
+  }
+
+  // 2. Hybrid Intent Detection
+  const intent = detectIntent(userMsg);
+  if (intent) {
+    return res.json({ reply: INTENTS[intent][0] });
+  }
+
+  // 3. Fallback
+  res.json({
+    reply: "That sounds interesting! I'm still learning about specific custom requests, but I'd love to discuss this further. Should I connect you with Ankush on WhatsApp for a quick consultation?"
+  });
+});
+
 // Catch-all route to serve index.html for frontend navigation
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -161,7 +225,8 @@ app.get('*', (req, res) => {
 // ─── START ───────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`\n🚀 Ankush.AI Backend running on http://localhost:${PORT}`);
+  console.log(`   POST /api/chat    — AI Chatbot`);
   console.log(`   POST /api/contact  — Submit lead`);
-  console.log(`   GET  /api/leads    — View leads (requires x-admin-key header)`);
+  console.log(`   GET  /api/leads    — View leads`);
   console.log(`   GET  /api/health   — Health check\n`);
 });
