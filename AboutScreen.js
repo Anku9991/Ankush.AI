@@ -5,8 +5,8 @@ import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Linking } from 'r
 const COLORS = {
   greenDark: '#0d3b1a', greenBright: '#27ae60', greenLight: '#2ecc71',
   yellow: '#f5c518', yellowBright: '#ffe234', white: '#f0fff4',
-  gray: '#a8d5b5', dark: '#081a0d', cardBg: 'rgba(20,80,35,0.6)',
-  border: 'rgba(245,197,24,0.25)',
+  gray: '#a8d5b5', dark: '#050a06', cardBg: 'rgba(15, 25, 20, 0.75)',
+  border: 'rgba(0, 255, 127, 0.15)',
 };
 
 const SKILLS = [
