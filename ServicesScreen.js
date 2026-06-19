@@ -53,8 +53,8 @@ export default function ServicesScreen() {
   const [selected, setSelected] = useState(null);
 
   const openWhatsApp = (service) => {
-    const msg = `Hi Ankush! I'm interested in: ${service.name} (${service.price}). Can we discuss?`;
-    Linking.openURL(`https://wa.me/917307852235?text=${encodeURIComponent(msg)}`);
+    const msg = `Hi PIHNEXA! I'm interested in: ${service.name} (${service.price}). Can we discuss?`;
+    Linking.openURL(`https://wa.me/917992203671?text=${encodeURIComponent(msg)}`);
   };
 
   return (
@@ -90,7 +90,7 @@ export default function ServicesScreen() {
       {/* Custom Project */}
       <TouchableOpacity
         style={[styles.card, styles.customCard]}
-        onPress={() => Linking.openURL('https://wa.me/917307852235?text=Hi! I have a custom project idea for you.')}
+        onPress={() => Linking.openURL('https://wa.me/917992203671?text=Hi! I have a custom project idea for you.')}
       >
         <Text style={{ fontSize: 36, marginBottom: 12 }}>✨</Text>
         <Text style={styles.cardName}>Custom Project?</Text>

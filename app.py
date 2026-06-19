@@ -24,7 +24,7 @@ if not os.path.exists(LEADS_FILE):
 # ─── INTENT REPLIES (High-Conversion) ──────────────────────
 INTENTS = {
     "greeting": [
-        "👋 Namaste! I'm the Ankush.AI Virtual Assistant. I help businesses automate their sales and build premium digital presences. How can I help you today?",
+        "👋 Namaste! I'm the PIHNEXA TECHNOLOGIES Virtual Assistant. I help businesses automate their sales and build premium digital presences. How can I help you today?",
         "Hey! Looking for a Website, Mobile App, or WhatsApp Automation? I'm here to provide you with the best rates and quality!"
     ],
     "pricing": [
@@ -37,7 +37,7 @@ INTENTS = {
         "We take pride in our work! 🏆 We have delivered 50+ projects like Mishra Dental Clinic, Patient Tracker, and Zoya AI. We offer 1 year of free support and guaranteed delivery in 7-10 days.",
     ],
     "contact": [
-        "You can chat with Ankush directly on WhatsApp here: +91 73078 52235. Or just drop your number here, and we'll call you back within 2 hours!",
+        "You can chat with PIHNEXA directly on WhatsApp here: +91 73078 52235. Or just drop your number here, and we'll call you back within 2 hours!",
     ]
 }
 
@@ -127,7 +127,7 @@ def chat():
     # 3. AI Fallback (Optional)
     # Here you would integrate Claude/Gemini/OpenAI
     # For now, we use a smart fallback
-    fallback_reply = "That sounds interesting! I'm still learning about specific custom requests, but I'd love to discuss this further. Should I connect you with Ankush on WhatsApp for a quick consultation?"
+    fallback_reply = "That sounds interesting! I'm still learning about specific custom requests, but I'd love to discuss this further. Should I connect you with PIHNEXA on WhatsApp for a quick consultation?"
     
     return jsonify({"reply": fallback_reply})
 

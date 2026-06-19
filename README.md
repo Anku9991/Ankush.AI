@@ -1,4 +1,4 @@
-# Ankush.AI — Full Stack Digital Creator Platform
+# PIHNEXA TECHNOLOGIES — Full Stack Digital Creator Platform
 
 > Website + React Native App + Node.js Backend
 
@@ -7,18 +7,18 @@
 ## 📁 Project Structure
 
 ```
-ankush-ai/
-├── ankush-ai-website/         ← Static HTML website (all-in-one file)
+pihnexa-technologies/
+├── pihnexa-technologies-website/         ← Static HTML website (all-in-one file)
 │   └── index.html
 │
-├── ankush-ai-backend/         ← Node.js Express API
+├── pihnexa-technologies-backend/         ← Node.js Express API
 │   ├── server.js
 │   ├── package.json
 │   ├── .env.example           ← Copy to .env and fill in values
 │   └── data/
 │       └── leads.json         ← Auto-created, stores form submissions
 │
-└── ankush-ai-rn/              ← React Native mobile app
+└── pihnexa-technologies-rn/              ← React Native mobile app
     ├── App.js
     ├── package.json
     └── src/
@@ -37,7 +37,7 @@ ankush-ai/
 **Open locally:**
 ```bash
 # Just open in browser — no build needed!
-open ankush-ai-website/index.html
+open pihnexa-technologies-website/index.html
 ```
 
 **Deploy to production (free options):**
@@ -57,7 +57,7 @@ const res = await fetch('http://localhost:3001/api/contact', {
 ## ⚙️ 2. Backend Setup
 
 ```bash
-cd ankush-ai-backend
+cd pihnexa-technologies-backend
 
 # Install dependencies
 npm install
@@ -109,7 +109,7 @@ curl -H "x-admin-key: your-key-here" http://localhost:3001/api/leads
 
 **Setup & Run:**
 ```bash
-cd ankush-ai-rn
+cd pihnexa-technologies-rn
 
 # Install dependencies
 npm install
@@ -137,7 +137,7 @@ cd android
 ```
 
 **Publish to Play Store:**
-1. Generate keystore: `keytool -genkey -v -keystore ankush-ai.keystore -alias ankush -keyalg RSA -keysize 2048 -validity 10000`
+1. Generate keystore: `keytool -genkey -v -keystore pihnexa-technologies.keystore -alias PIHNEXA -keyalg RSA -keysize 2048 -validity 10000`
 2. Add keystore config to `android/gradle.properties`
 3. Build: `./gradlew bundleRelease`
 4. Upload `.aab` to Google Play Console
@@ -158,7 +158,7 @@ cd android
 
 ### Backend
 - ✅ Lead capture & storage (JSON file)
-- ✅ Email notification to Ankush (Gmail)
+- ✅ Email notification to PIHNEXA (Gmail)
 - ✅ Auto-reply email to client
 - ✅ Rate limiting (10/hour per IP)
 - ✅ Security headers (Helmet.js)
@@ -179,8 +179,8 @@ cd android
 
 ## 🔧 Customization Checklist
 
-- [ ] Replace `Ankush.AI2026@gmail.com` with your real email
-- [ ] Update phone number `917307852235` if different
+- [ ] Replace `PIHNEXA TECHNOLOGIES2026@gmail.com` with your real email
+- [ ] Update phone number `917992203671` if different
 - [ ] Add real portfolio project images
 - [ ] Set strong `ADMIN_KEY` in `.env`
 - [ ] Configure Gmail App Password
@@ -193,5 +193,5 @@ cd android
 ## 📞 Support
 
 WhatsApp: +91 73078 52235  
-Email: Ankush.AI2026@gmail.com 🚀
+Email: PIHNEXA TECHNOLOGIES2026@gmail.com 🚀
 Built with ❤️ in Lucknow, India 🇮🇳

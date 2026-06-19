@@ -50,14 +50,14 @@ export default function AboutScreen() {
         <View style={styles.avatarWrap}>
           <Text style={styles.avatarEmoji}>👨‍💻</Text>
         </View>
-        <Text style={styles.name}>Ankush</Text>
+        <Text style={styles.name}>PIHNEXA</Text>
         <Text style={styles.title}>Your Digital Creator 🚀</Text>
         <Text style={styles.location}>📍 Lucknow, Uttar Pradesh, India</Text>
         <View style={styles.profileBtns}>
-          <TouchableOpacity style={styles.waBtnSmall} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
+          <TouchableOpacity style={styles.waBtnSmall} onPress={() => Linking.openURL('https://wa.me/917992203671')}>
             <Text style={styles.waBtnSmallText}>💬 WhatsApp</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mailBtnSmall} onPress={() => Linking.openURL('mailto:Ankush.AI2026@gmail.com')}>
+          <TouchableOpacity style={styles.mailBtnSmall} onPress={() => Linking.openURL('mailto:PIHNEXA TECHNOLOGIES2026@gmail.com')}>
             <Ionicons name="mail" size={20} color={COLORS.yellow} />
           </TouchableOpacity>
         </View>
@@ -125,9 +125,9 @@ export default function AboutScreen() {
       </View>
 
       {/* ─── FOOTER CTA ─── */}
-      <TouchableOpacity style={styles.cta} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
+      <TouchableOpacity style={styles.cta} onPress={() => Linking.openURL('https://wa.me/917992203671')}>
         <Text style={styles.ctaTitle}>Ready to Build? 🚀</Text>
-        <Text style={styles.ctaSub}>Tap to WhatsApp Ankush now</Text>
+        <Text style={styles.ctaSub}>Tap to WhatsApp PIHNEXA now</Text>
       </TouchableOpacity>
 
       <View style={{ height: 40 }} />

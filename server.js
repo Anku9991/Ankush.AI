@@ -87,9 +87,9 @@ async function sendEmailNotification(lead) {
     return;
   }
 
-  // Email to Ankush (notification)
-  const ankushMail = {
-    from: `"Ankush.AI Notifications" <${process.env.EMAIL_USER}>`,
+  // Email to PIHNEXA (notification)
+  const PIHNEXAMail = {
+    from: `"PIHNEXA TECHNOLOGIES Notifications" <${process.env.EMAIL_USER}>`,
     to: process.env.NOTIFY_EMAIL || process.env.EMAIL_USER,
     subject: `🔥 NEW LEAD: ${lead.service} — ${lead.name}`,
     html: `
@@ -120,37 +120,37 @@ async function sendEmailNotification(lead) {
           </div>
 
           <div style="margin-top: 30px; text-align: center;">
-            <a href="https://wa.me/${lead.phone.replace(/\D/g, '')}?text=Hi%20${encodeURIComponent(lead.name)},%20this%20is%20Ankush%20from%20Ankush.AI.%20I%20saw%20your%20enquiry%20about%20${encodeURIComponent(lead.service)}."
+            <a href="https://wa.me/${lead.phone.replace(/\D/g, '')}?text=Hi%20${encodeURIComponent(lead.name)},%20this%20is%20PIHNEXA%20from%20PIHNEXA TECHNOLOGIES.%20I%20saw%20your%20enquiry%20about%20${encodeURIComponent(lead.service)}."
                style="display: inline-block; background: #25D366; color: #fff; padding: 16px 32px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.3);">
               💬 Connect on WhatsApp
             </a>
           </div>
         </div>
         <div style="padding: 20px; text-align: center; font-size: 11px; color: #a8d5b5; border-top: 1px solid rgba(39,174,96,0.1); background: rgba(255,255,255,0.02);">
-          Captured at ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST • Ankush.AI Intelligence
+          Captured at ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST • PIHNEXA TECHNOLOGIES Intelligence
         </div>
       </div>
     `
   };
 
-  await transporter.sendMail(ankushMail);
+  await transporter.sendMail(PIHNEXAMail);
 
   // Auto-reply to client (if email provided)
   if (lead.email) {
     const clientMail = {
-      from: `"Ankush.AI" <${process.env.EMAIL_USER}>`,
+      from: `"PIHNEXA TECHNOLOGIES" <${process.env.EMAIL_USER}>`,
       to: lead.email,
-      subject: `✅ We've received your request — Ankush.AI`,
+      subject: `✅ We've received your request — PIHNEXA TECHNOLOGIES`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; color: #333;">
           <h2 style="color: #27ae60;">Namaste ${lead.name}! 👋</h2>
-          <p>Thank you for reaching out to <strong>Ankush.AI</strong>. We've received your inquiry regarding <strong>${lead.service}</strong>.</p>
+          <p>Thank you for reaching out to <strong>PIHNEXA TECHNOLOGIES</strong>. We've received your inquiry regarding <strong>${lead.service}</strong>.</p>
           <p>Our team is reviewing your requirements and will contact you on WhatsApp within <strong>2 hours</strong> for a detailed consultation.</p>
           <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
           <p style="font-size: 14px; color: #666;">Need immediate help? WhatsApp us directly:</p>
-          <a href="https://wa.me/917307852235" style="display: inline-block; background: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">+91 73078 52235</a>
+          <a href="https://wa.me/917992203671" style="display: inline-block; background: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">+91 73078 52235</a>
           <p style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px; font-size: 12px;">
-            <strong>Ankush.AI</strong><br>
+            <strong>PIHNEXA TECHNOLOGIES</strong><br>
             Your Digital Growth Partner<br>
             Lucknow, India
           </p>
@@ -170,7 +170,7 @@ app.use(express.static(path.join(process.cwd())));
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'Ankush.AI Backend',
+    service: 'PIHNEXA TECHNOLOGIES Backend',
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV || 'development'
   });
@@ -212,7 +212,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 // ─── AI CHATBOT LOGIC (Enhanced) ───────────────────────────
 const BOT_REPLIES = {
   greeting: [
-    "👋 Namaste! I'm the Ankush.AI assistant. Ready to build something amazing?",
+    "👋 Namaste! I'm the PIHNEXA TECHNOLOGIES assistant. Ready to build something amazing?",
     "Hey there! Looking for a website, app, or automation? You're in the right place! 🚀",
     "Welcome! I can help you with pricing, services, or connecting with our expert team. What's on your mind?"
   ],
@@ -223,13 +223,13 @@ const BOT_REPLIES = {
     "🚀 **Our Core Expertise**:\n1. Custom Web Dev & SEO\n2. Flutter Mobile Apps (iOS/Android)\n3. AI-Powered WhatsApp Bots\n4. Digital Business Cards\n5. Specialized Hospital Portals\n\nWhich one should we discuss?",
   ],
   trust: [
-    "🏆 **Why Ankush.AI?**\n- 50+ Projects Delivered Successfully\n- 1 Year FREE Technical Support\n- Guaranteed 7-10 Day Delivery for most projects\n- Verified clients like Mishra Dental Clinic & Zoya AI.",
+    "🏆 **Why PIHNEXA TECHNOLOGIES?**\n- 50+ Projects Delivered Successfully\n- 1 Year FREE Technical Support\n- Guaranteed 7-10 Day Delivery for most projects\n- Verified clients like Mishra Dental Clinic & Zoya AI.",
   ],
   contact: [
-    "Best way to talk is WhatsApp! 📱 Tap here: https://wa.me/917307852235\n\nOr just drop your number here and I'll have Ankush call you back within 2 hours!",
+    "Best way to talk is WhatsApp! 📱 Tap here: https://wa.me/917992203671\n\nOr just drop your number here and I'll have PIHNEXA call you back within 2 hours!",
   ],
   fallback: [
-    "That sounds like an interesting project! 🚀 I'm still learning the specifics of that, but I'd love to discuss it. Should I connect you with Ankush on WhatsApp right now?",
+    "That sounds like an interesting project! 🚀 I'm still learning the specifics of that, but I'd love to discuss it. Should I connect you with PIHNEXA on WhatsApp right now?",
     "Interesting! To give you the best advice, I'd need a bit more detail. Would you like to share your phone number so our expert can call you?",
   ]
 };
@@ -271,7 +271,7 @@ app.post('/api/chat', (req, res) => {
     sendEmailNotification(lead).catch(e => console.error("📧 Lead email failed:", e.message));
 
     return res.json({
-      reply: "Got it! I've noted your contact details. 🚀 Ankush will call you within 2 hours. Anything else you'd like to ask in the meantime?",
+      reply: "Got it! I've noted your contact details. 🚀 PIHNEXA will call you within 2 hours. Anything else you'd like to ask in the meantime?",
       is_lead: true
     });
   }
@@ -288,7 +288,7 @@ app.post('/api/chat', (req, res) => {
     hospital: "Our Hospital Portal (₹25k+) includes appointment booking, patient records, and billing. It's built to make your clinic 100% paperless. Shall I show you a demo?",
     website: "We build premium SEO-optimized websites starting at just ₹5k. Everything from business portfolios to e-commerce stores. Interested?",
     mobile: "We specialize in Flutter apps for iOS & Android. Smooth, fast, and secure. Do you have a specific app idea?",
-    affirmative: "Awesome! You can message Ankush directly on WhatsApp here: https://wa.me/917307852235 or share your phone number here for a callback.",
+    affirmative: "Awesome! You can message PIHNEXA directly on WhatsApp here: https://wa.me/917992203671 or share your phone number here for a callback.",
     negative: "No problem! 😊 I'm here if you change your mind. Feel free to explore our portfolio at your own pace!"
   };
 
@@ -310,7 +310,7 @@ app.get('*', (req, res) => {
 // ─── START ───────────────────────────────────────────────
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
-    console.log(`\n🚀 Ankush.AI Backend running on http://localhost:${PORT}`);
+    console.log(`\n🚀 PIHNEXA TECHNOLOGIES Backend running on http://localhost:${PORT}`);
     console.log(`📂 Working Directory: ${process.cwd()}`);
   });
 }

@@ -22,7 +22,7 @@ const SERVICES = [
 ];
 
 const API_URL = 'http://10.0.2.2:3001/api/contact'; // Android emulator → localhost
-// For real device: replace with your server IP/URL e.g. 'https://api.ankush.ai/api/contact'
+// For real device: replace with your server IP/URL e.g. 'https://api.PIHNEXA.ai/api/contact'
 
 export default function ContactScreen() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' });
@@ -56,8 +56,8 @@ export default function ContactScreen() {
       } else throw new Error(data.message);
     } catch {
       // Fallback: open WhatsApp
-      const msg = `Hi Ankush! I'm ${form.name} (${form.phone}). I need: ${form.service}. ${form.message}`;
-      Linking.openURL(`https://wa.me/917307852235?text=${encodeURIComponent(msg)}`);
+      const msg = `Hi PIHNEXA! I'm ${form.name} (${form.phone}). I need: ${form.service}. ${form.message}`;
+      Linking.openURL(`https://wa.me/917992203671?text=${encodeURIComponent(msg)}`);
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -70,7 +70,7 @@ export default function ContactScreen() {
         <Text style={styles.successIcon}>✅</Text>
         <Text style={styles.successTitle}>Message Sent!</Text>
         <Text style={styles.successSub}>We'll reply within 2 hours via WhatsApp.</Text>
-        <TouchableOpacity style={styles.btnWA} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
+        <TouchableOpacity style={styles.btnWA} onPress={() => Linking.openURL('https://wa.me/917992203671')}>
           <Text style={styles.btnWAText}>💬 Open WhatsApp</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnRetry} onPress={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', service: '', message: '' }); }}>
@@ -89,7 +89,7 @@ export default function ContactScreen() {
       </View>
 
       {/* Quick WhatsApp */}
-      <TouchableOpacity style={styles.quickWA} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
+      <TouchableOpacity style={styles.quickWA} onPress={() => Linking.openURL('https://wa.me/917992203671')}>
         <Text style={styles.quickWAIcon}>💬</Text>
         <View>
           <Text style={styles.quickWATitle}>Quick Chat on WhatsApp</Text>
@@ -151,13 +151,13 @@ export default function ContactScreen() {
 
       {/* Contact methods */}
       <View style={styles.methods}>
-        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('https://wa.me/917307852235')}>
+        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('https://wa.me/917992203671')}>
           <Text style={styles.methodIcon}>💬</Text>
           <View><Text style={styles.methodLabel}>WhatsApp</Text><Text style={styles.methodValue}>+91 73078 52235</Text></View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('mailto:Ankush.AI2026@gmail.com')}>
+        <TouchableOpacity style={styles.method} onPress={() => Linking.openURL('mailto:PIHNEXA TECHNOLOGIES2026@gmail.com')}>
           <View style={styles.iconContainer}><Ionicons name="mail" size={24} color={COLORS.yellow} /></View>
-          <View><Text style={styles.methodLabel}>Email</Text><Text style={styles.methodValue}>Ankush.AI2026@gmail.com</Text></View>
+          <View><Text style={styles.methodLabel}>Email</Text><Text style={styles.methodValue}>PIHNEXA TECHNOLOGIES2026@gmail.com</Text></View>
         </TouchableOpacity>
         <View style={styles.method}>
           <Text style={styles.methodIcon}>📍</Text>

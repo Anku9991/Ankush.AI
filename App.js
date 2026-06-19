@@ -1,5 +1,5 @@
-// App.js — Ankush.AI React Native App
-// Run: npx react-native init AnkushAI --template react-native-template-typescript
+// App.js — PIHNEXA TECHNOLOGIES React Native App
+// Run: npx react-native init PIHNEXAAI --template react-native-template-typescript
 // Then replace App.tsx/App.js with this file
 
 import React from 'react';
@@ -16,12 +16,12 @@ import ContactScreen from './src/screens/ContactScreen';
 const Tab = createBottomTabNavigator();
 
 const COLORS = {
-  greenDark: '#0d3b1a',
-  greenBright: '#27ae60',
-  yellow: '#f5c518',
-  dark: '#081a0d',
+  greenDark: '#0f172a',
+  greenBright: '#38bdf8',
+  yellow: '#22d3ee',
+  dark: '#020617',
   white: '#f0fff4',
-  gray: '#a8d5b5',
+  gray: '#94a3b8',
 };
 
 export default function App() {
@@ -54,7 +54,7 @@ export default function App() {
           },
         })}
       >
-        <Tab.Screen name="Home" component={HomeScreen} options={{ title: 'Ankush.AI', headerTitle: '🤖 Ankush.AI' }} />
+        <Tab.Screen name="Home" component={HomeScreen} options={{ title: 'PIHNEXA TECHNOLOGIES', headerTitle: '🤖 PIHNEXA TECHNOLOGIES' }} />
         <Tab.Screen name="Services" component={ServicesScreen} />
         <Tab.Screen name="Portfolio" component={PortfolioScreen} />
         <Tab.Screen name="About" component={AboutScreen} />

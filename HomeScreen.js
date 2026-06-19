@@ -42,8 +42,8 @@ export default function HomeScreen({ navigation }) {
   }, []);
 
   const openWhatsApp = (msg = '') => {
-    const text = msg || 'Hi Ankush! I found your app and want to know more about your services.';
-    Linking.openURL(`https://wa.me/917307852235?text=${encodeURIComponent(text)}`);
+    const text = msg || 'Hi PIHNEXA! I found your app and want to know more about your services.';
+    Linking.openURL(`https://wa.me/917992203671?text=${encodeURIComponent(text)}`);
   };
 
   return (
