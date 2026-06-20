@@ -823,7 +823,7 @@ footer {
 .sticky-cta {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  left: 2rem;
   z-index: 1000;
   background: var(--gradient-primary);
   color: #fff;
