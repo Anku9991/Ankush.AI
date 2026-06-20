@@ -522,6 +522,21 @@ section {
 .founder-img {
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
+  box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.2);
+  animation: breathingZoom 8s infinite ease-in-out;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.founder-img:hover {
+  transform: scale(0.98); /* zoom out slightly on hover */
+  box-shadow: 0 15px 50px -5px rgba(56, 189, 248, 0.4);
+  animation-play-state: paused;
+}
+
+@keyframes breathingZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
 }
 
 .founder-content h3 { font-size: 2rem; margin-bottom: 0.5rem; }
