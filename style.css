@@ -936,6 +936,7 @@ footer {
     padding: 1rem 0;
     position: relative;
     z-index: 900;
+    margin-top: 90px;
 }
 .ribbon-scroll {
     display: flex;
