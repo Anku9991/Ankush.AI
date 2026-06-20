@@ -48,8 +48,14 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <!-- Cinematic Noise Overlay -->
+    <div class="cinematic-noise"></div>
+    <!-- Ambient Cursor Torch -->
+    <div id="ambient-torch"></div>
 
     <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
@@ -731,6 +737,27 @@
                 });
             }
         });
+
+        // Ambient Torch Tracking
+        const torch = document.getElementById('ambient-torch');
+        document.addEventListener('mousemove', (e) => {
+            if(torch) {
+                torch.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+            }
+        });
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Auto-tag sections for scroll animations
+        document.querySelectorAll('.section-title').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+        document.querySelectorAll('.section-subtitle').forEach(el => { el.setAttribute('data-aos', 'fade-up'); el.setAttribute('data-aos-delay', '100'); });
+        document.querySelectorAll('.card').forEach((el, index) => { el.setAttribute('data-aos', 'fade-up'); el.setAttribute('data-aos-delay', String((index % 3) * 150)); });
+        document.querySelectorAll('.trust-item').forEach((el, index) => { el.setAttribute('data-aos', 'zoom-in'); el.setAttribute('data-aos-delay', String((index % 5) * 50)); });
+        
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic', offset: 50 });
     </script>
 </body>
 </html>
