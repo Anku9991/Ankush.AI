@@ -73,8 +73,47 @@
         </div>
     </nav>
 
+    <!-- APPLE STYLE RIBBON -->
+    <div class="apple-ribbon">
+        <div class="ribbon-scroll">
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-solid fa-hospital-user"></i></div>
+                <span>Patient Tracker</span>
+            </a>
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <span>Smart Queue</span>
+            </a>
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <span>Web Apps</span>
+            </a>
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-brands fa-app-store-ios"></i></div>
+                <span>Mobile Apps</span>
+            </a>
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <span>AI Bots</span>
+            </a>
+            <a href="#projects" class="ribbon-item" style="text-decoration:none;">
+                <div class="ribbon-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <span>Portfolios</span>
+            </a>
+        </div>
+    </div>
+
     <!-- 1. HERO SECTION -->
-    <header class="hero" id="home">
+    <header class="hero" id="home" style="position: relative; overflow: hidden;">
+        <!-- ANTI GRAVITY ENGINE -->
+        <div id="anti-gravity-container">
+            <div class="ag-orb ag-orb-1"></div>
+            <div class="ag-orb ag-orb-2"></div>
+            <div class="ag-orb ag-orb-3"></div>
+            <div class="ag-card-wrapper ag-card-1"><div class="ag-card"><i class="fa-solid fa-code"></i></div></div>
+            <div class="ag-card-wrapper ag-card-2"><div class="ag-card"><i class="fa-solid fa-microchip"></i></div></div>
+            <div class="ag-card-wrapper ag-card-3"><div class="ag-card"><i class="fa-solid fa-chart-line"></i></div></div>
+        </div>
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="badge">Healthcare & Business Automation Experts</div>
@@ -675,6 +714,22 @@
         document.getElementById('acceptCookies').addEventListener('click', () => {
             localStorage.setItem('cookiesAccepted', 'true');
             document.getElementById('cookieConsent').classList.remove('show');
+        });
+
+        // Anti-Gravity Magnetic Tracker
+        document.addEventListener('mousemove', (e) => {
+            const container = document.getElementById('home');
+            if(container) {
+                const cards = container.querySelectorAll('.ag-card');
+                // Calculate cursor position relative to screen center
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                
+                cards.forEach(card => {
+                    // Apply 3D magnetic tilt
+                    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(40px)`;
+                });
+            }
         });
     </script>
 </body>
