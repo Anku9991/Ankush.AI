@@ -791,3 +791,91 @@ footer {
   .hero-content h1 { font-size: 2.5rem; }
   section { padding: 4rem 0; }
 }
+/* PHASE 2 UPGRADES */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--bg-card);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+}
+.marquee-content {
+  display: inline-flex;
+  animation: scroll-left 30s linear infinite;
+  gap: 4rem;
+  padding-right: 4rem;
+}
+.marquee-item {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.sticky-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: var(--gradient-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+.sticky-cta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.6);
+  color: #fff;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(5, 10, 20, 0.98);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid var(--border-light);
+  padding: 1.5rem 2rem;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+}
+.cookie-consent.show {
+  transform: translateY(0);
+}
+.cookie-consent p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.cookie-consent .btn-sm {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
