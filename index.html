@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css?v=2.5">
+    <link rel="stylesheet" href="style.css?v=2.6">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -265,9 +265,51 @@
             
             <div class="video-wrapper glass" data-aos="zoom-in" data-aos-delay="300">
                 <!-- Replace src with your own video URL or local file path like 'assets/promo.mp4' -->
-                <video id="promoVideoPlayer" src="assets/promo.mp4" autoplay loop muted playsinline controls preload="auto" style="width: 100%; min-height: 400px; background: #050a14; object-fit: cover; border-radius: calc(var(--radius-lg) - 6px); display: block;">
+                <video id="promoVideoPlayer" src="assets/promo.mp4?v=2" autoplay loop muted playsinline controls preload="auto" style="width: 100%; min-height: 400px; background: #050a14; object-fit: cover; border-radius: calc(var(--radius-lg) - 6px); display: block;">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVERTISEMENT & HIRING GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div class="badge" data-aos="fade-up">Gallery & Announcements</div>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Our <span class="gradient-text">Spotlight</span></h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Latest advertisements, upcoming hirings, and company culture.</p>
+            </div>
+            
+            <div class="photo-gallery-grid">
+                <div class="gallery-item glass" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/hero-image.png" alt="Hiring 1" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>We Are Hiring!</h3>
+                        <p>Senior Developer Position</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/project-1.jpg" alt="Advertisement 1" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>New Product Launch</h3>
+                        <p>Discover our latest AI tool</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/project-2.jpg" alt="Advertisement 2" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Upcoming Event</h3>
+                        <p>Join us at Tech Expo 2026</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/project-3.jpg" alt="Hiring 2" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3>Join Our Team</h3>
+                        <p>UI/UX Designer Needed</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
