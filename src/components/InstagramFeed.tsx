@@ -12,7 +12,8 @@ interface InstagramMedia {
 }
 
 export default async function InstagramFeed() {
-  const token = process.env.IG_ACCESS_TOKEN;
+  const rawToken = process.env.IG_ACCESS_TOKEN;
+  const token = rawToken ? encodeURIComponent(rawToken.trim().replace(/^["']|["']$/g, '')) : undefined;
 
   // If no token is provided, we can show a placeholder or nothing
   if (!token) {
