@@ -1,5 +1,7 @@
 import React from "react";
 import InstagramFeed from "@/components/InstagramFeed";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main>
@@ -9,27 +11,7 @@ export default function Home() {
     {/*  Ambient Cursor Torch  */}
     <div id="ambient-torch"></div>
 
-    {/*  NAVIGATION  */}
-    <nav className="navbar" id="navbar">
-        <div className="container nav-container">
-            <a href="#" className="logo" style={{"display":"flex","alignItems":"center","gap":"10px"}}>
-                <img src="assets/logo.png" alt="PIHNEXA Logo" style={{"height":"40px","width":"auto"}} />
-                <span className="logo-text" style={{"fontFamily":"'Inter', sans-serif","fontWeight":"800","fontSize":"1.3rem","background":"linear-gradient(135deg, #0ea5e9, #10b981)","WebkitBackgroundClip":"text","WebkitTextFillColor":"transparent","letterSpacing":"-0.5px","lineHeight":"1"}}>PIHNEXA<br /><span style={{"fontSize":"0.8rem","fontWeight":"600","letterSpacing":"1px"}}>TECHNOLOGIES</span></span>
-            </a>
-            <ul className="nav-links" id="navLinks">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-            <div style={{"display":"flex","alignItems":"center","gap":"1rem"}}>
-                <a href="#contact" className="btn btn-primary" id="navCta" style={{"padding":"0.5rem 1rem","fontSize":"0.9rem"}}>Consultation</a>
-                <div className="mobile-toggle" id="mobileToggle">
-                    <i className="fa-solid fa-bars"></i>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <Navbar />
 
     {/*  APPLE STYLE RIBBON  */}
     <div className="apple-ribbon">
@@ -86,7 +68,7 @@ export default function Home() {
                 <div className="floating-icon icon-1"><i className="fa-solid fa-mobile-screen-button" style={{"color":"#38bdf8","fontSize":"2rem"}}></i></div>
                 <div className="floating-icon icon-2"><i className="fa-solid fa-robot" style={{"color":"#818cf8","fontSize":"2rem"}}></i></div>
                 {/*  Premium Abstract Illustration via Unsplash  */}
-                <img src="assets/hero-image.png" alt="Digital Solutions Dashboard" className="hero-image" />
+                <img src="/assets/hero-image.png" alt="Digital Solutions Dashboard" className="hero-image" />
             </div>
         </div>
     </header>
@@ -217,7 +199,7 @@ export default function Home() {
             
             <div className="video-wrapper glass" data-aos="zoom-in" data-aos-delay="300">
                 {/*  Replace src with your own video URL or local file path like 'assets/promo.mp4'  */}
-                <video id="promoVideoPlayer" src="assets/promo.mp4?v=2" autoPlay loop muted playsInline controls preload="auto" style={{"width":"100%","minHeight":"400px","background":"#050a14","objectFit":"cover","borderRadius":"calc(var(--radius-lg) - 6px)","display":"block"}}>
+                <video id="promoVideoPlayer" src="/assets/promo.mp4?v=2" autoPlay loop muted playsInline controls preload="auto" style={{"width":"100%","minHeight":"400px","background":"#050a14","objectFit":"cover","borderRadius":"calc(var(--radius-lg) - 6px)","display":"block"}}>
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -235,28 +217,28 @@ export default function Home() {
             
             <div className="photo-gallery-grid">
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="assets/adv.png" alt="Special Advertisement" className="gallery-img" />
+                    <img src="/assets/adv.png" alt="Special Advertisement" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Featured Advertisement</h3>
                         <p>Special Promotion by PIHNEXA</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/project-1.jpg" alt="Advertisement 1" className="gallery-img" />
+                    <img src="/assets/project-1.jpg" alt="Advertisement 1" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>New Product Launch</h3>
                         <p>Discover our latest AI tool</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="assets/project-2.jpg" alt="Advertisement 2" className="gallery-img" />
+                    <img src="/assets/project-2.jpg" alt="Advertisement 2" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Upcoming Event</h3>
                         <p>Join us at Tech Expo 2026</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="assets/project-3.jpg" alt="Hiring 2" className="gallery-img" />
+                    <img src="/assets/project-3.jpg" alt="Hiring 2" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Join Our Team</h3>
                         <p>UI/UX Designer Needed</p>
@@ -292,7 +274,7 @@ export default function Home() {
             <div className="projects-grid">
                 {/*  Project 1: MeetTrack Pro  */}
                 <div className="card glass project-card">
-                    <img src="assets/project-1.jpg" alt="MeetTrack Pro" className="project-img" />
+                    <img src="/assets/project-1.jpg" alt="MeetTrack Pro" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
                             <span className="tech-tag">Next.js</span><span className="tech-tag">Node.js</span><span className="tech-tag">AI</span>
@@ -304,7 +286,7 @@ export default function Home() {
                 </div>
                 {/*  Project 2: Smart Queue Management  */}
                 <div className="card glass project-card">
-                    <img src="assets/project-2.jpg" alt="Smart Queue Management" className="project-img" />
+                    <img src="/assets/project-2.jpg" alt="Smart Queue Management" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
                             <span className="tech-tag">React</span><span className="tech-tag">Firebase</span>
@@ -316,7 +298,7 @@ export default function Home() {
                 </div>
                 {/*  Project 3: Patient Tracker Pro  */}
                 <div className="card glass project-card">
-                    <img src="assets/project-3.jpg" alt="Patient Tracker Pro" className="project-img" />
+                    <img src="/assets/project-3.jpg" alt="Patient Tracker Pro" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
                             <span className="tech-tag">Vue.js</span><span className="tech-tag">PostgreSQL</span><span className="tech-tag">HIPAA</span>
@@ -328,7 +310,7 @@ export default function Home() {
                 </div>
                 {/*  Project 4: Medanta Mela Food App  */}
                 <div className="card glass project-card">
-                    <img src="assets/project-4.jpg" alt="Medanta Mela Food App" className="project-img" />
+                    <img src="/assets/project-4.jpg" alt="Medanta Mela Food App" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
                             <span className="tech-tag">Flutter</span><span className="tech-tag">Express</span>
@@ -340,7 +322,7 @@ export default function Home() {
                 </div>
                 {/*  Project 5: Personal Portfolios  */}
                 <div className="card glass project-card">
-                    <img src="assets/project-5.jpg" alt="Personal Portfolios" className="project-img" />
+                    <img src="/assets/project-5.jpg" alt="Personal Portfolios" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
                             <span className="tech-tag">HTML/CSS</span><span className="tech-tag">React</span><span className="tech-tag">UI/UX</span>
@@ -377,7 +359,7 @@ export default function Home() {
             <div className="founder-grid">
                 <div className="founder-img-wrapper">
                     {/*  Placeholder for Founder Image  */}
-                    <img src="assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" />
+                    <img src="/assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" />
                 </div>
                 <div className="founder-content">
                     <h3>Ankush Jha</h3>
@@ -620,129 +602,7 @@ export default function Home() {
     </section>
 
     {/*  FOOTER  */}
-    <footer>
-        <div className="container" style={{"display":"grid","gridTemplateColumns":"repeat(auto-fit, minmax(250px, 1fr))","gap":"2rem","padding":"4rem 0"}}>
-            <div>
-                <img src="assets/logo.png" alt="PIHNEXA Logo" style={{"height":"40px","marginBottom":"1rem"}} />
-                <p style={{"color":"var(--text-muted)","fontSize":"0.9rem"}}>Healthcare & Business Automation Experts.</p>
-                <div style={{"marginTop":"1rem","display":"flex","gap":"1.5rem","fontSize":"1.5rem","position":"relative","zIndex":"50"}}>
-                    <a href="#" style={{"color":"var(--text-muted)","transition":"color 0.3s"}}><i className="fa-brands fa-linkedin"></i></a>
-                    <a href="#" style={{"color":"var(--text-muted)","transition":"color 0.3s"}}><i className="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/pihnexa_technologies/" target="_blank" rel="noopener noreferrer" style={{"color":"var(--text-muted)","transition":"color 0.3s"}}><i className="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4 style={{"color":"#fff","marginBottom":"1rem","fontFamily":"var(--font-display)"}}>Products</h4>
-                <ul style={{"color":"var(--text-muted)","fontSize":"0.9rem","display":"flex","flexDirection":"column","gap":"0.5rem"}}>
-                    <li><a href="#projects">MeetTrack Pro</a></li>
-                    <li><a href="#projects">Smart Queue Management</a></li>
-                    <li><a href="#projects">Patient Tracker Pro</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style={{"color":"#fff","marginBottom":"1rem","fontFamily":"var(--font-display)"}}>Legal & Compliance</h4>
-                <ul style={{"color":"var(--text-muted)","fontSize":"0.9rem","display":"flex","flexDirection":"column","gap":"0.5rem"}}>
-                    <li><a href="javascript:void(0)" >Privacy Policy</a></li>
-                    <li><a href="javascript:void(0)" >Terms of Service</a></li>
-                    <li><a href="javascript:void(0)" >Cookie Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div className="container" style={{"borderTop":"1px solid var(--border-light)","padding":"2rem 0","textAlign":"center"}}>
-            <p style={{"color":"var(--text-muted)","fontSize":"0.85rem","maxWidth":"800px","margin":"0 auto 1rem auto"}}>
-                <strong>Healthcare Data Security & Compliance:</strong> At PIHNEXA, security is embedded in our DNA. We adhere to OWASP Top 10 standards, utilize AES-256 encryption, and enforce secure JWT/OAuth 2.0 authentication. Our healthcare solutions are designed with HIPAA compliance principles, ensuring end-to-end data protection for patient records.
-            </p>
-            <p style={{"fontSize":"0.9rem","color":"var(--text-muted)"}}>&copy; 2026 PIHNEXA Technologies. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    {/*  FLOATING WHATSAPP BUTTON  */}
-    <a href="https://wa.me/917992203671?text=Hi%20PIHNEXA,%20I%20want%20to%20discuss%20a%20project." className="floating-wa" target="_blank" aria-label="Chat on WhatsApp">
-        <i className="fa-brands fa-whatsapp"></i>
-    </a>
-
-    {/*  SCRIPTS  */}
-    
-
-    {/*  STICKY CTA  */}
-    <a href="#contact" className="sticky-cta">
-        <i className="fa-solid fa-calendar-check"></i> Book Free Tech Audit
-    </a>
-
-    {/*  COOKIE CONSENT  */}
-    <div className="cookie-consent" id="cookieConsent">
-        <p>We use cookies to improve your experience and ensure compliance with security standards. By continuing, you agree to our <a href="javascript:void(0)"  style={{"color":"var(--accent-primary)","textDecoration":"underline"}}>Cookie Policy</a>.</p>
-        <button className="btn btn-primary btn-sm" id="acceptCookies">Accept & Continue</button>
-    </div>
-
-    
-    
-    {/*  AOS Animation Library  */}
-    
-    
-
-    {/*  LEGAL MODAL  */}
-    <div id="legalModal" className="legal-modal">
-        <div className="legal-modal-content glass">
-            <span className="close-legal" >&times;</span>
-            <div className="legal-tabs">
-                <button className="legal-tab active" >Privacy Policy</button>
-                <button className="legal-tab" >Terms of Service</button>
-                <button className="legal-tab" >Cookie Policy</button>
-            </div>
-            <div className="legal-body">
-                {/*  Privacy Policy  */}
-                <div id="privacyText" className="legal-section active">
-                    <h2>Privacy Policy</h2>
-                    <p>Last Updated: June 2026</p>
-                    <h3>1. Information We Collect</h3>
-                    <p>At PIHNEXA Technologies, we collect information that you voluntarily provide to us when expressing an interest in obtaining information about our premium products (such as MeetTrack Pro, Patient Tracker Pro) or services.</p>
-                    <h3>2. Healthcare Data & HIPAA Compliance</h3>
-                    <p>For our healthcare partners using Patient Tracker Pro and Smart Queue Management, we adhere strictly to OWASP Top 10 security protocols and ensure end-to-end AES-256 encryption. We process patient data in compliance with standard global health data privacy principles.</p>
-                    <h3>3. How We Use Your Information</h3>
-                    <ul>
-                        <li>To provide and maintain our automated services.</li>
-                        <li>To deploy AI bots and custom Web/App solutions securely.</li>
-                        <li>To notify you about changes to our software infrastructure.</li>
-                    </ul>
-                    <h3>4. Data Security</h3>
-                    <p>Security is our core DNA. We utilize OAuth 2.0 and JWT for secure session management, ensuring that your enterprise data remains impenetrable.</p>
-                </div>
-                
-                {/*  Terms of Service  */}
-                <div id="termsText" className="legal-section">
-                    <h2>Terms of Service</h2>
-                    <p>Last Updated: June 2026</p>
-                    <h3>1. Acceptance of Terms</h3>
-                    <p>By accessing PIHNEXA Technologies' website or utilizing our software products, you agree to be bound by these Terms of Service.</p>
-                    <h3>2. Enterprise Software Licenses</h3>
-                    <p>Products like MeetTrack Pro and Patient Tracker Pro are licensed to organizations under strict usage parameters. Reverse engineering, unauthorized distribution, or tampering with our proprietary AI algorithms is strictly prohibited.</p>
-                    <h3>3. Limitation of Liability</h3>
-                    <p>PIHNEXA Technologies shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of our custom applications or business automation workflows.</p>
-                    <h3>4. Intellectual Property</h3>
-                    <p>All source code, designs, UI/UX layouts, and AI models provided by PIHNEXA remain our intellectual property unless explicitly transferred under a custom development contract.</p>
-                </div>
-                
-                {/*  Cookie Policy  */}
-                <div id="cookieText" className="legal-section">
-                    <h2>Cookie Policy</h2>
-                    <p>Last Updated: June 2026</p>
-                    <h3>1. What Are Cookies?</h3>
-                    <p>Cookies are small text files stored securely on your device. We use them to offer you a seamless, personalized, and premium web experience.</p>
-                    <h3>2. How We Use Cookies</h3>
-                    <ul>
-                        <li><strong>Essential Cookies:</strong> Required for the operation of our secure portals and Anti-Gravity UI engines.</li>
-                        <li><strong>Analytical Cookies:</strong> To understand how visitors interact with our portfolio and service pages, helping us optimize the UX.</li>
-                    </ul>
-                    <h3>3. Managing Your Cookies</h3>
-                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept essential cookies, some portions of our premium UI may not render perfectly.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-
+    <Footer />
     </main>
   );
 }
