@@ -1,0 +1,137 @@
+import React from 'react';
+
+// Define the shape of Instagram Media objects
+interface InstagramMedia {
+  id: string;
+  caption?: string;
+  media_type: 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM';
+  media_url: string;
+  thumbnail_url?: string;
+  permalink: string;
+  timestamp: string;
+}
+
+export default async function InstagramFeed() {
+  const token = process.env.IG_ACCESS_TOKEN;
+
+  // If no token is provided, we can show a placeholder or nothing
+  if (!token) {
+    return (
+      <section id="instagram-feed" style={{ padding: '4rem 0', background: 'rgba(15,23,42,0.3)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="badge" data-aos="fade-up">Instagram Sync</div>
+            <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+              Latest From <span className="gradient-text">PihNexa</span>
+            </h2>
+            <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Connect your Instagram account in Vercel to see live updates.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  let posts: InstagramMedia[] = [];
+
+  try {
+    // Next.js ISR: Fetch from Instagram API and cache for 3600 seconds (1 hour)
+    const res = await fetch(
+      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}`,
+      { next: { revalidate: 3600 } }
+    );
+    const data = await res.json();
+
+    if (data.data) {
+      posts = data.data.slice(0, 8); // Limit to latest 8 posts
+    }
+  } catch (error) {
+    console.error('Error fetching Instagram posts:', error);
+  }
+
+  if (posts.length === 0) {
+    return null; // Don't show the section if no posts are returned
+  }
+
+  return (
+    <section id="instagram-feed" style={{ padding: '4rem 0' }}>
+      <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div className="badge" data-aos="fade-up">Social Wall</div>
+          <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+            Latest From <span className="gradient-text">PihNexa</span>
+          </h2>
+          <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Follow us on Instagram for the latest reels, tips, and company updates.
+          </p>
+        </div>
+
+        <div className="ig-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+          {posts.map((post) => {
+            const imageUrl = post.media_type === 'VIDEO' ? post.thumbnail_url || post.media_url : post.media_url;
+            return (
+              <a
+                key={post.id}
+                href={post.permalink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ig-post glass"
+                data-aos="zoom-in"
+                style={{
+                  display: 'block',
+                  position: 'relative',
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  aspectRatio: '4/5',
+                  textDecoration: 'none',
+                  boxShadow: 'var(--shadow-card)'
+                }}
+              >
+                <img
+                  src={imageUrl}
+                  alt={post.caption || 'Instagram Post'}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }}
+                />
+                <div
+                  className="ig-overlay"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
+                    padding: '1.5rem',
+                    opacity: 0,
+                    transition: 'opacity 0.3s',
+                    color: '#fff'
+                  }}
+                >
+                  {post.media_type === 'VIDEO' && (
+                    <i className="fa-solid fa-play" style={{ position: 'absolute', top: '1rem', right: '1rem', fontSize: '1.5rem' }}></i>
+                  )}
+                  {post.media_type === 'CAROUSEL_ALBUM' && (
+                    <i className="fa-solid fa-images" style={{ position: 'absolute', top: '1rem', right: '1rem', fontSize: '1.5rem' }}></i>
+                  )}
+                  <p style={{ fontSize: '0.9rem', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {post.caption}
+                  </p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', marginTop: '0.5rem' }}>
+                    {new Date(post.timestamp).toLocaleDateString()}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .ig-post:hover img { transform: scale(1.05); }
+        .ig-post:hover .ig-overlay { opacity: 1 !important; }
+      `}} />
+    </section>
+  );
+}
