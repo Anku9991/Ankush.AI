@@ -41,6 +41,14 @@ export default function Home() {
                 <div className="ribbon-icon">💼</div>
                 <span>Portfolios</span>
             </a>
+            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
+                <div className="ribbon-icon">📅</div>
+                <span>Staff Roster Automation</span>
+            </a>
+            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
+                <div className="ribbon-icon">🎮</div>
+                <span>Kids Game Portal</span>
+            </a>
         </div>
     </div>
 
