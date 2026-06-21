@@ -55,7 +55,7 @@ export const Footer = () => {
               }}
             >
               <a 
-                href="https://www.linkedin.com/feed/" 
+                href="https://www.linkedin.com/in/pihnexa-technologies-597891418/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "var(--text-muted)", transition: "color 0.3s" }}
