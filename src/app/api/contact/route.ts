@@ -17,8 +17,7 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'smtp.gmail.com',
+      host: 'smtp.zoho.in', // Use smtp.zoho.com if registered globally, .in for India
       port: 465,
       secure: true,
       auth: {
