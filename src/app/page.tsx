@@ -1,5 +1,6 @@
 import React from "react";
 import InstagramFeed from "@/components/InstagramFeed";
+import ContactForm from "@/components/ContactForm";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 export default function Home() {
@@ -572,31 +573,7 @@ export default function Home() {
                     </div>
                 </div>
                 
-                <div className="card glass">
-                    <form className="contact-form" action="#" method="POST">
-                        <div className="form-group">
-                            <label htmlFor="name">Full Name *</label>
-                            <input type="text" id="name" className="form-control" required placeholder="John Doe" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="phone">Phone Number *</label>
-                            <input type="tel" id="phone" className="form-control" required placeholder="+91 9876543210" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" className="form-control" placeholder="john@company.com" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="company">Company / Clinic Name</label>
-                            <input type="text" id="company" className="form-control" placeholder="City Hospital" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="requirement">Project Requirement *</label>
-                            <textarea id="requirement" className="form-control" rows={4} required placeholder="Describe what you are looking to build..."></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-primary" style={{"width":"100%","marginTop":"1rem"}}>Submit Inquiry</button>
-                    </form>
-                </div>
+                <ContactForm />
             </div>
         </div>
     </section>
