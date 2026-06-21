@@ -54,7 +54,12 @@ export const Footer = () => {
                 zIndex: "50",
               }}
             >
-              <a href="#" style={{ color: "var(--text-muted)", transition: "color 0.3s" }}>
+              <a 
+                href="https://www.linkedin.com/feed/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--text-muted)", transition: "color 0.3s" }}
+              >
                 <i className="fa-brands fa-linkedin"></i>
               </a>
               <a
