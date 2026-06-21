@@ -36,15 +36,52 @@ export default async function InstagramFeed() {
   let posts: InstagramMedia[] = [];
 
   try {
-    // Next.js ISR: Fetch from Instagram API and cache for 3600 seconds (1 hour)
-    const res = await fetch(
+    // Attempt 1: Instagram Basic Display API (Personal/Creator accounts)
+    const basicRes = await fetch(
       `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}`,
       { next: { revalidate: 3600 } }
     );
-    const data = await res.json();
+    const basicData = await basicRes.json();
 
-    if (data.data) {
-      posts = data.data.slice(0, 8); // Limit to latest 8 posts
+    if (basicData.data && !basicData.error) {
+      posts = basicData.data.slice(0, 8);
+    } else {
+      // Attempt 2: Facebook Graph API (Professional Business Accounts linked to FB Pages)
+      console.log("Instagram Basic Display API failed. Attempting Facebook Graph API route...");
+      
+      // Step A: Get FB Pages the token has access to
+      const fbPagesRes = await fetch(`https://graph.facebook.com/v19.0/me/accounts?access_token=${token}`);
+      const fbPagesData = await fbPagesRes.json();
+
+      if (fbPagesData.data && fbPagesData.data.length > 0) {
+        // Assume the first page is the correct one for simplicity
+        const pageId = fbPagesData.data[0].id;
+        
+        // Step B: Get the linked Instagram Business Account ID
+        const igAccountRes = await fetch(`https://graph.facebook.com/v19.0/${pageId}?fields=instagram_business_account&access_token=${token}`);
+        const igAccountData = await igAccountRes.json();
+
+        if (igAccountData.instagram_business_account) {
+          const igUserId = igAccountData.instagram_business_account.id;
+          
+          // Step C: Fetch Media using the IG User ID
+          const mediaRes = await fetch(
+            `https://graph.facebook.com/v19.0/${igUserId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}`,
+            { next: { revalidate: 3600 } }
+          );
+          const mediaData = await mediaRes.json();
+          
+          if (mediaData.data) {
+            posts = mediaData.data.slice(0, 8);
+          } else {
+             console.error("Facebook Graph API failed to fetch media:", mediaData.error);
+          }
+        } else {
+          console.error("No Instagram Business Account linked to this Facebook Page.");
+        }
+      } else {
+        console.error("Facebook Graph API: Token invalid or no Facebook Pages found. Basic Data Error:", basicData.error);
+      }
     }
   } catch (error) {
     console.error('Error fetching Instagram posts:', error);
