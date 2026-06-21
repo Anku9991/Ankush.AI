@@ -51,7 +51,26 @@ export default async function InstagramFeed() {
   }
 
   if (posts.length === 0) {
-    return null; // Don't show the section if no posts are returned
+    return (
+      <section id="instagram-feed" style={{ padding: '4rem 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="badge" data-aos="fade-up">Social Wall</div>
+            <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+              Latest From <span className="gradient-text">PihNexa</span>
+            </h2>
+            <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Follow us on Instagram for the latest reels, tips, and company updates.
+            </p>
+          </div>
+          <div style={{ textAlign: 'center', padding: '3rem', background: 'rgba(255,255,255,0.02)', borderRadius: '1rem', border: '1px dashed rgba(255,255,255,0.1)' }}>
+            <i className="fa-brands fa-instagram" style={{ fontSize: '3rem', color: 'var(--text-muted)', marginBottom: '1rem' }}></i>
+            <p style={{ color: 'var(--text-muted)' }}>No posts found or Instagram token is invalid/expired.</p>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Please verify your IG_ACCESS_TOKEN in Vercel settings.</p>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
