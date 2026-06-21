@@ -57,8 +57,13 @@ export const Footer = () => {
               <a href="#" style={{ color: "var(--text-muted)", transition: "color 0.3s" }}>
                 <i className="fa-brands fa-linkedin"></i>
               </a>
-              <a href="#" style={{ color: "var(--text-muted)", transition: "color 0.3s" }}>
-                <i className="fa-brands fa-twitter"></i>
+              <a
+                href="https://x.com/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--text-muted)", transition: "color 0.3s" }}
+              >
+                <i className="fa-brands fa-x-twitter"></i>
               </a>
               <a
                 href="https://www.instagram.com/pihnexa_technologies/"
