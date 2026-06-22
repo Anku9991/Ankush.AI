@@ -65,9 +65,6 @@ export default function Home() {
             <div className="ag-orb ag-orb-1"></div>
             <div className="ag-orb ag-orb-2"></div>
             <div className="ag-orb ag-orb-3"></div>
-            <div className="ag-card-wrapper ag-card-1"><div className="ag-card"><i className="fa-solid fa-code"></i></div></div>
-            <div className="ag-card-wrapper ag-card-2"><div className="ag-card"><i className="fa-solid fa-microchip"></i></div></div>
-            <div className="ag-card-wrapper ag-card-3"><div className="ag-card"><i className="fa-solid fa-chart-line"></i></div></div>
         </div>
         <div className="container hero-grid">
             <div className="hero-content">
