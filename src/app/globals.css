@@ -6,26 +6,26 @@
 
 :root {
   /* Color Palette */
-  --bg-dark: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.6);
-  --bg-card-hover: rgba(51, 65, 85, 0.8);
-  --text-main: #f8fafc;
-  --text-muted: #cbd5e1;
+  --bg-dark: #f8fafc; /* Inverted to very light gray/white */
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --text-main: #0f172a; /* Dark text */
+  --text-muted: #475569; /* Muted dark text */
   
   /* Accents */
-  --accent-primary: #38bdf8;
-  --accent-secondary: #818cf8;
+  --accent-primary: #1e3a8a; /* Deep corporate blue */
+  --accent-secondary: #3b82f6; /* Tech blue */
   --accent-success: #10b981;
   --accent-warning: #f59e0b;
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  --gradient-bg: linear-gradient(180deg, var(--bg-dark) 0%, #1e293b 100%);
+  --gradient-bg: linear-gradient(180deg, var(--bg-dark) 0%, #f1f5f9 100%);
   
   /* UI Elements */
-  --border-light: rgba(255, 255, 255, 0.08);
-  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.15);
-  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.15);
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
   
   /* Layout */
   --radius-sm: 8px;
@@ -57,8 +57,8 @@ body {
   font-family: var(--font-sans);
   background: var(--bg-dark);
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.08), transparent 25%);
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(30, 58, 138, 0.05), transparent 25%);
   background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
