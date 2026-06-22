@@ -151,11 +151,7 @@ export const Footer = () => {
               margin: "0 auto 1rem auto",
             }}
           >
-            <strong>Healthcare Data Security & Compliance:</strong> At PIHNEXA, security is
-            embedded in our DNA. We adhere to OWASP Top 10 standards, utilize AES-256 encryption,
-            and enforce secure JWT/OAuth 2.0 authentication. Our healthcare solutions are designed
-            with HIPAA compliance principles, ensuring end-to-end data protection for patient
-            records.
+            <strong>Data Security & Compliance:</strong> At PIHNEXA Technologies, we prioritize the security, privacy, and integrity of user data. Our platforms are protected with HTTPS encryption, secure authentication mechanisms, regular security updates, and industry-standard development practices. We are committed to safeguarding sensitive information and continuously improving our systems to maintain a secure and reliable digital experience for our clients and users.
           </p>
           <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
             &copy; 2026 PIHNEXA Technologies. All Rights Reserved.
