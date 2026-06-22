@@ -496,64 +496,36 @@ export default function Home() {
             <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
             <div className="faq-container" style={{"marginTop":"3rem"}}>
                 <div className="faq-item">
-                    <div className="faq-question">How long does a website take to build? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>A standard corporate website takes 2-3 weeks. Complex web applications and portals can take 1-3 months depending on the required features.</p></div>
+                    <div className="faq-question">What services does PIHNEXA Technologies provide? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We specialize in end-to-end digital transformation, offering Website Development, Mobile App Development, custom Hospital Software, Queue Management Solutions, and WhatsApp Automation for businesses and enterprises.</p></div>
+                </div>
+                <div className="faq-item">
+                    <div className="faq-question">How long does a typical project take? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Timelines depend on project complexity. A standard corporate website typically takes 2&ndash;4 weeks, while complex custom software or mobile applications may take 2&ndash;4 months. We always provide a clear timeline before development begins.</p></div>
                 </div>
                 <div className="faq-item">
                     <div className="faq-question">Do you provide post-launch support? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we offer dedicated support and maintenance packages ensuring your software runs smoothly and stays updated with the latest security patches.</p></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. We believe in long-term partnerships. We offer dedicated maintenance, security updates, and technical support packages to ensure your digital products remain fast, secure, and fully operational after launch.</p></div>
                 </div>
                 <div className="faq-item">
-                    <div className="faq-question">Can you build custom hospital management software? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Absolutely. We specialize in healthcare tech, offering custom modules for patient registration, OPD billing, smart queuing, and pharmacy inventory.</p></div>
+                    <div className="faq-question">Can you build custom software for hospitals and businesses? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Absolutely. We have deep expertise in building tailored enterprise solutions, including patient management systems, smart queues, and automated business workflows designed to increase operational efficiency and revenue.</p></div>
                 </div>
                 <div className="faq-item">
-                    <div className="faq-question">Do you provide mobile apps for Android and iOS? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we develop high-performance native and cross-platform mobile apps using frameworks like Flutter and React Native.</p></div>
+                    <div className="faq-question">Will my website be mobile-friendly and SEO-ready? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. Every project we deliver is built with a mobile-first approach, ensuring a flawless user experience across all devices. We also implement foundational SEO best practices to help your business rank higher online.</p></div>
                 </div>
                 <div className="faq-item">
-                    <div className="faq-question">Do you offer web hosting services? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we provide scalable cloud hosting solutions via AWS, DigitalOcean, and Vercel tailored to your project's traffic requirements.</p></div>
+                    <div className="faq-question">Do I own the source code and project assets? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. Upon final payment and project completion, the intellectual property, source code, and all digital assets are fully transferred to your complete ownership. We believe your business should own its technology.</p></div>
                 </div>
                 <div className="faq-item">
-                    <div className="faq-question">Can you automate WhatsApp for my business? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we integrate the official WhatsApp Cloud API to create intelligent chatbots, automated reminders, and lead capture systems.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Are your websites SEO friendly? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>100%. We implement on-page SEO best practices including meta tags, fast loading speeds, semantic HTML, and structured data.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">What technologies do you use? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We utilize modern stacks including React, Node.js, Python, Flutter, PostgreSQL, and various AI integrations.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Do you sign NDAs? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we ensure complete confidentiality and are happy to sign Non-Disclosure Agreements before discussing sensitive ideas.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">What is a Smart Queue Management system? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>It is a digital token system (via QR or SMS) that allows patients or customers to track their turn live, eliminating crowded waiting rooms.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Can you redesign an existing website? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, we offer complete UI/UX overhauls to modernize outdated websites and improve their conversion rates.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Do you offer UI/UX design as a separate service? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes, our design team can create wireframes, prototypes, and high-fidelity mockups in Figma for your software ideas.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">How do you ensure data security? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We implement encryption (at rest and in transit), secure authentication (JWT/OAuth), and follow OWASP security guidelines.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Do I own the source code? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>For fully custom projects, yes, the intellectual property and source code are handed over to you upon final payment.</p></div>
+                    <div className="faq-question">How do you protect client information? <i className="fa-solid fa-chevron-down"></i></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We prioritize data security and confidentiality. Our platforms are protected by standard HTTPS encryption, secure authentication methods, and robust server infrastructure to ensure your sensitive business and client information remains private and secure.</p></div>
                 </div>
                 <div className="faq-item">
                     <div className="faq-question">How do we get started? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Simply fill out the contact form or click the WhatsApp button. We'll schedule a free 30-minute consultation to discuss your needs.</p></div>
+                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Simply fill out our contact form or reach out via WhatsApp. Our team will schedule a free, no-obligation consultation to understand your requirements and propose the perfect digital solution for your business.</p></div>
                 </div>
             </div>
         </div>
