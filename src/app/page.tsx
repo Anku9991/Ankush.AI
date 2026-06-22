@@ -3,6 +3,7 @@ import InstagramFeed from "@/components/InstagramFeed";
 import ContactForm from "@/components/ContactForm";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 export default function Home() {
   return (
     <main>
@@ -491,45 +492,7 @@ export default function Home() {
     </section>
 
     {/*  11. FAQ  */}
-    <section id="faq">
-        <div className="container">
-            <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
-            <div className="faq-container" style={{"marginTop":"3rem"}}>
-                <div className="faq-item">
-                    <div className="faq-question">What services does PIHNEXA Technologies provide? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We specialize in end-to-end digital transformation, offering Website Development, Mobile App Development, custom Hospital Software, Queue Management Solutions, and WhatsApp Automation for businesses and enterprises.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">How long does a typical project take? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Timelines depend on project complexity. A standard corporate website typically takes 2&ndash;4 weeks, while complex custom software or mobile applications may take 2&ndash;4 months. We always provide a clear timeline before development begins.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Do you provide post-launch support? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. We believe in long-term partnerships. We offer dedicated maintenance, security updates, and technical support packages to ensure your digital products remain fast, secure, and fully operational after launch.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Can you build custom software for hospitals and businesses? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Absolutely. We have deep expertise in building tailored enterprise solutions, including patient management systems, smart queues, and automated business workflows designed to increase operational efficiency and revenue.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Will my website be mobile-friendly and SEO-ready? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. Every project we deliver is built with a mobile-first approach, ensuring a flawless user experience across all devices. We also implement foundational SEO best practices to help your business rank higher online.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">Do I own the source code and project assets? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Yes. Upon final payment and project completion, the intellectual property, source code, and all digital assets are fully transferred to your complete ownership. We believe your business should own its technology.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">How do you protect client information? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>We prioritize data security and confidentiality. Our platforms are protected by standard HTTPS encryption, secure authentication methods, and robust server infrastructure to ensure your sensitive business and client information remains private and secure.</p></div>
-                </div>
-                <div className="faq-item">
-                    <div className="faq-question">How do we get started? <i className="fa-solid fa-chevron-down"></i></div>
-                    <div className="faq-answer"><p style={{"paddingTop":"1rem"}}>Simply fill out our contact form or reach out via WhatsApp. Our team will schedule a free, no-obligation consultation to understand your requirements and propose the perfect digital solution for your business.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <FAQSection />
 
     <InstagramFeed />
     {/*  12. CONTACT  */}
