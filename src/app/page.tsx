@@ -325,7 +325,7 @@ export default function Home() {
                         </div>
                         <h3>Medanta Mela 2025</h3>
                         <p>Custom mobile application built specifically for seamless food ordering and event management.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <a href="https://github.com/Anku9991/Queue-Management" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
                 {/*  Project 5: GDM Sugar Tracker  */}
