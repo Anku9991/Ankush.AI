@@ -439,10 +439,6 @@ export default function Home() {
         <div className="container">
             <div className="founder-grid" style={{"gap":"4rem","alignItems":"center"}}>
                 <div className="founder-img-wrapper" style={{"position":"relative"}}>
-                    {/* Trust-building Quote Overlay */}
-                    <div className="quote-badge" style={{"position":"absolute","bottom":"-20px","right":"-20px","background":"var(--bg-main)","padding":"1.5rem","borderRadius":"var(--radius-md)","boxShadow":"var(--shadow-glow)","border":"1px solid var(--border-light)","maxWidth":"280px","zIndex":"2"}}>
-                        <p style={{"fontSize":"0.95rem","fontStyle":"italic","color":"var(--text-muted)","margin":"0"}}>“Technology should not just digitize processes; it should actively solve your operational bottlenecks.”</p>
-                    </div>
                     <img src="/assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" style={{"borderRadius":"var(--radius-lg)","boxShadow":"var(--shadow-card)"}} />
                 </div>
                 <div className="founder-content">
@@ -467,7 +463,6 @@ export default function Home() {
                     <div style={{"display":"flex","gap":"1rem","flexWrap":"wrap"}}>
                         <a href="#contact" className="btn btn-primary">Schedule Consultation <i className="fa-solid fa-calendar-check" style={{"marginLeft":"0.5rem"}}></i></a>
                         <a href="#projects" className="btn btn-secondary">View Case Studies</a>
-                        <a href="https://linkedin.com/in/ankushjha" target="_blank" rel="noreferrer" className="btn" style={{"background":"transparent","border":"1px solid var(--border-light)","color":"var(--text-main)"}}>Connect on LinkedIn <i className="fa-brands fa-linkedin" style={{"marginLeft":"0.5rem","color":"#0A66C2"}}></i></a>
                     </div>
                 </div>
             </div>
