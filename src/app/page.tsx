@@ -68,44 +68,34 @@ export default function Home() {
         </div>
         <div className="container hero-grid">
             <div className="hero-content">
-                <div className="badge">Healthcare & Business Automation Experts</div>
-                <h1>Transform Your Business with <span className="gradient-text">Smart Digital Solutions</span></h1>
-                <p>We build Websites, Mobile Apps, Hospital Software, AI Solutions, WhatsApp Automation, and Digital Systems that help businesses scale faster and operate smarter.</p>
+                <div className="badge">Enterprise-Grade Digital Transformation</div>
+                <h1>Technology Solutions Built for <span className="gradient-text">Healthcare & Business Growth</span></h1>
+                <p>Empowering organizations to improve efficiency, automate complex workflows, and accelerate growth through custom digital systems.</p>
                 <div className="hero-ctas">
-                    <a href="#contact" className="btn btn-primary">Book Free Consultation <i className="fa-solid fa-arrow-right"></i></a>
-                    <a href="#projects" className="btn btn-secondary">View Our Work</a>
+                    <a href="#contact" className="btn btn-primary">Schedule Free Consultation <i className="fa-solid fa-arrow-right"></i></a>
+                    <a href="#projects" className="btn btn-secondary">Explore Solutions</a>
                 </div>
+                <p className="trust-statement" style={{"marginTop":"2rem","fontSize":"0.95rem","color":"var(--text-muted)","display":"flex","alignItems":"center","gap":"0.5rem"}}>
+                    <i className="fa-solid fa-shield-halved" style={{"color":"var(--accent-primary)"}}></i> Trusted technology partner for healthcare providers, startups, and growing businesses.
+                </p>
             </div>
             <div className="hero-visual">
-                {/*  Premium Abstract Illustration via Unsplash  */}
-                <img src="/assets/hero-image.png" alt="Digital Solutions Dashboard" className="hero-image" />
+                <img src="/assets/saas-dashboard.png" alt="Premium Healthcare SaaS Dashboard" className="hero-image" />
             </div>
         </div>
     </header>
 
-    {/*  CLIENT & PROJECT MARQUEE  */}
-    <div className="marquee-container">
-        <div className="marquee-content">
-            <span className="marquee-item">MEETTRACK PRO</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">SMART QUEUE MANAGEMENT</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">PATIENT TRACKER PRO</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">MEDANTA MELA APP</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">PERSONAL PORTFOLIOS</span>
-            {/*  Duplicate for infinite scroll effect  */}
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">MEETTRACK PRO</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">SMART QUEUE MANAGEMENT</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">PATIENT TRACKER PRO</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">MEDANTA MELA APP</span>
-            <span className="marquee-item"><i className="fa-solid fa-star" style={{"color":"var(--accent-warning)","fontSize":"1rem"}}></i></span>
-            <span className="marquee-item">PERSONAL PORTFOLIOS</span>
+    {/*  TRUST BAR  */}
+    <div className="trust-bar" style={{"padding":"2rem 0","borderBottom":"1px solid var(--border-light)","background":"rgba(255,255,255,0.02)"}}>
+        <div className="container">
+            <div style={{"display":"flex","flexWrap":"wrap","justifyContent":"center","gap":"2rem","alignItems":"center","color":"var(--text-muted)","fontSize":"0.95rem","fontWeight":"500"}}>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
+                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
+            </div>
         </div>
     </div>
 
@@ -268,43 +258,72 @@ export default function Home() {
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-notes-medical" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
                     <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Healthcare Technology Expertise</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We possess a profound understanding of intricate healthcare workflows, patient journeys, and specific operational hurdles, ensuring our tech naturally aligns with demanding medical environments.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Deep understanding of healthcare workflows and patient experience.</p>
                 </div>
                 {/* Card 2 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-hospital-user" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
                     <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Real Operational Experience</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Beyond standard software development, our direct hands-on experience in complex hospital operations guarantees practical, battle-tested solutions that work perfectly in the real world.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Built by professionals with real-world operational knowledge.</p>
                 </div>
                 {/* Card 3 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-code-branch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Custom Software & Automation</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We reject generic templates. Every piece of software and workflow automation is meticulously engineered to solve your unique business challenges and maximize efficiency.</p>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Custom Software & Automation Solutions</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Tailored systems designed around your business processes.</p>
                 </div>
                 {/* Card 4 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-stopwatch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
                     <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Fast Delivery & Deployment</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Time is money. Our agile development methodology ensures rapid project execution and seamless deployment timelines without compromising on security or premium quality.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Efficient execution with clear milestones and timelines.</p>
                 </div>
                 {/* Card 5 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-headset" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
                     <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Ongoing Support & Maintenance</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We build long-term partnerships. Enjoy peace of mind with our dedicated post-launch technical assistance, regular security updates, and highly dependable continuous maintenance.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Continuous assistance after project launch.</p>
                 </div>
                 {/* Card 6 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-comments" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Transparent Communication</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Stay informed every step of the way. We provide absolute clarity with detailed milestone tracking, honest progress updates, and exceptionally transparent project management.</p>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Transparent Communication & Project Tracking</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Regular updates and complete visibility throughout development.</p>
                 </div>
                 {/* Card 7 */}
                 <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
                     <i className="fa-solid fa-server" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Scalable & Future-Ready</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We design enterprise architecture that grows with you. Our robust, scalable systems ensure your technology remains reliable and cutting-edge as your organization expands.</p>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Scalable & Future-Ready Solutions</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We design enterprise architecture that grows with your organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  4.1 TRUST & CREDIBILITY  */}
+    <section id="trust" style={{"padding":"5rem 0"}}>
+        <div className="container">
+            <div style={{"textAlign":"center","marginBottom":"3rem"}}>
+                <h2 className="section-title">Built for Reliability. <span className="gradient-text">Designed for Growth.</span></h2>
+                <p className="section-subtitle" style={{"maxWidth":"700px","margin":"0 auto"}}>We focus on engineering quality and scalable architecture, ensuring your business stays ahead without compromising on performance.</p>
+            </div>
+            
+            <div style={{"display":"grid","gridTemplateColumns":"repeat(auto-fit, minmax(250px, 1fr))","gap":"1.5rem","maxWidth":"1000px","margin":"0 auto"}}>
+                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
+                    <i className="fa-solid fa-medal" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.1rem"}}>Quality-Focused Development</h4>
+                </div>
+                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
+                    <i className="fa-solid fa-cubes" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.1rem"}}>Scalable Architecture</h4>
+                </div>
+                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
+                    <i className="fa-solid fa-briefcase" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.1rem"}}>Business-Centric Approach</h4>
+                </div>
+                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
+                    <i className="fa-solid fa-handshake" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.1rem"}}>Long-Term Support</h4>
                 </div>
             </div>
         </div>
