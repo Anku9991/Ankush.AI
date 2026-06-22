@@ -7,6 +7,11 @@ import FAQSection from "@/components/FAQSection";
 export default function Home() {
   return (
     <main>
+        {/* GLOBAL FLOATING LOGOS */}
+        <img src="/assets/logo.png" alt="PIHNEXA Logo" className="floating-logo logo-1" />
+        <img src="/assets/logo.png" alt="PIHNEXA Logo" className="floating-logo logo-2" />
+
+        <div className="blob blob-1"></div>
 
     {/*  Cinematic Noise Overlay  */}
     <div className="cinematic-noise"></div>
@@ -75,8 +80,6 @@ export default function Home() {
                 </div>
             </div>
             <div className="hero-visual">
-                <div className="floating-icon icon-1"><i className="fa-solid fa-mobile-screen-button" style={{"color":"#38bdf8","fontSize":"2rem"}}></i></div>
-                <div className="floating-icon icon-2"><i className="fa-solid fa-robot" style={{"color":"#818cf8","fontSize":"2rem"}}></i></div>
                 {/*  Premium Abstract Illustration via Unsplash  */}
                 <img src="/assets/hero-image.png" alt="Digital Solutions Dashboard" className="hero-image" />
             </div>
