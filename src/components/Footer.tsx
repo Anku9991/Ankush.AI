@@ -228,29 +228,33 @@ export const Footer = () => {
               <div id="privacyText" className="legal-section active">
                 <h2>Privacy Policy</h2>
                 <p>Last Updated: June 2026</p>
-                <h3>1. Information We Collect</h3>
+                <h3>Section 1 - Information We Collect</h3>
                 <p>
-                  At PIHNEXA Technologies, we collect information that you voluntarily provide to
-                  us when expressing an interest in obtaining information about our premium products
-                  (such as MeetTrack Pro, Patient Tracker Pro) or services.
+                  At PIHNEXA Technologies, we collect only voluntary inquiry information that you provide to us when contacting us through our website. This may include your Name, Email, Phone Number, and Message content.
                 </p>
-                <h3>2. Healthcare Data & HIPAA Compliance</h3>
+                <h3>Section 2 - How We Use Information</h3>
                 <p>
-                  For our healthcare partners using Patient Tracker Pro and Smart Queue Management,
-                  we adhere strictly to OWASP Top 10 security protocols and ensure end-to-end
-                  AES-256 encryption. We process patient data in compliance with standard global
-                  health data privacy principles.
+                  We use the information collected solely to respond to your inquiries, provide customer support, and communicate regarding the services you have requested, such as Website Development, Mobile App Development, or IT Consulting.
                 </p>
-                <h3>3. How We Use Your Information</h3>
-                <ul>
-                  <li>To provide and maintain our automated services.</li>
-                  <li>To deploy AI bots and custom Web/App solutions securely.</li>
-                  <li>To notify you about changes to our software infrastructure.</li>
-                </ul>
-                <h3>4. Data Security</h3>
+                <h3>Section 3 - Data Sharing</h3>
                 <p>
-                  Security is our core DNA. We utilize OAuth 2.0 and JWT for secure session
-                  management, ensuring that your enterprise data remains impenetrable.
+                  We do not sell, trade, or rent your personal information to third parties. We may share information only with trusted service providers assisting us in operating our website and conducting our business, provided those parties agree to keep this information confidential.
+                </p>
+                <h3>Section 4 - Data Retention</h3>
+                <p>
+                  We retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, or as required by applicable laws.
+                </p>
+                <h3>Section 5 - Security Measures</h3>
+                <p>
+                  We implement reasonable administrative and technical security measures, including HTTPS encryption, to protect your personal information from unauthorized access, alteration, or disclosure.
+                </p>
+                <h3>Section 6 - User Rights</h3>
+                <p>
+                  Depending on your jurisdiction, you may have the right to request access to, correction, or deletion of your personal data. Please contact us to exercise these rights.
+                </p>
+                <h3>Section 7 - Contact Us</h3>
+                <p>
+                  If you have questions about this Privacy Policy, please contact us at <a href="mailto:info@pihnexa.co.in" style={{color: "var(--accent-primary)"}}>info@pihnexa.co.in</a>.
                 </p>
               </div>
             )}
@@ -260,28 +264,41 @@ export const Footer = () => {
               <div id="termsText" className="legal-section active">
                 <h2>Terms of Service</h2>
                 <p>Last Updated: June 2026</p>
-                <h3>1. Acceptance of Terms</h3>
+                <h3>Section 1 - Acceptance of Terms</h3>
                 <p>
-                  By accessing PIHNEXA Technologies' website or utilizing our software products,
-                  you agree to be bound by these Terms of Service.
+                  By accessing the website of PIHNEXA Technologies at https://www.pihnexa.co.in, you agree to comply with and be bound by these Terms of Service.
                 </p>
-                <h3>2. Enterprise Software Licenses</h3>
+                <h3>Section 2 - Services</h3>
                 <p>
-                  Products like MeetTrack Pro and Patient Tracker Pro are licensed to organizations
-                  under strict usage parameters. Reverse engineering, unauthorized distribution, or
-                  tampering with our proprietary AI algorithms is strictly prohibited.
+                  PIHNEXA Technologies provides services including Website Development, Mobile App Development, Hospital Software Development, Queue Management Solutions, WhatsApp Automation, Digital Business Solutions, and IT Consulting. Any future healthcare data processing services will be subject to separate, specific agreements.
                 </p>
-                <h3>3. Limitation of Liability</h3>
+                <h3>Section 3 - User Responsibilities</h3>
                 <p>
-                  PIHNEXA Technologies shall not be liable for any indirect, incidental, special,
-                  consequential or punitive damages resulting from your use of our custom
-                  applications or business automation workflows.
+                  You agree to use our website and services only for lawful purposes. You must not use our platform to transmit any harmful code, unsolicited promotional material, or illegal content.
                 </p>
-                <h3>4. Intellectual Property</h3>
+                <h3>Section 4 - Intellectual Property</h3>
                 <p>
-                  All source code, designs, UI/UX layouts, and AI models provided by PIHNEXA remain
-                  our intellectual property unless explicitly transferred under a custom development
-                  contract.
+                  All content, branding, and original materials on this website are the intellectual property of PIHNEXA Technologies and are protected by applicable copyright and trademark laws.
+                </p>
+                <h3>Section 5 - Limitation of Liability</h3>
+                <p>
+                  PIHNEXA Technologies shall not be liable for any direct, indirect, incidental, or consequential damages arising out of your use or inability to use our website or services.
+                </p>
+                <h3>Section 6 - Service Availability</h3>
+                <p>
+                  We reserve the right to modify, suspend, or discontinue any part of our website or services at any time without prior notice.
+                </p>
+                <h3>Section 7 - Termination</h3>
+                <p>
+                  We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+                </p>
+                <h3>Section 8 - Governing Law</h3>
+                <p>
+                  These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.
+                </p>
+                <h3>Section 9 - Contact Information</h3>
+                <p>
+                  For any inquiries regarding these Terms, please contact us at <a href="mailto:info@pihnexa.co.in" style={{color: "var(--accent-primary)"}}>info@pihnexa.co.in</a>.
                 </p>
               </div>
             )}
@@ -291,27 +308,21 @@ export const Footer = () => {
               <div id="cookieText" className="legal-section active">
                 <h2>Cookie Policy</h2>
                 <p>Last Updated: June 2026</p>
-                <h3>1. What Are Cookies?</h3>
+                <h3>Section 1 - What Are Cookies</h3>
                 <p>
-                  Cookies are small text files stored securely on your device. PIHNEXA uses
-                  cookies exclusively for essential functionality, such as CSRF protection and
-                  session persistence during secure client logins.
+                  Cookies are small data files placed on your computer or mobile device when you visit a website. They are widely used to make websites work efficiently and provide a better user experience.
                 </p>
-                <h3>2. Types of Cookies We Use</h3>
-                <ul>
-                  <li>
-                    <strong>Essential Cookies:</strong> Required for the secure operation of our
-                    enterprise applications.
-                  </li>
-                  <li>
-                    <strong>Analytics Cookies:</strong> Fully anonymized telemetry to help us
-                    improve software load speeds and identify potential bottlenecks.
-                  </li>
-                </ul>
-                <h3>3. Your Control</h3>
+                <h3>Section 2 - Types of Cookies</h3>
                 <p>
-                  You may disable cookies through your browser settings, though doing so may
-                  impair the functionality of our strict-security enterprise portals.
+                  We currently use basic essential cookies necessary for the proper functioning of our website, such as routing secure HTTPS traffic and managing basic user sessions.
+                </p>
+                <h3>Section 3 - Cookie Control</h3>
+                <p>
+                  You have the right to accept or reject cookies. You can exercise your cookie rights by setting or amending your web browser controls to accept or refuse cookies.
+                </p>
+                <h3>Section 4 - Changes to Policy</h3>
+                <p>
+                  We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
                 </p>
               </div>
             )}
