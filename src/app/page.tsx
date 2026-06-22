@@ -263,14 +263,12 @@ export default function Home() {
         <div className="container">
             <h2 className="section-title">Why Choose <span className="gradient-text">PIHNEXA?</span></h2>
             <div className="features-grid" style={{"marginTop":"3rem"}}>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Custom Development</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Fast Project Delivery</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Mobile First Design</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Enterprise Security</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>SEO Friendly</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Scalable Solutions</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Dedicated Support</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-check-circle"></i><h4>Affordable Pricing</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-stethoscope"></i><h4>Healthcare Domain Expertise</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-hospital-user"></i><h4>Real Operational Experience</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-code"></i><h4>Custom-Built Solutions</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-rocket"></i><h4>Fast Delivery</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-comments"></i><h4>Transparent Communication</h4></div>
+                <div className="card glass feature-item"><i className="fa-solid fa-headset"></i><h4>Ongoing Support</h4></div>
             </div>
         </div>
     </section>
@@ -442,49 +440,56 @@ export default function Home() {
         </div>
     </section>
 
-    {/*  10. PRICING  */}
+    {/*  10. SOLUTIONS & PACKAGES  */}
     <section id="pricing" style={{"background":"rgba(15,23,42,0.3)"}}>
         <div className="container">
-            <h2 className="section-title">Productized <span className="gradient-text">Solutions</span></h2>
+            <h2 className="section-title">Solutions Designed for <span className="gradient-text">Growth</span></h2>
+            <p className="section-subtitle" style={{"maxWidth":"800px","margin":"0 auto"}}>Technology solutions built for healthcare providers, businesses, and enterprises that need reliability, efficiency, and measurable results.</p>
             <div className="pricing-grid" style={{"marginTop":"3rem"}}>
+                {/* Package 1 */}
                 <div className="card glass pricing-card">
-                    <h3>Healthcare Automation Bundle</h3>
-                    <div className="price" style={{"fontSize":"1.8rem"}}>Clinic Launchpad</div>
+                    <h3>Clinic Launchpad</h3>
+                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Clinics, Diagnostic Centers, Small Hospitals</div>
                     <ul className="pricing-features">
                         <li><i className="fa-solid fa-check"></i> Smart Queue Management</li>
-                        <li><i className="fa-solid fa-check"></i> Patient Tracker Pro</li>
-                        <li><i className="fa-solid fa-check"></i> Credit Patient Checklists</li>
-                        <li><i className="fa-solid fa-check"></i> 24/7 WhatsApp Bot</li>
-                        <li><i className="fa-solid fa-check"></i> Dedicated Tech Support</li>
+                        <li><i className="fa-solid fa-check"></i> Patient Registration System</li>
+                        <li><i className="fa-solid fa-check"></i> Digital Token Display</li>
+                        <li><i className="fa-solid fa-check"></i> WhatsApp Appointment Alerts</li>
+                        <li><i className="fa-solid fa-check"></i> OPD Patient Tracking</li>
+                        <li><i className="fa-solid fa-check"></i> Dedicated Support</li>
                     </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1rem"}}>Automate patient flow, reduce desk chaos, and digitize records instantly.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Streamline your clinic's patient flow and eliminate waiting room chaos from day one.</p>
                     <a href="#contact" className="btn btn-secondary">Request Demo</a>
                 </div>
+                {/* Package 2 */}
                 <div className="card glass pricing-card popular">
                     <div className="badge" style={{"alignSelf":"flex-start"}}>Most Popular</div>
-                    <h3>Startup & Event Tech Package</h3>
-                    <div className="price" style={{"fontSize":"1.8rem"}}>Go-To-Market Ready</div>
+                    <h3>Business Growth Suite</h3>
+                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Startups, Professionals, Growing Businesses</div>
                     <ul className="pricing-features">
-                        <li><i className="fa-solid fa-check"></i> Premium Personal Portfolio</li>
-                        <li><i className="fa-solid fa-check"></i> Custom App (e.g. Medanta Mela)</li>
-                        <li><i className="fa-solid fa-check"></i> Digital Attendance</li>
-                        <li><i className="fa-solid fa-check"></i> High-Converting MVP</li>
+                        <li><i className="fa-solid fa-check"></i> Premium Business Website</li>
+                        <li><i className="fa-solid fa-check"></i> Mobile-Friendly Design</li>
+                        <li><i className="fa-solid fa-check"></i> Lead Generation Forms</li>
+                        <li><i className="fa-solid fa-check"></i> WhatsApp Automation</li>
                         <li><i className="fa-solid fa-check"></i> CRM Integration</li>
+                        <li><i className="fa-solid fa-check"></i> SEO-Ready Setup</li>
                     </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1rem"}}>Launch faster, capture leads effortlessly, and scale from day one.</p>
-                    <a href="#contact" className="btn btn-primary">Get Started</a>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Establish a powerful online presence designed specifically to capture leads and drive growth.</p>
+                    <a href="#contact" className="btn btn-primary">Start Growing</a>
                 </div>
+                {/* Package 3 */}
                 <div className="card glass pricing-card">
-                    <h3>Custom Solutions</h3>
-                    <div className="price" style={{"fontSize":"1.8rem"}}>Enterprise Level</div>
+                    <h3>Enterprise Solutions</h3>
+                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Hospitals, Enterprises, Large Organizations</div>
                     <ul className="pricing-features">
-                        <li><i className="fa-solid fa-check"></i> Edge AI Implementations</li>
-                        <li><i className="fa-solid fa-check"></i> Offline-First Rural Software</li>
-                        <li><i className="fa-solid fa-check"></i> Multilingual Chatbots</li>
-                        <li><i className="fa-solid fa-check"></i> Predictive Business Dashboards</li>
-                        <li><i className="fa-solid fa-check"></i> Dedicated Engineering Team</li>
+                        <li><i className="fa-solid fa-check"></i> Custom Software Development</li>
+                        <li><i className="fa-solid fa-check"></i> Hospital Workflow Automation</li>
+                        <li><i className="fa-solid fa-check"></i> Dashboard & Reporting</li>
+                        <li><i className="fa-solid fa-check"></i> Multi-User Access Control</li>
+                        <li><i className="fa-solid fa-check"></i> API Integrations</li>
+                        <li><i className="fa-solid fa-check"></i> Dedicated Development Team</li>
                     </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1rem"}}>Tailor-made software engineering to solve your most complex operational challenges.</p>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Scalable, robust software engineered to solve your complex operational and structural challenges.</p>
                     <a href="#contact" className="btn btn-secondary">Discuss Requirements</a>
                 </div>
             </div>
