@@ -316,16 +316,16 @@ export default function Home() {
                         <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
-                {/*  Project 4: Medanta Mela 2025  */}
+                {/*  Project 4: Queue Management System  */}
                 <div className="card glass project-card">
-                    <img src="/assets/medanta-mela.png" alt="Medanta Mela 2025" className="project-img" />
+                    <img src="/assets/queue-management.png" alt="Queue Management System" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">Flutter</span><span className="tech-tag">Mobile App</span>
+                            <span className="tech-tag">Next.js</span><span className="tech-tag">System Design</span>
                         </div>
-                        <h3>Medanta Mela 2025</h3>
-                        <p>Custom mobile application built specifically for seamless food ordering and event management.</p>
-                        <a href="https://github.com/Anku9991/Queue-Management" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <h3>Queue Management System</h3>
+                        <p>A smart digital token and queue tracking system designed to streamline patient flow in hospitals.</p>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 5: GDM Sugar Tracker  */}
