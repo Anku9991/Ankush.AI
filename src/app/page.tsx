@@ -226,31 +226,31 @@ export default function Home() {
             
             <div className="photo-gallery-grid">
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/assets/adv.png" alt="Special Advertisement" className="gallery-img" />
+                    <img src="/assets/spotlight-ad.png" alt="Special Advertisement" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Featured Advertisement</h3>
                         <p>Special Promotion by PIHNEXA</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/assets/project-1.jpg" alt="Advertisement 1" className="gallery-img" />
+                    <img src="/assets/spotlight-product.png" alt="New Product Launch" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>New Product Launch</h3>
-                        <p>Discover our latest AI tool</p>
+                        <p>Smart Queue & Meeting Management System</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="/assets/project-2.jpg" alt="Advertisement 2" className="gallery-img" />
+                    <img src="/assets/spotlight-event.png" alt="Upcoming Event" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Upcoming Event</h3>
-                        <p>Join us at Tech Expo 2026</p>
+                        <p>Coming Soon: Our Next Big Project</p>
                     </div>
                 </div>
                 <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="/assets/project-3.jpg" alt="Hiring 2" className="gallery-img" />
+                    <img src="/assets/spotlight-team.png" alt="Join Our Team" className="gallery-img" />
                     <div className="gallery-overlay">
                         <h3>Join Our Team</h3>
-                        <p>UI/UX Designer Needed</p>
+                        <p>Make Your Future Bright</p>
                     </div>
                 </div>
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
                         </div>
                         <h3>MeetTrack</h3>
                         <p>An advanced dashboard for tracking, scheduling, and analyzing business meetings efficiently.</p>
-                        <a href="https://github.com/Anku9991/meet-track" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 2: Patient Tracker  */}
@@ -302,7 +302,7 @@ export default function Home() {
                         </div>
                         <h3>Patient Tracker</h3>
                         <p>Specialized hospital software generating automated, structured checklists specifically for patients.</p>
-                        <a href="https://github.com/Anku9991/Patient_Tracker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 3: Mishra Dental Clinic  */}
@@ -314,7 +314,7 @@ export default function Home() {
                         </div>
                         <h3>Mishra Dental Clinic</h3>
                         <p>A comprehensive dental clinic management platform handling appointments and patient records.</p>
-                        <a href="https://github.com/Anku9991/mishra-dental-clinic" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 4: Medanta Mela 2025  */}
@@ -326,7 +326,7 @@ export default function Home() {
                         </div>
                         <h3>Medanta Mela 2025</h3>
                         <p>Custom mobile application built specifically for seamless food ordering and event management.</p>
-                        <a href="https://github.com/Anku9991/Medanta_mela_2025" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 5: GDM Sugar Tracker  */}
@@ -338,7 +338,7 @@ export default function Home() {
                         </div>
                         <h3>GDM Sugar Tracker</h3>
                         <p>A clean, modern health and fitness mobile app dashboard for tracking daily blood sugar levels.</p>
-                        <a href="https://github.com/Anku9991/GDM-Sugar-Tracker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
                 {/*  Project 6: Roster  */}
@@ -350,7 +350,7 @@ export default function Home() {
                         </div>
                         <h3>Staff Roster Automation</h3>
                         <p>A premium enterprise web dashboard for tracking weekly schedules and employee shift assignments.</p>
-                        <a href="https://github.com/Anku9991/roster" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
                     </div>
                 </div>
             </div>
