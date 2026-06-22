@@ -85,17 +85,22 @@ export default function Home() {
         </div>
     </header>
 
-    {/*  TRUST BAR  */}
-    <div className="trust-bar" style={{"padding":"2rem 0","borderBottom":"1px solid var(--border-light)","background":"rgba(255,255,255,0.02)"}}>
-        <div className="container">
-            <div style={{"display":"flex","flexWrap":"wrap","justifyContent":"center","gap":"2rem","alignItems":"center","color":"var(--text-muted)","fontSize":"0.95rem","fontWeight":"500"}}>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
-                <span style={{"display":"flex","alignItems":"center","gap":"0.5rem"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
-            </div>
+    {/*  TRUST BAR (SCROLLING MARQUEE)  */}
+    <div className="marquee-container" style={{"borderBottom":"1px solid var(--border-light)","background":"rgba(255,255,255,0.02)"}}>
+        <div className="marquee-content">
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
+            {/* Duplicate for infinite loop */}
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
+            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
         </div>
     </div>
 
@@ -430,26 +435,40 @@ export default function Home() {
     </section>
 
     {/*  7. FOUNDER SECTION  */}
-    <section id="about">
+    <section id="about" style={{"padding":"6rem 0", "background":"var(--bg-card)"}}>
         <div className="container">
-            <div className="founder-grid">
-                <div className="founder-img-wrapper">
-                    {/*  Placeholder for Founder Image  */}
-                    <img src="/assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" />
+            <div className="founder-grid" style={{"gap":"4rem","alignItems":"center"}}>
+                <div className="founder-img-wrapper" style={{"position":"relative"}}>
+                    {/* Trust-building Quote Overlay */}
+                    <div className="quote-badge" style={{"position":"absolute","bottom":"-20px","right":"-20px","background":"var(--bg-main)","padding":"1.5rem","borderRadius":"var(--radius-md)","boxShadow":"var(--shadow-glow)","border":"1px solid var(--border-light)","maxWidth":"280px","zIndex":"2"}}>
+                        <p style={{"fontSize":"0.95rem","fontStyle":"italic","color":"var(--text-muted)","margin":"0"}}>“Technology should not just digitize processes; it should actively solve your operational bottlenecks.”</p>
+                    </div>
+                    <img src="/assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" style={{"borderRadius":"var(--radius-lg)","boxShadow":"var(--shadow-card)"}} />
                 </div>
                 <div className="founder-content">
-                    <h3>Ankush Jha</h3>
-                    <span className="founder-role">Founder & Chief Technology Consultant</span>
-                    <p>As the architect behind MeetTrack Pro, Medanta Mela's food app, and the advanced Patient Tracker Pro, my focus has always been on creating tangible impact. I specialize in healthcare automation, digital transformation, and full-stack solutions, driven by a vision to build software that actively solves real-world operational bottlenecks.</p>
-                    
-                    <div className="skills-list">
-                        <span className="skill-tag">Healthcare Tech</span>
-                        <span className="skill-tag">Business Automation</span>
-                        <span className="skill-tag">Full-Stack Development</span>
-                        <span className="skill-tag">Product Strategy</span>
+                    <div style={{"marginBottom":"1.5rem"}}>
+                        <h2 className="section-title" style={{"textAlign":"left","marginBottom":"0.5rem"}}>Ankush Jha</h2>
+                        <span className="founder-role" style={{"color":"var(--accent-primary)","fontWeight":"600","fontSize":"1.1rem","letterSpacing":"1px","textTransform":"uppercase"}}>Founder & Chief Technology Consultant</span>
                     </div>
                     
-                    <a href="#contact" className="btn btn-primary">Connect with Ankush <i className="fa-brands fa-linkedin" style={{"marginLeft":"0.5rem"}}></i></a>
+                    <p style={{"fontSize":"1.05rem","lineHeight":"1.7","color":"var(--text-muted)","marginBottom":"2rem"}}>
+                        With extensive real-world experience in hospital operations and enterprise administration, I bridge the gap between complex business requirements and scalable technical execution. At PIHNEXA Technologies, my focus is strictly on delivering high-impact software solutions that drive efficiency, automate redundant workflows, and accelerate digital transformation for healthcare providers, fast-growing startups, and established enterprises. We don't just write code; we architect reliable systems designed for tangible business growth.
+                    </p>
+                    
+                    <div className="skills-list" style={{"display":"flex","flexWrap":"wrap","gap":"0.75rem","marginBottom":"2.5rem"}}>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Healthcare Technology</span>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Digital Transformation</span>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Business Automation</span>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Software Consulting</span>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Hospital Workflows</span>
+                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Enterprise Architecture</span>
+                    </div>
+                    
+                    <div style={{"display":"flex","gap":"1rem","flexWrap":"wrap"}}>
+                        <a href="#contact" className="btn btn-primary">Schedule Consultation <i className="fa-solid fa-calendar-check" style={{"marginLeft":"0.5rem"}}></i></a>
+                        <a href="#projects" className="btn btn-secondary">View Case Studies</a>
+                        <a href="https://linkedin.com/in/ankushjha" target="_blank" rel="noreferrer" className="btn" style={{"background":"transparent","border":"1px solid var(--border-light)","color":"var(--text-main)"}}>Connect on LinkedIn <i className="fa-brands fa-linkedin" style={{"marginLeft":"0.5rem","color":"#0A66C2"}}></i></a>
+                    </div>
                 </div>
             </div>
         </div>
