@@ -261,14 +261,51 @@ export default function Home() {
     {/*  4. WHY CHOOSE US  */}
     <section id="why-us" style={{"background":"rgba(15,23,42,0.3)"}}>
         <div className="container">
-            <h2 className="section-title">Why Choose <span className="gradient-text">PIHNEXA?</span></h2>
-            <div className="features-grid" style={{"marginTop":"3rem"}}>
-                <div className="card glass feature-item"><i className="fa-solid fa-stethoscope"></i><h4>Healthcare Domain Expertise</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-hospital-user"></i><h4>Real Operational Experience</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-code"></i><h4>Custom-Built Solutions</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-rocket"></i><h4>Fast Delivery</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-comments"></i><h4>Transparent Communication</h4></div>
-                <div className="card glass feature-item"><i className="fa-solid fa-headset"></i><h4>Ongoing Support</h4></div>
+            <h2 className="section-title">Why Businesses & Healthcare Providers Choose <span className="gradient-text">PIHNEXA</span></h2>
+            <p className="section-subtitle" style={{"maxWidth":"800px","margin":"0 auto"}}>We combine real-world operational expertise with modern technology to deliver practical, scalable, and reliable digital solutions.</p>
+            <div className="features-grid" style={{"marginTop":"3rem","gridTemplateColumns":"repeat(auto-fit, minmax(300px, 1fr))","gap":"2rem"}}>
+                {/* Card 1 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-notes-medical" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Healthcare Technology Expertise</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We possess a profound understanding of intricate healthcare workflows, patient journeys, and specific operational hurdles, ensuring our tech naturally aligns with demanding medical environments.</p>
+                </div>
+                {/* Card 2 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-hospital-user" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Real Operational Experience</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Beyond standard software development, our direct hands-on experience in complex hospital operations guarantees practical, battle-tested solutions that work perfectly in the real world.</p>
+                </div>
+                {/* Card 3 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-code-branch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Custom Software & Automation</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We reject generic templates. Every piece of software and workflow automation is meticulously engineered to solve your unique business challenges and maximize efficiency.</p>
+                </div>
+                {/* Card 4 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-stopwatch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Fast Delivery & Deployment</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Time is money. Our agile development methodology ensures rapid project execution and seamless deployment timelines without compromising on security or premium quality.</p>
+                </div>
+                {/* Card 5 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-headset" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Ongoing Support & Maintenance</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We build long-term partnerships. Enjoy peace of mind with our dedicated post-launch technical assistance, regular security updates, and highly dependable continuous maintenance.</p>
+                </div>
+                {/* Card 6 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-comments" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Transparent Communication</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Stay informed every step of the way. We provide absolute clarity with detailed milestone tracking, honest progress updates, and exceptionally transparent project management.</p>
+                </div>
+                {/* Card 7 */}
+                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
+                    <i className="fa-solid fa-server" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
+                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Scalable & Future-Ready</h4>
+                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We design enterprise architecture that grows with you. Our robust, scalable systems ensure your technology remains reliable and cutting-edge as your organization expands.</p>
+                </div>
             </div>
         </div>
     </section>
