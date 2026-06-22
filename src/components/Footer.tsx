@@ -81,7 +81,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 style={{ color: "#fff", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
+            <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
               Products
             </h4>
             <ul
@@ -105,7 +105,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 style={{ color: "#fff", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
+            <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
               Legal & Compliance
             </h4>
             <ul

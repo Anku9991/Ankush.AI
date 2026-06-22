@@ -157,7 +157,7 @@ section {
 
 .btn-primary {
   background: var(--gradient-primary);
-  color: #fff;
+  color: #fff; /* Button text should remain white on primary background */
   box-shadow: var(--shadow-glow);
 }
 
@@ -856,7 +856,7 @@ footer {
 }
 .sticky-cta:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.6);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
   color: #fff;
 }
 
@@ -1041,9 +1041,9 @@ section {
 }
 .card:hover {
     transform: translateY(-8px);
-    background: rgba(30, 41, 59, 0.9);
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(56,189,248,0.1);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 20px rgba(59, 130, 246, 0.05);
 }
 /* LEGAL MODAL */
 .legal-modal {
@@ -1078,7 +1078,7 @@ section {
     font-size: 2.5rem; cursor: pointer; color: var(--text-muted);
     line-height: 1; transition: color 0.3s;
 }
-.close-legal:hover { color: #fff; }
+.close-legal:hover { color: var(--text-main); }
 .legal-tabs {
     display: flex; gap: 2rem; margin-bottom: 2rem;
     border-bottom: 1px solid var(--border-light);
@@ -1097,7 +1097,7 @@ section {
     flex: 1; overflow-y: auto; padding-right: 1.5rem;
     color: var(--text-muted);
 }
-.legal-body h3 { color: #fff; margin-top: 2rem; font-size: 1.5rem; }
+.legal-body h3 { color: var(--text-main); margin-top: 2rem; font-size: 1.5rem; }
 .legal-body p, .legal-body ul { margin-bottom: 1.5rem; }
 .legal-body ul { list-style: disc inside; }
 .legal-body::-webkit-scrollbar { width: 4px; }

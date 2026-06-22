@@ -18,35 +18,35 @@ export default function Home() {
     <div className="apple-ribbon">
         <div className="ribbon-scroll">
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-user-doctor" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-user-doctor" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Patient Tracker</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-users" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-users" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Smart Queue</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-laptop-code" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-laptop-code" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Web Apps</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-mobile-screen" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-mobile-screen" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Mobile Apps</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-robot" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-robot" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>AI Bots</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-briefcase" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-briefcase" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Portfolios</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-calendar-check" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-calendar-check" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Staff Roster Automation</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-regular fa-gamepad" style={{color: "var(--accent-primary)"}}></i></div>
+                <div className="ribbon-icon"><i className="fa-solid fa-gamepad" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Kids Game Portal</span>
             </a>
         </div>
