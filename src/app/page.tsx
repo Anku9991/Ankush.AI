@@ -281,64 +281,76 @@ export default function Home() {
             <p className="section-subtitle">Real solutions delivering real business value.</p>
             
             <div className="projects-grid">
-                {/*  Project 1: MeetTrack Pro  */}
+                {/*  Project 1: MeetTrack  */}
                 <div className="card glass project-card">
-                    <img src="/assets/project-1.jpg" alt="MeetTrack Pro" className="project-img" />
+                    <img src="/assets/meet-track.png" alt="MeetTrack" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">Next.js</span><span className="tech-tag">Node.js</span><span className="tech-tag">AI</span>
+                            <span className="tech-tag">Next.js</span><span className="tech-tag">Dashboard</span>
                         </div>
-                        <h3>MeetTrack Pro</h3>
-                        <p>An advanced meeting dashboard for tracking, scheduling, and analyzing business meetings efficiently.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <h3>MeetTrack</h3>
+                        <p>An advanced dashboard for tracking, scheduling, and analyzing business meetings efficiently.</p>
+                        <a href="https://github.com/Anku9991/meet-track" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
-                {/*  Project 2: Smart Queue Management  */}
+                {/*  Project 2: Patient Tracker  */}
                 <div className="card glass project-card">
-                    <img src="/assets/project-2.jpg" alt="Smart Queue Management" className="project-img" />
+                    <img src="/assets/patient-tracker.png" alt="Patient Tracker" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">React</span><span className="tech-tag">Firebase</span>
+                            <span className="tech-tag">React</span><span className="tech-tag">Healthcare</span>
                         </div>
-                        <h3>Smart Queue Management</h3>
-                        <p>Real-time token and queue management system that completely removes chaos at front desks.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <h3>Patient Tracker</h3>
+                        <p>Specialized hospital software generating automated, structured checklists specifically for patients.</p>
+                        <a href="https://github.com/Anku9991/Patient_Tracker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
-                {/*  Project 3: Patient Tracker Pro  */}
+                {/*  Project 3: Mishra Dental Clinic  */}
                 <div className="card glass project-card">
-                    <img src="/assets/project-3.jpg" alt="Patient Tracker Pro" className="project-img" />
+                    <img src="/assets/mishra-dental.png" alt="Mishra Dental Clinic" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">Vue.js</span><span className="tech-tag">PostgreSQL</span><span className="tech-tag">HIPAA</span>
+                            <span className="tech-tag">Vue.js</span><span className="tech-tag">Clinic Management</span>
                         </div>
-                        <h3>Patient Tracker Pro</h3>
-                        <p>Specialized hospital software generating automated, structured checklists specifically for Credit Patients.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <h3>Mishra Dental Clinic</h3>
+                        <p>A comprehensive dental clinic management platform handling appointments and patient records.</p>
+                        <a href="https://github.com/Anku9991/mishra-dental-clinic" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
-                {/*  Project 4: Medanta Mela Food App  */}
+                {/*  Project 4: Medanta Mela 2025  */}
                 <div className="card glass project-card">
-                    <img src="/assets/project-4.jpg" alt="Medanta Mela Food App" className="project-img" />
+                    <img src="/assets/medanta-mela.png" alt="Medanta Mela 2025" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">Flutter</span><span className="tech-tag">Express</span>
+                            <span className="tech-tag">Flutter</span><span className="tech-tag">Mobile App</span>
                         </div>
-                        <h3>Medanta Mela Food App</h3>
-                        <p>Custom mobile application built specifically for seamless food ordering and event management at Medanta Mela.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <h3>Medanta Mela 2025</h3>
+                        <p>Custom mobile application built specifically for seamless food ordering and event management.</p>
+                        <a href="https://github.com/Anku9991/Medanta_mela_2025" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
-                {/*  Project 5: Personal Portfolios  */}
+                {/*  Project 5: GDM Sugar Tracker  */}
                 <div className="card glass project-card">
-                    <img src="/assets/project-5.jpg" alt="Personal Portfolios" className="project-img" />
+                    <img src="/assets/sugar-tracker.png" alt="GDM Sugar Tracker" className="project-img" />
                     <div className="project-content">
                         <div className="project-tech">
-                            <span className="tech-tag">HTML/CSS</span><span className="tech-tag">React</span><span className="tech-tag">UI/UX</span>
+                            <span className="tech-tag">React Native</span><span className="tech-tag">Health Metrics</span>
                         </div>
-                        <h3>Premium Personal Portfolios</h3>
-                        <p>High-end, dynamic digital identities and portfolio websites designed for professionals and creatives.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
+                        <h3>GDM Sugar Tracker</h3>
+                        <p>A clean, modern health and fitness mobile app dashboard for tracking daily blood sugar levels.</p>
+                        <a href="https://github.com/Anku9991/GDM-Sugar-Tracker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
+                    </div>
+                </div>
+                {/*  Project 6: Roster  */}
+                <div className="card glass project-card">
+                    <img src="/assets/roster.png" alt="Staff Roster" className="project-img" />
+                    <div className="project-content">
+                        <div className="project-tech">
+                            <span className="tech-tag">Node.js</span><span className="tech-tag">Automation</span>
+                        </div>
+                        <h3>Staff Roster Automation</h3>
+                        <p>A premium enterprise web dashboard for tracking weekly schedules and employee shift assignments.</p>
+                        <a href="https://github.com/Anku9991/roster" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{"width":"100%"}}>View on GitHub</a>
                     </div>
                 </div>
             </div>
