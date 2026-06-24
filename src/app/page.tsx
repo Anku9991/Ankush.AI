@@ -200,7 +200,7 @@ export default function Home() {
         <div className="container" style={{"textAlign":"center"}}>
             <div className="badge" data-aos="fade-up">Featured Video</div>
             <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">See Our <span className="gradient-text">Technology</span> in Action</h2>
-            <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200" style={{"marginBottom":"3rem"}}>Upload your promotional video or advertisements here.</p>
+
             
             <div className="video-wrapper glass" data-aos="zoom-in" data-aos-delay="300">
                 {/*  Replace src with your own video URL or local file path like 'assets/promo.mp4'  */}
