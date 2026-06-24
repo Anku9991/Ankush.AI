@@ -24,8 +24,8 @@ export default function Home() {
     <div className="apple-ribbon">
         <div className="ribbon-scroll">
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-user-doctor" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Patient Tracker</span>
+                <div className="ribbon-icon"><i className="fa-solid fa-calendar-check" style={{color: "var(--accent-primary)"}}></i></div>
+                <span>MeetTrack</span>
             </a>
             <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
                 <div className="ribbon-icon"><i className="fa-solid fa-users" style={{color: "var(--accent-primary)"}}></i></div>
