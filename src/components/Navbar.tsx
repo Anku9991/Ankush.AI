@@ -19,7 +19,7 @@ export const Navbar = () => {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} id="navbar">
       <div className="container nav-container">
         <a href="#" className="logo" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <img src="/assets/logo.png" alt="PIHNEXA Logo" style={{ height: "40px", width: "auto" }} />
+          <img src="/assets/logo.png" alt="PIHNEXA Logo" style={{ height: "65px", width: "auto" }} />
           <span
             className="logo-text"
             style={{
