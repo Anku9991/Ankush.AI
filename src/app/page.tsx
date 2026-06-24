@@ -55,6 +55,10 @@ export default function Home() {
                 <div className="ribbon-icon"><i className="fa-solid fa-gamepad" style={{color: "var(--accent-primary)"}}></i></div>
                 <span>Kids Game Portal</span>
             </a>
+            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
+                <div className="ribbon-icon"><i className="fa-solid fa-cart-shopping" style={{color: "var(--accent-primary)"}}></i></div>
+                <span>E-Commerce</span>
+            </a>
         </div>
     </div>
 
