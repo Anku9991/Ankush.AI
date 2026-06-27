@@ -4,6 +4,8 @@ import ContactForm from "@/components/ContactForm";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
+import ImmersiveScrollSection from "@/components/ImmersiveScrollSection";
+
 export default function Home() {
   return (
     <main>
@@ -140,6 +142,8 @@ export default function Home() {
             </div>
         </div>
     </section>
+
+    <ImmersiveScrollSection />
 
     {/*  3. SERVICES  */}
     <section id="services">
