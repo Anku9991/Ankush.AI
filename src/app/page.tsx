@@ -1,623 +1,232 @@
-import React from "react";
+import { Navbar } from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import TrustBar from "@/components/TrustBar";
+import ProblemsSection from "@/components/ProblemsSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import WhyPihNexaSection from "@/components/WhyPihNexaSection";
+import SecuritySection from "@/components/SecuritySection";
+import TechStackSection from "@/components/TechStackSection";
+import PackagesSection from "@/components/PackagesSection";
+import ProcessSection from "@/components/ProcessSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FounderSection from "@/components/FounderSection";
+import BlogTeaser from "@/components/BlogTeaser";
+import { FAQSection } from "@/components/FAQSection";
 import InstagramFeed from "@/components/InstagramFeed";
 import ContactForm from "@/components/ContactForm";
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import FAQSection from "@/components/FAQSection";
-import ImmersiveScrollSection from "@/components/ImmersiveScrollSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
-        {/* GLOBAL FLOATING LOGOS */}
-        <img src="/assets/logo.png" alt="PIHNEXA Logo" className="floating-logo logo-1" />
-        <img src="/assets/logo.png" alt="PIHNEXA Logo" className="floating-logo logo-2" />
+      {/* ─── Navigation ─────────────────────────────────────────── */}
+      <Navbar />
 
-        <div className="blob blob-1"></div>
+      {/* ─── 1. Hero ─────────────────────────────────────────────── */}
+      <HeroSection />
 
-    {/*  Cinematic Noise Overlay  */}
-    <div className="cinematic-noise"></div>
-    {/*  Ambient Cursor Torch  */}
-    <div id="ambient-torch"></div>
+      {/* ─── 2. Trust Marquee Bar ────────────────────────────────── */}
+      <TrustBar />
 
-    <Navbar />
+      {/* ─── 3. Problems We Solve ────────────────────────────────── */}
+      <ProblemsSection />
 
-    {/*  APPLE STYLE RIBBON  */}
-    <div className="apple-ribbon">
-        <div className="ribbon-scroll">
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-calendar-check" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>MeetTrack</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-users" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Smart Queue</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-laptop-code" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Web Apps</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-mobile-screen" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Mobile Apps</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-robot" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>AI Bots</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-briefcase" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Portfolios</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-calendar-check" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Staff Roster Automation</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-gamepad" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>Kids Game Portal</span>
-            </a>
-            <a href="#projects" className="ribbon-item" style={{"textDecoration":"none"}}>
-                <div className="ribbon-icon"><i className="fa-solid fa-cart-shopping" style={{color: "var(--accent-primary)"}}></i></div>
-                <span>E-Commerce</span>
-            </a>
+      {/* ─── 4. Solutions / Products ─────────────────────────────── */}
+      <SolutionsSection />
+
+      {/* ─── 5. Case Studies / Real Results ──────────────────────── */}
+      <CaseStudiesSection />
+
+      {/* ─── 6. Why PihNexa ──────────────────────────────────────── */}
+      <WhyPihNexaSection />
+
+      {/* ─── 7. Security & Compliance ────────────────────────────── */}
+      <SecuritySection />
+
+      {/* ─── 8. Technology Stack ─────────────────────────────────── */}
+      <TechStackSection />
+
+      {/* ─── 9. Packages / Pricing ───────────────────────────────── */}
+      <PackagesSection />
+
+      {/* ─── 10. Delivery Process ────────────────────────────────── */}
+      <ProcessSection />
+
+      {/* ─── 11. Testimonials ────────────────────────────────────── */}
+      <TestimonialsSection />
+
+      {/* ─── 12. Founder ─────────────────────────────────────────── */}
+      <FounderSection />
+
+      {/* ─── 13. Blog / Resources Teaser ─────────────────────────── */}
+      <BlogTeaser />
+
+      {/* ─── 14. FAQ ─────────────────────────────────────────────── */}
+      <FAQSection />
+
+      {/* ─── 15. Instagram Feed ───────────────────────────────────── */}
+      <section
+        id="instagram-feed"
+        style={{ padding: "5rem 0", background: "var(--bg-alt)" }}
+      >
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "3rem" }}>
+            <div className="section-label">Social Wall</div>
+            <h2 className="section-heading" style={{ marginTop: "0.5rem" }}>
+              Latest From{" "}
+              <span className="gradient-text">PihNexa</span>
+            </h2>
+            <p className="section-subheading mx-auto" style={{ marginTop: "0.75rem" }}>
+              Follow us on Instagram for the latest reels, product demos, and company updates.
+            </p>
+          </div>
+          <InstagramFeed />
         </div>
-    </div>
+      </section>
 
-    {/*  1. HERO SECTION  */}
-    <header className="hero" id="home" style={{"position":"relative","overflow":"hidden"}}>
-        {/*  ANTI GRAVITY ENGINE  */}
-        <div id="anti-gravity-container">
-            <div className="ag-orb ag-orb-1"></div>
-            <div className="ag-orb ag-orb-2"></div>
-            <div className="ag-orb ag-orb-3"></div>
+      {/* ─── 16. Promo Video ──────────────────────────────────────── */}
+      <section
+        id="promo-video"
+        style={{ padding: "5rem 0" }}
+      >
+        <div className="container" style={{ textAlign: "center" }}>
+          <div className="section-label">Featured Video</div>
+          <h2 className="section-heading" style={{ marginTop: "0.5rem", marginBottom: "2rem" }}>
+            See Our{" "}
+            <span className="gradient-text">Technology</span> in Action
+          </h2>
+          <div className="video-wrapper">
+            <video
+              src="/assets/promo.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              preload="none"
+              style={{
+                width: "100%",
+                minHeight: "300px",
+                background: "var(--navy-950)",
+                objectFit: "cover",
+                display: "block",
+              }}
+              aria-label="PihNexa Technologies product demonstration video"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <div className="container hero-grid">
-            <div className="hero-content">
-                <div className="badge">Enterprise-Grade Digital Transformation</div>
-                <h1>Technology Solutions Built for <span className="gradient-text">Healthcare & Business Growth</span></h1>
-                <p>Empowering organizations to improve efficiency, automate complex workflows, and accelerate growth through custom digital systems.</p>
-                <div className="hero-ctas">
-                    <a href="#contact" className="btn btn-primary">Schedule Free Consultation <i className="fa-solid fa-arrow-right"></i></a>
-                    <a href="#projects" className="btn btn-secondary">Explore Solutions</a>
+      </section>
+
+      {/* ─── 17. Contact / Final CTA ──────────────────────────────── */}
+      <section
+        id="contact"
+        className="contact-section"
+      >
+        <div className="container">
+          <div className="contact-grid">
+            {/* Left: heading + contact info */}
+            <div>
+              <div
+                className="section-label"
+                style={{
+                  background: "rgba(13,148,136,0.15)",
+                  borderColor: "rgba(13,148,136,0.35)",
+                  color: "var(--teal-400)",
+                }}
+              >
+                Book Free Tech Audit
+              </div>
+              <h2
+                className="section-heading section-heading-white"
+                style={{ marginTop: "0.75rem", marginBottom: "1rem" }}
+              >
+                Ready to Transform Your Hospital&apos;s Operations?
+              </h2>
+              <p className="section-subheading section-subheading-white" style={{ marginBottom: "2.5rem" }}>
+                Book a free, no-obligation consultation. We will map your current workflows, identify
+                automation opportunities, and propose a solution with a clear ROI projection.
+              </p>
+
+              {/* Contact items */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <a href="tel:+917992203671" className="contact-item" style={{ display: "flex" }}>
+                  <div className="contact-item-icon">
+                    <i className="fa-solid fa-phone" />
+                  </div>
+                  <div>
+                    <div className="contact-item-label">Call Us</div>
+                    <div className="contact-item-value">+91 7992203671</div>
+                  </div>
+                </a>
+                <a href="mailto:info@pihnexa.co.in" className="contact-item" style={{ display: "flex" }}>
+                  <div className="contact-item-icon">
+                    <i className="fa-solid fa-envelope" />
+                  </div>
+                  <div>
+                    <div className="contact-item-label">Email Us</div>
+                    <div className="contact-item-value">info@pihnexa.co.in</div>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/917992203671?text=Hi%20PihNexa,%20I%20want%20to%20book%20a%20free%20Tech%20Audit."
+                  className="contact-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "flex" }}
+                >
+                  <div className="contact-item-icon">
+                    <i className="fa-brands fa-whatsapp" />
+                  </div>
+                  <div>
+                    <div className="contact-item-label">WhatsApp</div>
+                    <div className="contact-item-value">Chat Directly on WhatsApp</div>
+                  </div>
+                </a>
+              </div>
+
+              {/* Trust signal */}
+              <div
+                style={{
+                  marginTop: "2rem",
+                  padding: "1.25rem",
+                  background: "rgba(13,148,136,0.1)",
+                  border: "1px solid rgba(13,148,136,0.25)",
+                  borderRadius: "var(--radius-lg)",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "0.82rem",
+                    fontWeight: "600",
+                    color: "var(--teal-400)",
+                    marginBottom: "0.35rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.08em",
+                  }}
+                >
+                  <i className="fa-solid fa-shield-halved" style={{ marginRight: "0.4rem" }} />
+                  Zero Obligation
                 </div>
-                <p className="trust-statement" style={{"marginTop":"2rem","fontSize":"0.95rem","color":"var(--text-muted)","display":"flex","alignItems":"center","gap":"0.5rem"}}>
-                    <i className="fa-solid fa-shield-halved" style={{"color":"var(--accent-primary)"}}></i> Trusted technology partner for healthcare providers, startups, and growing businesses.
+                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", lineHeight: "1.55" }}>
+                  Our Tech Audit is 100% free and comes with no sales pressure. You will receive a clear
+                  written assessment regardless of whether we work together.
                 </p>
+              </div>
             </div>
-            <div className="hero-visual">
-                <img src="/assets/saas-dashboard.png" alt="Premium Healthcare SaaS Dashboard" className="hero-image" />
+
+            {/* Right: Contact Form */}
+            <div>
+              <ContactForm />
             </div>
+          </div>
         </div>
-    </header>
+      </section>
 
-    {/*  TRUST BAR (SCROLLING MARQUEE)  */}
-    <div className="marquee-container" style={{"borderBottom":"1px solid var(--border-light)","background":"rgba(255,255,255,0.02)"}}>
-        <div className="marquee-content">
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
-            {/* Duplicate for infinite loop */}
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Smart Queue Management</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Patient Registration Systems</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Healthcare Automation</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Website & Mobile Apps</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> WhatsApp Automation</span>
-            <span className="marquee-item" style={{"display":"flex","alignItems":"center","gap":"0.5rem","textTransform":"none","fontWeight":"500"}}><i className="fa-solid fa-circle-check" style={{"color":"var(--accent-primary)"}}></i> Custom Software Development</span>
-        </div>
-    </div>
-
-    {/*  2. TRUST INDICATORS  */}
-    <section className="trust-section">
-        <div className="container">
-            <div className="trust-grid">
-                <div className="trust-item">
-                    <i className="fa-solid fa-bolt"></i>
-                    <h4>Fast Delivery</h4>
-                    <span style={{"fontSize":"0.85rem","color":"var(--text-muted)"}}>Agile methodology</span>
-                </div>
-                <div className="trust-item">
-                    <i className="fa-solid fa-headset"></i>
-                    <h4>Dedicated Support</h4>
-                    <span style={{"fontSize":"0.85rem","color":"var(--text-muted)"}}>24/7 technical assistance</span>
-                </div>
-                <div className="trust-item">
-                    <i className="fa-solid fa-code-merge"></i>
-                    <h4>Custom Development</h4>
-                    <span style={{"fontSize":"0.85rem","color":"var(--text-muted)"}}>Tailored to your needs</span>
-                </div>
-                <div className="trust-item">
-                    <i className="fa-solid fa-shield-halved"></i>
-                    <h4>Secure Solutions</h4>
-                    <span style={{"fontSize":"0.85rem","color":"var(--text-muted)"}}>Enterprise-grade security</span>
-                </div>
-                <div className="trust-item">
-                    <i className="fa-solid fa-server"></i>
-                    <h4>Scalable Architecture</h4>
-                    <span style={{"fontSize":"0.85rem","color":"var(--text-muted)"}}>Built for growth</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <ImmersiveScrollSection />
-
-    {/*  3. SERVICES  */}
-    <section id="services">
-        <div className="container">
-            <h2 className="section-title">Our <span className="gradient-text">Core Services</span></h2>
-            <p className="section-subtitle">Comprehensive digital solutions designed to modernize your operations and accelerate growth.</p>
-            
-            <div className="services-grid">
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-laptop-code"></i></div>
-                    <h3>Website Development</h3>
-                    <p>High-converting business websites, corporate portals, and landing pages that drive leads.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-brands fa-app-store-ios"></i></div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform apps using Flutter for Android and iOS devices.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-hospital-user"></i></div>
-                    <h3>Hospital Management</h3>
-                    <p>Patient registration, automated billing, appointment booking, and dashboards.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-users-viewfinder"></i></div>
-                    <h3>Smart Queue Management</h3>
-                    <p>QR-based patient flow, token systems, and live wait-time tracking.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-fingerprint"></i></div>
-                    <h3>Digital Attendance</h3>
-                    <p>QR attendance systems, location tracking, and digital signature solutions.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-brands fa-whatsapp"></i></div>
-                    <h3>WhatsApp Automation</h3>
-                    <p>Automated lead capture, 24/7 customer support bots, and alert notifications.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-brain"></i></div>
-                    <h3>AI Solutions</h3>
-                    <p>Intelligent AI chatbots, workflow optimization, and predictive analytics.</p>
-                    
-                </div>
-                <div className="card glass service-card">
-                    <div className="service-icon"><i className="fa-solid fa-gears"></i></div>
-                    <h3>Business Automation</h3>
-                    <p>Custom software bridging gaps in your workflow, eliminating manual data entry.</p>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    {/*  VIDEO / ADVERTISEMENT SECTION  */}
-    <section id="promo-video">
-        <div className="container" style={{"textAlign":"center"}}>
-            <div className="badge" data-aos="fade-up">Featured Video</div>
-            <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">See Our <span className="gradient-text">Technology</span> in Action</h2>
-
-            
-            <div className="video-wrapper glass" data-aos="zoom-in" data-aos-delay="300">
-                {/*  Replace src with your own video URL or local file path like 'assets/promo.mp4'  */}
-                <video id="promoVideoPlayer" src="/assets/promo.mp4?v=2" autoPlay loop muted playsInline controls preload="auto" style={{"width":"100%","minHeight":"400px","background":"#050a14","objectFit":"cover","borderRadius":"calc(var(--radius-lg) - 6px)","display":"block"}}>
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
-
-    {/*  ADVERTISEMENT & HIRING GALLERY  */}
-    <section id="gallery">
-        <div className="container">
-            <div style={{"textAlign":"center","marginBottom":"3rem"}}>
-                <div className="badge" data-aos="fade-up">Gallery & Announcements</div>
-                <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">Our <span className="gradient-text">Spotlight</span></h2>
-                <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">Latest advertisements, upcoming hirings, and company culture.</p>
-            </div>
-            
-            <div className="photo-gallery-grid">
-                <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/assets/spotlight-ad.png" alt="Special Advertisement" className="gallery-img" />
-                    <div className="gallery-overlay">
-                        <h3>Featured Advertisement</h3>
-                        <p>Special Promotion by PIHNEXA</p>
-                    </div>
-                </div>
-                <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/assets/spotlight-product.png" alt="New Product Launch" className="gallery-img" />
-                    <div className="gallery-overlay">
-                        <h3>New Product Launch</h3>
-                        <p>Smart Queue & Meeting Management System</p>
-                    </div>
-                </div>
-                <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="/assets/spotlight-event.png" alt="Upcoming Event" className="gallery-img" />
-                    <div className="gallery-overlay">
-                        <h3>Upcoming Event</h3>
-                        <p>Coming Soon: Our Next Big Project</p>
-                    </div>
-                </div>
-                <div className="gallery-item glass" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="/assets/spotlight-team.png" alt="Join Our Team" className="gallery-img" />
-                    <div className="gallery-overlay">
-                        <h3>Join Our Team</h3>
-                        <p>Make Your Future Bright</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  4. WHY CHOOSE US  */}
-    <section id="why-us" style={{"background":"rgba(15,23,42,0.3)"}}>
-        <div className="container">
-            <h2 className="section-title">Why Businesses & Healthcare Providers Choose <span className="gradient-text">PIHNEXA</span></h2>
-            <p className="section-subtitle" style={{"maxWidth":"800px","margin":"0 auto"}}>We combine real-world operational expertise with modern technology to deliver practical, scalable, and reliable digital solutions.</p>
-            <div className="features-grid" style={{"marginTop":"3rem","gridTemplateColumns":"repeat(auto-fit, minmax(300px, 1fr))","gap":"2rem"}}>
-                {/* Card 1 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-notes-medical" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Healthcare Technology Expertise</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Deep understanding of healthcare workflows and patient experience.</p>
-                </div>
-                {/* Card 2 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-hospital-user" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Real Operational Experience</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Built by professionals with real-world operational knowledge.</p>
-                </div>
-                {/* Card 3 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-code-branch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Custom Software & Automation Solutions</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Tailored systems designed around your business processes.</p>
-                </div>
-                {/* Card 4 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-stopwatch" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Fast Delivery & Deployment</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Efficient execution with clear milestones and timelines.</p>
-                </div>
-                {/* Card 5 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-headset" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Ongoing Support & Maintenance</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Continuous assistance after project launch.</p>
-                </div>
-                {/* Card 6 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-comments" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Transparent Communication & Project Tracking</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>Regular updates and complete visibility throughout development.</p>
-                </div>
-                {/* Card 7 */}
-                <div className="card glass feature-item" style={{"alignItems":"flex-start","textAlign":"left","padding":"2rem"}}>
-                    <i className="fa-solid fa-server" style={{"fontSize":"2rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.2rem","marginBottom":"0.75rem"}}>Scalable & Future-Ready Solutions</h4>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.95rem","lineHeight":"1.6"}}>We design enterprise architecture that grows with your organization.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  4.1 TRUST & CREDIBILITY  */}
-    <section id="trust" style={{"padding":"5rem 0"}}>
-        <div className="container">
-            <div style={{"textAlign":"center","marginBottom":"3rem"}}>
-                <h2 className="section-title">Built for Reliability. <span className="gradient-text">Designed for Growth.</span></h2>
-                <p className="section-subtitle" style={{"maxWidth":"700px","margin":"0 auto"}}>We focus on engineering quality and scalable architecture, ensuring your business stays ahead without compromising on performance.</p>
-            </div>
-            
-            <div style={{"display":"grid","gridTemplateColumns":"repeat(auto-fit, minmax(250px, 1fr))","gap":"1.5rem","maxWidth":"1000px","margin":"0 auto"}}>
-                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
-                    <i className="fa-solid fa-medal" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.1rem"}}>Quality-Focused Development</h4>
-                </div>
-                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
-                    <i className="fa-solid fa-cubes" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.1rem"}}>Scalable Architecture</h4>
-                </div>
-                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
-                    <i className="fa-solid fa-briefcase" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.1rem"}}>Business-Centric Approach</h4>
-                </div>
-                <div className="card glass" style={{"padding":"2rem","textAlign":"center"}}>
-                    <i className="fa-solid fa-handshake" style={{"fontSize":"2.5rem","color":"var(--accent-primary)","marginBottom":"1rem"}}></i>
-                    <h4 style={{"fontSize":"1.1rem"}}>Long-Term Support</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  5. FEATURED PROJECTS  */}
-    <section id="projects">
-        <div className="container">
-            <h2 className="section-title">Featured <span className="gradient-text">Projects</span></h2>
-            <p className="section-subtitle">Real solutions delivering real business value.</p>
-            
-            <div className="projects-grid">
-                {/*  Project 1: MeetTrack  */}
-                <div className="card glass project-card">
-                    <img src="/assets/meet-track.png" alt="MeetTrack" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">Next.js</span><span className="tech-tag">Dashboard</span>
-                        </div>
-                        <h3>MeetTrack</h3>
-                        <p>An advanced dashboard for tracking, scheduling, and analyzing business meetings efficiently.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-                {/*  Project 2: Patient Tracker  */}
-                <div className="card glass project-card">
-                    <img src="/assets/patient-tracker.png" alt="Patient Tracker" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">React</span><span className="tech-tag">Healthcare</span>
-                        </div>
-                        <h3>Patient Tracker</h3>
-                        <p>Specialized hospital software generating automated, structured checklists specifically for patients.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-                {/*  Project 3: Mishra Dental Clinic  */}
-                <div className="card glass project-card">
-                    <img src="/assets/mishra-dental.png" alt="Mishra Dental Clinic" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">Vue.js</span><span className="tech-tag">Clinic Management</span>
-                        </div>
-                        <h3>Mishra Dental Clinic</h3>
-                        <p>A comprehensive dental clinic management platform handling appointments and patient records.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-                {/*  Project 4: Queue Management System  */}
-                <div className="card glass project-card">
-                    <img src="/assets/queue-management.png" alt="Queue Management System" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">Next.js</span><span className="tech-tag">System Design</span>
-                        </div>
-                        <h3>Queue Management System</h3>
-                        <p>A smart digital token and queue tracking system designed to streamline patient flow in hospitals.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-                {/*  Project 5: GDM Sugar Tracker  */}
-                <div className="card glass project-card">
-                    <img src="/assets/sugar-tracker.png" alt="GDM Sugar Tracker" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">React Native</span><span className="tech-tag">Health Metrics</span>
-                        </div>
-                        <h3>GDM Sugar Tracker</h3>
-                        <p>A clean, modern health and fitness mobile app dashboard for tracking daily blood sugar levels.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-                {/*  Project 6: Roster  */}
-                <div className="card glass project-card">
-                    <img src="/assets/roster.png" alt="Staff Roster" className="project-img" />
-                    <div className="project-content">
-                        <div className="project-tech">
-                            <span className="tech-tag">Node.js</span><span className="tech-tag">Automation</span>
-                        </div>
-                        <h3>Staff Roster Automation</h3>
-                        <p>A premium enterprise web dashboard for tracking weekly schedules and employee shift assignments.</p>
-                        <a href="#contact" className="btn btn-secondary" style={{"width":"100%"}}>View Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  6. INDUSTRIES WE SERVE  */}
-    <section className="trust-section">
-        <div className="container">
-            <h2 className="section-title">Industries We <span className="gradient-text">Serve</span></h2>
-            <div className="industries-grid" style={{"marginTop":"3rem"}}>
-                <div className="card glass industry-card"><i className="fa-solid fa-hospital"></i><h4>Hospitals</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-stethoscope"></i><h4>Clinics</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-heart-pulse"></i><h4>Healthcare</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-utensils"></i><h4>Restaurants</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-graduation-cap"></i><h4>Education</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-store"></i><h4>Retail</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-rocket"></i><h4>Startups</h4></div>
-                <div className="card glass industry-card"><i className="fa-solid fa-building"></i><h4>Enterprises</h4></div>
-            </div>
-        </div>
-    </section>
-
-    {/*  7. FOUNDER SECTION  */}
-    <section id="about" style={{"padding":"6rem 0", "background":"var(--bg-card)"}}>
-        <div className="container">
-            <div className="founder-grid" style={{"gap":"4rem","alignItems":"center"}}>
-                <div className="founder-img-wrapper" style={{"position":"relative"}}>
-                    <img src="/assets/founder.jpg" alt="Ankush Jha - Founder" className="founder-img" style={{"borderRadius":"var(--radius-lg)","boxShadow":"var(--shadow-card)"}} />
-                </div>
-                <div className="founder-content">
-                    <div style={{"marginBottom":"1.5rem"}}>
-                        <h2 className="section-title" style={{"textAlign":"left","marginBottom":"0.5rem"}}>Ankush Jha</h2>
-                        <span className="founder-role" style={{"color":"var(--accent-primary)","fontWeight":"600","fontSize":"1.1rem","letterSpacing":"1px","textTransform":"uppercase"}}>Founder & Chief Technology Consultant</span>
-                    </div>
-                    
-                    <p style={{"fontSize":"1.05rem","lineHeight":"1.7","color":"var(--text-muted)","marginBottom":"2rem"}}>
-                        With extensive real-world experience in hospital operations and enterprise administration, I bridge the gap between complex business requirements and scalable technical execution. At PIHNEXA Technologies, my focus is strictly on delivering high-impact software solutions that drive efficiency, automate redundant workflows, and accelerate digital transformation for healthcare providers, fast-growing startups, and established enterprises. We don't just write code; we architect reliable systems designed for tangible business growth.
-                    </p>
-                    
-                    <div className="skills-list" style={{"display":"flex","flexWrap":"wrap","gap":"0.75rem","marginBottom":"2.5rem"}}>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Healthcare Technology</span>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Digital Transformation</span>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Business Automation</span>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Software Consulting</span>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Hospital Workflows</span>
-                        <span className="skill-tag" style={{"background":"rgba(56, 189, 248, 0.1)","color":"#38bdf8","padding":"0.5rem 1rem","borderRadius":"20px","fontSize":"0.85rem","fontWeight":"600"}}>Enterprise Architecture</span>
-                    </div>
-                    
-                    <div style={{"display":"flex","gap":"1rem","flexWrap":"wrap"}}>
-                        <a href="#contact" className="btn btn-primary">Schedule Consultation <i className="fa-solid fa-calendar-check" style={{"marginLeft":"0.5rem"}}></i></a>
-                        <a href="#projects" className="btn btn-secondary">View Case Studies</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    {/*  9. PROCESS  */}
-    <section id="process">
-        <div className="container">
-            <h2 className="section-title">Our <span className="gradient-text">Delivery Process</span></h2>
-            <div className="process-grid" style={{"marginTop":"4rem"}}>
-                <div className="process-step">
-                    <div className="step-number">1</div>
-                    <h4>Requirement Discussion</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>Understanding goals and business logic.</p>
-                </div>
-                <div className="process-step">
-                    <div className="step-number">2</div>
-                    <h4>Planning & Design</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>UI/UX mapping and architecture design.</p>
-                </div>
-                <div className="process-step">
-                    <div className="step-number">3</div>
-                    <h4>Development</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>Agile coding with milestone updates.</p>
-                </div>
-                <div className="process-step">
-                    <div className="step-number">4</div>
-                    <h4>Testing</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>Rigorous QA, security & load testing.</p>
-                </div>
-                <div className="process-step">
-                    <div className="step-number">5</div>
-                    <h4>Deployment</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>Smooth server launch and configurations.</p>
-                </div>
-                <div className="process-step">
-                    <div className="step-number">6</div>
-                    <h4>Support & Maintenance</h4>
-                    <p style={{"fontSize":"0.9rem","color":"var(--text-muted)","marginTop":"0.5rem"}}>Ongoing upgrades and 24/7 technical support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  10. SOLUTIONS & PACKAGES  */}
-    <section id="pricing" style={{"background":"rgba(15,23,42,0.3)"}}>
-        <div className="container">
-            <h2 className="section-title">Solutions Designed for <span className="gradient-text">Growth</span></h2>
-            <p className="section-subtitle" style={{"maxWidth":"800px","margin":"0 auto"}}>Technology solutions built for healthcare providers, businesses, and enterprises that need reliability, efficiency, and measurable results.</p>
-            <div className="pricing-grid" style={{"marginTop":"3rem"}}>
-                {/* Package 1 */}
-                <div className="card glass pricing-card">
-                    <h3>Clinic Launchpad</h3>
-                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Clinics, Diagnostic Centers, Small Hospitals</div>
-                    <ul className="pricing-features">
-                        <li><i className="fa-solid fa-check"></i> Smart Queue Management</li>
-                        <li><i className="fa-solid fa-check"></i> Patient Registration System</li>
-                        <li><i className="fa-solid fa-check"></i> Digital Token Display</li>
-                        <li><i className="fa-solid fa-check"></i> WhatsApp Appointment Alerts</li>
-                        <li><i className="fa-solid fa-check"></i> OPD Patient Tracking</li>
-                        <li><i className="fa-solid fa-check"></i> Dedicated Support</li>
-                    </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Streamline your clinic's patient flow and eliminate waiting room chaos from day one.</p>
-                    <a href="#contact" className="btn btn-secondary">Request Demo</a>
-                </div>
-                {/* Package 2 */}
-                <div className="card glass pricing-card popular">
-                    <div className="badge" style={{"alignSelf":"flex-start"}}>Most Popular</div>
-                    <h3>Business Growth Suite</h3>
-                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Startups, Professionals, Growing Businesses</div>
-                    <ul className="pricing-features">
-                        <li><i className="fa-solid fa-check"></i> Premium Business Website</li>
-                        <li><i className="fa-solid fa-check"></i> Mobile-Friendly Design</li>
-                        <li><i className="fa-solid fa-check"></i> Lead Generation Forms</li>
-                        <li><i className="fa-solid fa-check"></i> WhatsApp Automation</li>
-                        <li><i className="fa-solid fa-check"></i> CRM Integration</li>
-                        <li><i className="fa-solid fa-check"></i> SEO-Ready Setup</li>
-                    </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Establish a powerful online presence designed specifically to capture leads and drive growth.</p>
-                    <a href="#contact" className="btn btn-primary">Start Growing</a>
-                </div>
-                {/* Package 3 */}
-                <div className="card glass pricing-card">
-                    <h3>Enterprise Solutions</h3>
-                    <div className="price" style={{"fontSize":"1.2rem","color":"var(--text-muted)","fontWeight":"400","marginBottom":"1.5rem"}}>For Hospitals, Enterprises, Large Organizations</div>
-                    <ul className="pricing-features">
-                        <li><i className="fa-solid fa-check"></i> Custom Software Development</li>
-                        <li><i className="fa-solid fa-check"></i> Hospital Workflow Automation</li>
-                        <li><i className="fa-solid fa-check"></i> Dashboard & Reporting</li>
-                        <li><i className="fa-solid fa-check"></i> Multi-User Access Control</li>
-                        <li><i className="fa-solid fa-check"></i> API Integrations</li>
-                        <li><i className="fa-solid fa-check"></i> Dedicated Development Team</li>
-                    </ul>
-                    <p style={{"color":"var(--text-muted)","fontSize":"0.9rem","marginBottom":"1.5rem"}}>Scalable, robust software engineered to solve your complex operational and structural challenges.</p>
-                    <a href="#contact" className="btn btn-secondary">Discuss Requirements</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  11. FAQ  */}
-    <FAQSection />
-
-    <InstagramFeed />
-    {/*  12. CONTACT  */}
-    <section id="contact" style={{"background":"rgba(15,23,42,0.3)"}}>
-        <div className="container">
-            <div className="contact-grid">
-                <div>
-                    <h2 className="section-title" style={{"textAlign":"left"}}>Let's Build Something <span className="gradient-text">Great</span></h2>
-                    <p style={{"color":"var(--text-muted)","marginBottom":"2rem"}}>Ready to automate your operations or launch your next big platform? Get in touch with us today.</p>
-                    
-                    <div className="contact-info">
-                        <div className="contact-item">
-                            <div className="contact-icon"><i className="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h4>Call Us</h4>
-                                <a href="tel:+917992203671" style={{"color":"var(--text-muted)"}}>+91 7992203671</a>
-                            </div>
-                        </div>
-                        <div className="contact-item">
-                            <div className="contact-icon"><i className="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h4>Email Us</h4>
-                                <a href="mailto:info@pihnexa.co.in" style={{"color":"var(--text-muted)"}}>info@pihnexa.co.in</a>
-                            </div>
-                        </div>
-                        <div className="contact-item">
-                            <div className="contact-icon"><i className="fa-solid fa-globe"></i></div>
-                            <div>
-                                <h4>Website</h4>
-                                <a href="http://www.pihnexa.co.in" style={{"color":"var(--text-muted)"}}>www.pihnexa.co.in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <ContactForm />
-            </div>
-        </div>
-    </section>
-
-    {/*  FOOTER  */}
-    <Footer />
+      {/* ─── Footer ──────────────────────────────────────────────── */}
+      <Footer />
     </main>
   );
 }

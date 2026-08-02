@@ -2,73 +2,127 @@
 
 import React, { useState } from "react";
 
-export default function FAQSection() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+const faqs = [
+  {
+    q: "What is a Smart Queue Management System for hospitals?",
+    a: "A Smart Queue Management System is a digital solution that automates patient flow in hospitals and clinics using QR codes, token numbers, and real-time tracking. It eliminates manual token issuance, reduces waiting room congestion, and gives patients live queue visibility via display boards and WhatsApp notifications.",
+  },
+  {
+    q: "How long does it take to deploy a hospital queue management system?",
+    a: "A standard Smart Queue Management System deployment takes 3–6 weeks, including setup, configuration, staff training, and go-live support. Complex, multi-department integrations may take 2–3 months depending on scope.",
+  },
+  {
+    q: "Can PihNexa integrate with our existing Hospital Management System (HMS) or EMR?",
+    a: "Yes. We build our solutions with API-first architecture, enabling integration with existing HMS, EMR, and billing systems. The scope of integration depends on the APIs available in your current systems, which we assess during the requirements phase.",
+  },
+  {
+    q: "Does PihNexa serve small clinics or only large hospitals?",
+    a: "PihNexa serves the full spectrum — from single-doctor clinics and diagnostic centres to multi-specialty hospitals. Our Clinic Launchpad package is specifically designed for smaller facilities, while our Enterprise Solutions handle complex, multi-department hospitals with high patient volumes.",
+  },
+  {
+    q: "What is included in the Patient Checklist & Tracker system?",
+    a: "The Patient Checklist & Tracker automates generation of structured, digital checklists — pre-operative, post-operative, and follow-up — based on each patient's profile and procedure type. It includes staff sign-off tracking, compliance logs, and a complete audit trail. The system has processed 6,000+ checklists in a live hospital with zero performance issues.",
+  },
+  {
+    q: "How secure is patient data on PihNexa's systems?",
+    a: "All data is transmitted over HTTPS (TLS 1.3 encryption). Systems include role-based access control (RBAC) so each staff role only sees what they need. Audit logs track every action. We use enterprise-grade cloud infrastructure with automated backups. Patient data is never shared with third parties.",
+  },
+  {
+    q: "What does the Staff Roster Automation system do?",
+    a: "Staff Roster Automation replaces manual spreadsheets and WhatsApp coordination with intelligent scheduling software. It handles shift assignments, conflict detection, leave management, swap requests, and automatically sends WhatsApp notifications to staff for schedule changes.",
+  },
+  {
+    q: "Do you offer post-launch support and maintenance?",
+    a: "Yes — every project includes a post-launch support period, and we offer ongoing maintenance packages for security updates, feature additions, and technical support. Healthcare systems cannot afford to go unsupported after deployment, and we take that responsibility seriously.",
+  },
+  {
+    q: "What is the typical cost of a hospital queue management system in India?",
+    a: "Our Smart Queue Management System starts at ₹1.75L as part of the Clinic Launchpad package. Final pricing depends on the number of departments, display boards, integrations, and ongoing support requirements. Contact us for a scoped quote.",
+  },
+  {
+    q: "Do I own the source code and data after the project is complete?",
+    a: "Yes. Upon project completion and final payment, full intellectual property — source code, design assets, and database schemas — is transferred to you. Your business owns its technology.",
+  },
+  {
+    q: "Can the queue management system send SMS or WhatsApp notifications to patients?",
+    a: "Yes. Our Smart Queue System integrates with WhatsApp Business API and SMS gateways to send patients automated notifications about their token number, estimated wait time, and when they are about to be called.",
+  },
+  {
+    q: "How do we get started with PihNexa Technologies?",
+    a: "Fill out our contact form or reach us on WhatsApp at +91 7992203671. We start with a free, no-obligation Tech Audit session to understand your requirements and then provide a detailed proposal within 3–5 working days.",
+  },
+];
 
-    const toggleFaq = (index: number) => {
-        if (activeIndex === index) {
-            setActiveIndex(null);
-        } else {
-            setActiveIndex(index);
-        }
-    };
+export function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const faqs = [
-        {
-            question: "What services does PIHNEXA Technologies provide?",
-            answer: "We specialize in end-to-end digital transformation, offering Website Development, Mobile App Development, custom Hospital Software, Queue Management Solutions, and WhatsApp Automation for businesses and enterprises."
-        },
-        {
-            question: "How long does a typical project take?",
-            answer: "Timelines depend on project complexity. A standard corporate website typically takes 2–4 weeks, while complex custom software or mobile applications may take 2–4 months. We always provide a clear timeline before development begins."
-        },
-        {
-            question: "Do you provide post-launch support?",
-            answer: "Yes. We believe in long-term partnerships. We offer dedicated maintenance, security updates, and technical support packages to ensure your digital products remain fast, secure, and fully operational after launch."
-        },
-        {
-            question: "Can you build custom software for hospitals and businesses?",
-            answer: "Absolutely. We have deep expertise in building tailored enterprise solutions, including patient management systems, smart queues, and automated business workflows designed to increase operational efficiency and revenue."
-        },
-        {
-            question: "Will my website be mobile-friendly and SEO-ready?",
-            answer: "Yes. Every project we deliver is built with a mobile-first approach, ensuring a flawless user experience across all devices. We also implement foundational SEO best practices to help your business rank higher online."
-        },
-        {
-            question: "Do I own the source code and project assets?",
-            answer: "Yes. Upon final payment and project completion, the intellectual property, source code, and all digital assets are fully transferred to your complete ownership. We believe your business should own its technology."
-        },
-        {
-            question: "How do you protect client information?",
-            answer: "We prioritize data security and confidentiality. Our platforms are protected by standard HTTPS encryption, secure authentication methods, and robust server infrastructure to ensure your sensitive business and client information remains private and secure."
-        },
-        {
-            question: "How do we get started?",
-            answer: "Simply fill out our contact form or reach out via WhatsApp. Our team will schedule a free, no-obligation consultation to understand your requirements and propose the perfect digital solution for your business."
-        }
-    ];
+  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
-    return (
-        <section id="faq">
-            <div className="container">
-                <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
-                <div className="faq-container" style={{ marginTop: "3rem" }}>
-                    {faqs.map((faq, index) => (
-                        <div 
-                            key={index} 
-                            className={`faq-item ${activeIndex === index ? "active" : ""}`}
-                            onClick={() => toggleFaq(index)}
-                        >
-                            <div className="faq-question">
-                                {faq.question} <i className="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div className="faq-answer">
-                                <p style={{ paddingTop: "1rem" }}>{faq.answer}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+  return (
+    <section id="faq" style={{ padding: "6rem 0", background: "var(--bg-dark)" }}>
+      <div className="container">
+        <div className="text-center" style={{ maxWidth: "680px", margin: "0 auto" }}>
+          <div className="section-label fade-up">FAQ</div>
+          <h2 className="section-heading fade-up delay-100">
+            Frequently Asked Questions About{" "}
+            <span className="gradient-text">Healthcare Automation</span>
+          </h2>
+          <p className="section-subheading mx-auto fade-up delay-200">
+            Answers to the questions hospital administrators and clinic owners ask most before choosing
+            a healthcare technology partner.
+          </p>
+        </div>
+
+        <div className="faq-container fade-up delay-200">
+          {faqs.map((faq, i) => (
+            <div
+              key={i}
+              className={`faq-item ${openIndex === i ? "active" : ""}`}
+              itemScope
+              itemProp="mainEntity"
+              itemType="https://schema.org/Question"
+            >
+              <div
+                className="faq-question"
+                onClick={() => toggle(i)}
+                role="button"
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
+                id={`faq-question-${i}`}
+                tabIndex={0}
+                onKeyDown={(e) => e.key === "Enter" && toggle(i)}
+              >
+                <span itemProp="name">{faq.q}</span>
+                <i className="fa-solid fa-chevron-down" aria-hidden="true" />
+              </div>
+              <div
+                className="faq-answer"
+                id={`faq-answer-${i}`}
+                role="region"
+                aria-labelledby={`faq-question-${i}`}
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+              >
+                <p itemProp="text">{faq.a}</p>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        <div
+          className="text-center fade-up"
+          style={{ marginTop: "3rem" }}
+        >
+          <p style={{ color: "var(--text-muted)", fontSize: "0.925rem", marginBottom: "1.25rem" }}>
+            Have a question not covered here?
+          </p>
+          <a href="#contact" className="btn btn-primary">
+            <i className="fa-solid fa-comment-dots" />
+            Ask Us Directly
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }

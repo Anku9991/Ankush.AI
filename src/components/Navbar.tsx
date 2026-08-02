@@ -8,68 +8,81 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const close = () => setIsMobileMenuOpen(false);
+
+  const links = [
+    { href: "#solutions", label: "Solutions" },
+    { href: "#case-studies", label: "Case Studies" },
+    { href: "#packages", label: "Pricing" },
+    { href: "#about", label: "About" },
+    { href: "#faq", label: "FAQ" },
+  ];
+
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} id="navbar">
-      <div className="container nav-container">
-        <a href="#" className="logo" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <img src="/assets/logo.png" alt="PIHNEXA Logo" style={{ height: "65px", width: "auto" }} />
+      <div className="nav-container">
+        {/* Logo */}
+        <a href="#" className="logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <Image
+            src="/assets/logo.png"
+            alt="PihNexa Technologies Logo"
+            width={50}
+            height={50}
+            style={{ height: "46px", width: "auto" }}
+            priority
+          />
           <span
             className="logo-text"
             style={{
-              fontFamily: "'Inter', sans-serif",
               fontWeight: "800",
-              fontSize: "1.3rem",
-              background: "linear-gradient(135deg, #0ea5e9, #10b981)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              letterSpacing: "-0.5px",
-              lineHeight: "1",
+              fontSize: "1.2rem",
+              letterSpacing: "-0.02em",
+              lineHeight: "1.1",
             }}
           >
-            PIHNEXA
+            PihNexa
             <br />
-            <span style={{ fontSize: "0.8rem", fontWeight: "600", letterSpacing: "1px" }}>TECHNOLOGIES</span>
+            <span style={{ fontSize: "0.65rem", fontWeight: "600", letterSpacing: "0.1em", opacity: 0.8 }}>
+              TECHNOLOGIES
+            </span>
           </span>
         </a>
 
         {/* Desktop Links */}
         <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`} id="navLinks">
-          <li>
-            <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-          </li>
-          <li>
-            <a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
-          </li>
-          <li>
-            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-          </li>
-          <li>
-            <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing</a>
-          </li>
+          {links.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} onClick={close}>
+                {l.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        {/* Right side */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <a
             href="#contact"
-            className="btn btn-primary"
+            className="btn btn-primary btn-sm"
             id="navCta"
-            style={{ padding: "0.5rem 1rem", fontSize: "0.9rem" }}
+            onClick={close}
+            style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}
           >
-            Consultation
+            <i className="fa-solid fa-calendar-check" style={{ fontSize: "0.85rem" }} />
+            Book Free Demo
           </a>
           <div
             className="mobile-toggle"
             id="mobileToggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
-            <i className={`fa-solid ${isMobileMenuOpen ? "fa-xmark" : "fa-bars"}`}></i>
+            <i className={`fa-solid ${isMobileMenuOpen ? "fa-xmark" : "fa-bars"}`} />
           </div>
         </div>
       </div>
