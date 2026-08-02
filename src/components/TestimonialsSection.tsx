@@ -1,32 +1,32 @@
 const testimonials = [
   {
     quote:
-      "The Smart Queue Management System completely transformed our OPD experience. Waiting room crowding dropped dramatically within weeks of going live. The team at PihNexa understood our workflow without us having to explain it twice.",
-    author: "Dr. Priya Sharma",
-    role: "Medical Superintendent",
-    org: "Multi-Specialty Hospital, Patna",
+      "PihNexa built the GMD Tracker for my wife during her entire pregnancy. It was incredibly reliable for tracking her sugar levels every single day. The personal care and attention to detail in the app were outstanding.",
+    author: "Satyam Patel",
+    role: "User",
+    org: "GMD Tracker App",
     stars: 5,
-    avatar: "PS",
+    avatar: "SP",
     avatarColor: "#0D9488",
   },
   {
     quote:
-      "We were skeptical about digitising our patient checklists — but the system has been flawless. Over 6,000 checklists generated with zero errors. PihNexa built exactly what we needed, not a generic product.",
-    author: "Rajesh Kumar",
-    role: "Chief Operations Officer",
-    org: "Surgical Care Centre, Bihar",
+      "The Patient Tracker has made our daily operations so much smoother. Our staff is very happy with how easy it is to manage patient registrations and track checklists efficiently without any lag.",
+    author: "Clinic Admin",
+    role: "Operations",
+    org: "Patient Tracker User",
     stars: 5,
-    avatar: "RK",
+    avatar: "CA",
     avatarColor: "#1E3A8A",
   },
   {
     quote:
-      "Staff roster management used to take our admin team half a day every week. Now it takes 20 minutes. The automation is accurate and the WhatsApp notifications for schedule changes are something our staff actually love.",
-    author: "Anita Verma",
-    role: "Hospital Administrator",
-    org: "Diagnostic & Wellness Centre, Jharkhand",
+      "PihNexa developed the Mission English SaaS platform for us, and it has completely changed how our students learn. They can now easily take online tests and track their progress in real-time.",
+    author: "Institute Director",
+    role: "Founder",
+    org: "Mission English SaaS",
     stars: 5,
-    avatar: "AV",
+    avatar: "ID",
     avatarColor: "#7C3AED",
   },
 ];
@@ -38,12 +38,11 @@ export default function TestimonialsSection() {
         <div className="text-center" style={{ maxWidth: "680px", margin: "0 auto" }}>
           <div className="section-label fade-up">Client Testimonials</div>
           <h2 className="section-heading fade-up delay-100">
-            What Healthcare Administrators{" "}
+            What Our Clients{" "}
             <span className="gradient-text">Say About PihNexa</span>
           </h2>
           <p className="section-subheading mx-auto fade-up delay-200">
-            Real feedback from hospital administrators and clinic owners who have deployed our systems
-            in live healthcare environments.
+            Real feedback from users who have experienced the impact of our custom software solutions.
           </p>
         </div>
 
