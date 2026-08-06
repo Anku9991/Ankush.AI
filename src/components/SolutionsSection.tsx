@@ -22,7 +22,7 @@ const solutions = [
     image: "/assets/patient-tracker.png",
     title: "Patient Checklist & Tracker",
     description:
-      "Automated structured checklist generation for patients — pre-op, post-op, and follow-up. 6,000+ checklists processed with zero lag in live hospital deployments.",
+      "Automated structured checklist generation for patients — pre-op, post-op, and follow-up. 7,500+ checklists processed with zero lag in live hospital deployments.",
     benefits: [
       "Automated checklist generation per patient profile",
       "Pre-op, post-op & follow-up protocols",

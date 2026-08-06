@@ -1,7 +1,7 @@
 export default function TrustBar() {
   const items = [
     { icon: "fa-circle-check", text: "Smart Queue Management" },
-    { icon: "fa-file-medical", text: "6,000+ Patient Checklists Processed" },
+    { icon: "fa-file-medical", text: "7,500+ Patient Checklists Processed" },
     { icon: "fa-shield-halved", text: "Zero Downtime in Production" },
     { icon: "fa-hospital-user", text: "Trusted by Hospitals & Clinics" },
     { icon: "fa-mobile-screen", text: "WhatsApp Automation" },

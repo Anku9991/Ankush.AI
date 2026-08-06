@@ -85,7 +85,7 @@ export default function HeroSection() {
             <p className="hero-description fade-up delay-200">
               PihNexa Technologies delivers production-proven healthcare automation systems — from Smart
               Queue Management to Patient Checklist Tracking. Already powering{" "}
-              <strong style={{ color: "#2DD4BF" }}>6,000+ patient checklists</strong> in live hospital
+              <strong style={{ color: "#2DD4BF" }}>7,500+ patient checklists</strong> in live hospital
               environments with zero performance issues.
             </p>
 
@@ -137,7 +137,7 @@ export default function HeroSection() {
         >
           {[
             {
-              end: 6000,
+              end: 7500,
               suffix: "+",
               label: "Patient Checklists Processed",
               icon: "fa-file-medical",

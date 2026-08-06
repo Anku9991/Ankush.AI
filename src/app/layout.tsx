@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "PihNexa Technologies | Hospital Queue Management & Healthcare Automation Software India",
   description:
-    "PihNexa Technologies delivers enterprise-grade Smart Queue Management, Patient Checklist Tracking & Hospital Workflow Automation. 6,000+ patient checklists processed with zero lag. Serving hospitals & clinics across India.",
+    "PihNexa Technologies delivers enterprise-grade Smart Queue Management, Patient Checklist Tracking & Hospital Workflow Automation. 7,500+ patient checklists processed with zero lag. Serving hospitals & clinics across India.",
   keywords:
     "hospital queue management system, clinic automation software India, smart queue management system, hospital workflow automation, patient checklist software, healthcare custom software development, digital attendance system hospital, OPD queue management, PihNexa Technologies",
   authors: [{ name: "PihNexa Technologies" }],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PihNexa Technologies | Hospital Queue Management & Healthcare Automation",
     description:
-      "Enterprise-grade healthcare technology for hospitals and clinics. Smart Queue Management, Patient Tracking, Staff Roster Automation. 6,000+ patients processed.",
+      "Enterprise-grade healthcare technology for hospitals and clinics. Smart Queue Management, Patient Tracking, Staff Roster Automation. 7,500+ patients processed.",
     url: "https://www.pihnexa.co.in",
     siteName: "PihNexa Technologies",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PihNexa Technologies | Hospital Queue Management & Healthcare Automation",
     description:
-      "Enterprise-grade healthcare technology for hospitals and clinics. 6,000+ patients processed.",
+      "Enterprise-grade healthcare technology for hospitals and clinics. 7,500+ patients processed.",
     images: ["https://www.pihnexa.co.in/assets/saas-dashboard.png"],
   },
   robots: {
@@ -166,7 +166,7 @@ const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Patient Checklist & Tracker",
-          description: "Automated patient checklist generation — 6,000+ processed in live hospitals",
+          description: "Automated patient checklist generation — 7,500+ processed in live hospitals",
         },
       },
       {
@@ -226,7 +226,7 @@ const aggregateRatingSchema = {
       author: { "@type": "Person", name: "Rajesh Kumar" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:
-        "Over 6,000 checklists generated with zero errors. PihNexa built exactly what we needed, not a generic product.",
+        "Over 7,500 checklists generated with zero errors. PihNexa built exactly what we needed, not a generic product.",
       datePublished: "2026-07-15",
     },
     {
@@ -276,7 +276,7 @@ const softwareSchemas = [
     applicationCategory: "HealthcareApplication",
     operatingSystem: "Web",
     description:
-      "Automated patient checklist generation and tracking system. 6,000+ checklists processed with zero performance issues in live hospital deployments.",
+      "Automated patient checklist generation and tracking system. 7,500+ checklists processed with zero performance issues in live hospital deployments.",
     url: "https://www.pihnexa.co.in/#solutions",
     creator: { "@type": "Organization", name: "PihNexa Technologies" },
   },

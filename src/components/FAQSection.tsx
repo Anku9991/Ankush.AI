@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What is included in the Patient Checklist & Tracker system?",
-    a: "The Patient Checklist & Tracker automates generation of structured, digital checklists — pre-operative, post-operative, and follow-up — based on each patient's profile and procedure type. It includes staff sign-off tracking, compliance logs, and a complete audit trail. The system has processed 6,000+ checklists in a live hospital with zero performance issues.",
+    a: "The Patient Checklist & Tracker automates generation of structured, digital checklists — pre-operative, post-operative, and follow-up — based on each patient's profile and procedure type. It includes staff sign-off tracking, compliance logs, and a complete audit trail. The system has processed 7,500+ checklists in a live hospital with zero performance issues.",
   },
   {
     q: "How secure is patient data on PihNexa's systems?",

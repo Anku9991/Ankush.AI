@@ -1,6 +1,6 @@
 const caseStudies = [
   {
-    metric: "6,000+",
+    metric: "7,500+",
     metricLabel: "Patient Checklists Generated",
     badge: "Healthcare · Live Deployment",
     title: "Automating Pre-Op Patient Checklists at Scale",
@@ -9,7 +9,7 @@ const caseStudies = [
     solution:
       "PihNexa deployed a custom Patient Checklist & Tracker system that auto-generates structured, digital checklists based on the patient's procedure type, age, and department. Each checklist is timestamped, assigned to the responsible clinician, and auditable.",
     result:
-      "Within 4 months of go-live, the system processed 6,000+ patient checklists with zero performance issues. Paperwork time dropped from 20 minutes to under 2 minutes per patient. Clinical compliance improved measurably.",
+      "Within 4 months of go-live, the system processed 7,500+ patient checklists with zero performance issues. Paperwork time dropped from 20 minutes to under 2 minutes per patient. Clinical compliance improved measurably.",
     image: "/assets/patient-tracker.png",
     tags: ["React", "Node.js", "PostgreSQL", "Healthcare"],
   },
