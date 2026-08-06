@@ -139,7 +139,7 @@ export default function PihNexaBot() {
               dangerouslySetInnerHTML={{ 
                 __html: msg.text
                   .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                  .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-weight: bold; color: inherit;">$1</a>')
+                  .replace(/(https?:\/\/[^\s"'.,;!?]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-weight: bold; color: inherit;">$1</a>')
                   .replace(/\n/g, '<br/>') 
               }} 
             />
