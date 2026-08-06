@@ -18,8 +18,15 @@ export default function PihNexaBot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        top: containerRef.current.scrollHeight,
+        behavior: "smooth"
+      });
+    }
   };
 
   useEffect(() => {
@@ -107,10 +114,12 @@ export default function PihNexaBot() {
 
       {/* Chat Area */}
       <div
+        ref={containerRef}
         style={{
           flex: 1,
           padding: "1.5rem",
           overflowY: "auto",
+          overscrollBehavior: "contain",
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
