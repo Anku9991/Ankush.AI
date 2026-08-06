@@ -91,7 +91,7 @@ export async function POST(req: Request) {
             <p>Thank you for reaching out to <strong>PIHNEXA TECHNOLOGIES</strong>. We've received your inquiry.</p>
             <p>Our team is reviewing your requirements and will contact you on WhatsApp within <strong>2 hours</strong> for a detailed consultation.</p>
             <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            <p style="font-size: 14px; color: #666;">Need immediate help? WhatsApp us directly: <a href="https://wa.me/917992203671" style="color: #27ae60;">+91 7992203671</a></p>
+            <p style="font-size: 14px; color: #666;">Need immediate help? WhatsApp us directly: <a href="https://wa.me/917307852235" style="color: #27ae60;">+91 7307852235</a></p>
           </div>
         `
       };

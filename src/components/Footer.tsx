@@ -82,7 +82,7 @@ export const Footer = () => {
                   <i className="fa-brands fa-instagram" />
                 </a>
                 <a
-                  href="https://wa.me/917992203671"
+                  href="https://wa.me/917307852235"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with PihNexa on WhatsApp"
@@ -147,7 +147,7 @@ export const Footer = () => {
               </div>
               <div style={{ marginTop: "1.5rem" }}>
                 <a
-                  href="https://wa.me/917992203671?text=Hi%20PihNexa,%20I%20want%20to%20discuss%20a%20project."
+                  href="https://wa.me/917307852235?text=Hi%20PihNexa,%20I%20want%20to%20discuss%20a%20project."
                   className="btn btn-primary btn-sm"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -200,7 +200,7 @@ export const Footer = () => {
 
       {/* Floating WhatsApp */}
       <a
-        href="https://wa.me/917992203671?text=Hi%20PihNexa,%20I%20want%20to%20discuss%20a%20project."
+        href="https://wa.me/917307852235?text=Hi%20PihNexa,%20I%20want%20to%20discuss%20a%20project."
         className="floating-wa"
         target="_blank"
         rel="noopener noreferrer"

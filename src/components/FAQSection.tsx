@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How do we get started with PihNexa Technologies?",
-    a: "Fill out our contact form or reach us on WhatsApp at +91 7992203671. We start with a free, no-obligation Tech Audit session to understand your requirements and then provide a detailed proposal within 3–5 working days.",
+    a: "Fill out our contact form or reach us on WhatsApp at +91 7307852235. We start with a free, no-obligation Tech Audit session to understand your requirements and then provide a detailed proposal within 3–5 working days.",
   },
 ];
 

@@ -174,7 +174,7 @@ export default function HomePage() {
                   </div>
                 </a>
                 <a
-                  href="https://wa.me/917992203671?text=Hi%20PihNexa,%20I%20want%20to%20book%20a%20free%20Tech%20Audit."
+                  href="https://wa.me/917307852235?text=Hi%20PihNexa,%20I%20want%20to%20book%20a%20free%20Tech%20Audit."
                   className="contact-item"
                   target="_blank"
                   rel="noopener noreferrer"
