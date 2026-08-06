@@ -62,7 +62,6 @@ export default function PihNexaBot() {
       style={{
         width: "100%",
         maxWidth: "600px",
-        height: "500px",
         background: "#FFFFFF",
         border: "1px solid #E2E8F0",
         borderRadius: "1rem",
@@ -72,7 +71,7 @@ export default function PihNexaBot() {
         overflow: "hidden",
         margin: "0 auto",
       }}
-      className="float-anim"
+      className="float-anim pihnexa-bot-container"
     >
       {/* Header */}
       <div

@@ -31,7 +31,7 @@ export default function ScrollButtons() {
   };
 
   return (
-    <div style={{ position: 'fixed', right: '1.5rem', bottom: '6rem', zIndex: 1000, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+    <div className="scroll-buttons-container" style={{ zIndex: 1000, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
       {showTop && (
         <button
           onClick={scrollToTop}

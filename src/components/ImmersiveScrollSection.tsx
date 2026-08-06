@@ -172,6 +172,29 @@ export default function ImmersiveScrollSection() {
     "SEAMLESS SMART WORKFLOWS"
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile(); // Check immediately on mount
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <section style={{ padding: "6rem 1.5rem", background: "#050a14", textAlign: "center", display: "flex", flexDirection: "column", gap: "2rem" }}>
+        {texts.map((text, i) => (
+          <div key={i} style={{ padding: "2rem", background: "rgba(255,255,255,0.02)", borderRadius: "1rem", border: "1px solid rgba(255,255,255,0.05)" }}>
+            <h2 style={{ color: "#fff", fontSize: "1.5rem", margin: 0, textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>
+              {text}
+            </h2>
+          </div>
+        ))}
+      </section>
+    );
+  }
+
   return (
     <section 
       ref={containerRef}
