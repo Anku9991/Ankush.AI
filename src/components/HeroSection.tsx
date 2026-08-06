@@ -155,12 +155,10 @@ export default function HeroSection() {
               icon: "fa-graduation-cap",
             },
             {
-              end: 0,
-              suffix: " Downtime",
-              prefix: "Zero",
+              end: 100,
+              suffix: "% Uptime",
               label: "in Live Hospital Deployments",
               icon: "fa-server",
-              isText: true,
             },
             {
               end: 24,
@@ -176,11 +174,7 @@ export default function HeroSection() {
                 aria-hidden="true"
               />
               <div className="stat-number">
-                {stat.isText ? (
-                  <span style={{ fontSize: "1.8rem" }}>Zero</span>
-                ) : (
-                  <Counter end={stat.end} suffix={stat.suffix} />
-                )}
+                <Counter end={stat.end} suffix={stat.suffix} />
               </div>
               <div className="stat-label">{stat.label}</div>
             </div>
