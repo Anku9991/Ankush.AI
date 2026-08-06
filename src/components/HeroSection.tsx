@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import PihNexaBot from "./PihNexaBot";
 
 interface CounterProps {
   end: number;
@@ -116,16 +117,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Visual */}
-          <div className="hero-visual scale-in delay-300">
-            <Image
-              src="/assets/saas-dashboard.png"
-              alt="PihNexa Smart Healthcare Dashboard — Queue Management and Patient Tracking"
-              className="hero-image float-anim"
-              width={1200}
-              height={800}
-              priority
-            />
+          {/* Visual - AI Bot */}
+          <div className="hero-visual scale-in delay-300" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <PihNexaBot />
           </div>
         </div>
 
