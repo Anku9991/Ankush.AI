@@ -1568,9 +1568,7 @@ textarea.form-control {
     font-size: 1.8rem !important;
   }
   .sticky-cta {
-    bottom: 1.5rem !important;
-    padding: 0.8rem 1.2rem !important;
-    font-size: 0.9rem !important;
+    display: none !important;
   }
   .scroll-buttons-container {
     bottom: 11rem !important;
