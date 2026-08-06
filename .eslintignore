@@ -1,0 +1,4 @@
+*.js
+legacy_html/
+node_modules/
+.next/

@@ -36,7 +36,7 @@ export default function ContactForm() {
       } else {
         setError(result.message || 'Something went wrong. Please try again.');
       }
-    } catch (err) {
+    } catch {
       setError('Network error. Please check your connection or contact us on WhatsApp.');
     } finally {
       setLoading(false);

@@ -79,9 +79,9 @@ const LiquidImageMaterial = shaderMaterial(
 
 extend({ LiquidImageMaterial });
 
-const ImagePlane = ({ url, position, index, globalZ, maxZ }: any) => {
+const ImagePlane = ({ url, position, globalZ }: { url: string; position: number[]; globalZ: React.MutableRefObject<number> }) => {
   const meshRef = useRef<THREE.Mesh>(null);
-  const materialRef = useRef<any>(null);
+  const materialRef = useRef<THREE.ShaderMaterial & { uTime: number; uDistortionOffset: number }>(null);
   const texture = useTexture(url);
 
   useFrame((state) => {
@@ -101,13 +101,13 @@ const ImagePlane = ({ url, position, index, globalZ, maxZ }: any) => {
   return (
     <mesh position={position} ref={meshRef}>
       <planeGeometry args={[16, 9, 64, 64]} />
-      {/* @ts-ignore */}
+      {/* @ts-expect-error custom element */}
       <liquidImageMaterial ref={materialRef} uTexture={texture} transparent={true} />
     </mesh>
   );
 };
 
-const Scene = ({ images, texts, setActiveIndex, scrollRef }: any) => {
+const Scene = ({ images, setActiveIndex, scrollRef }: { images: string[]; setActiveIndex: (i: number) => void; scrollRef: React.RefObject<HTMLDivElement | null> }) => {
   const groupRef = useRef<THREE.Group>(null);
   const globalZ = useRef(0);
 
@@ -136,7 +136,7 @@ const Scene = ({ images, texts, setActiveIndex, scrollRef }: any) => {
         }
       }
     });
-  }, [images.length]);
+  }, [images.length, scrollRef, setActiveIndex]);
 
   return (
     <group ref={groupRef}>
@@ -196,7 +196,6 @@ export default function ImmersiveScrollSection() {
           <ambientLight intensity={1} />
           <Scene 
             images={images} 
-            texts={texts} 
             setActiveIndex={setActiveIndex} 
             scrollRef={containerRef} 
           />

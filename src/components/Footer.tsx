@@ -10,7 +10,7 @@ export const Footer = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage.getItem("cookieConsent") !== "true") {
-      setCookieConsentOpen(true);
+      setTimeout(() => setCookieConsentOpen(true), 0);
     }
   }, []);
 

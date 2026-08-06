@@ -102,7 +102,7 @@ export async function GET() {
         }, { status: 400 });
       }
     }
-  } catch (err: any) {
-    return NextResponse.json({ success: false, error: 'Network or Fetch error', details: err.message }, { status: 500 });
+  } catch (err: unknown) {
+    return NextResponse.json({ success: false, error: 'Network or Fetch error', details: err instanceof Error ? err.message : String(err) }, { status: 500 });
   }
 }

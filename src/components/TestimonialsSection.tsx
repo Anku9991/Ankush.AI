@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
               <blockquote>
-                <p className="testimonial-quote">"{t.quote}"</p>
+                <p className="testimonial-quote">&quot;{t.quote}&quot;</p>
               </blockquote>
               <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
                 <div

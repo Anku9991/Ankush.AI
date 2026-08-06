@@ -77,7 +77,7 @@ export default function CaseStudiesSection() {
             </span>
           </h2>
           <p className="section-subheading section-subheading-white mx-auto fade-up delay-200">
-            We don't just ship software — we measure what changes. Here are three deployments with
+            We don&apos;t just ship software — we measure what changes. Here are three deployments with
             documented, real-world impact on hospital operations.
           </p>
         </div>
