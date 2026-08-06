@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollAnimationInit() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -15,13 +18,19 @@ export default function ScrollAnimationInit() {
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    const animatedEls = document.querySelectorAll(
-      ".fade-up, .fade-in, .slide-left, .slide-right, .scale-in"
-    );
-    animatedEls.forEach((el) => observer.observe(el));
+    // Small timeout to ensure Next.js has fully mounted the new page DOM
+    const timer = setTimeout(() => {
+      const animatedEls = document.querySelectorAll(
+        ".fade-up, .fade-in, .slide-left, .slide-right, .scale-in"
+      );
+      animatedEls.forEach((el) => observer.observe(el));
+    }, 100);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }
