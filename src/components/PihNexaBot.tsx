@@ -136,12 +136,14 @@ export default function PihNexaBot() {
               border: msg.role === "model" ? "1px solid #E2E8F0" : "none",
             }}
           >
-            {msg.text.split('\n').map((line, i) => (
-              <span key={i}>
-                {line.replace(/\*\*(.*?)\*\*/g, '$1')} {/* Simple bold strip for now */}
-                <br />
-              </span>
-            ))}
+            <span 
+              dangerouslySetInnerHTML={{ 
+                __html: msg.text
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-weight: bold; color: inherit;">$1</a>')
+                  .replace(/\n/g, '<br/>') 
+              }} 
+            />
           </div>
         ))}
         {isLoading && (
