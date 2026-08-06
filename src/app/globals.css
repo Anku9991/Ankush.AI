@@ -1390,10 +1390,6 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .blob { display: none; }
 .cinematic-noise { display: none; }
 
-/* ============================================================
-   PROMO VIDEO / IMMERSIVE SECTION
-   ============================================================ */
-#promo-video { background: var(--navy-950); }
 
 /* ============================================================
    SCROLLBAR
