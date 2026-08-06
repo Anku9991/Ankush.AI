@@ -73,7 +73,7 @@ export function FAQSection() {
           </p>
         </div>
 
-        <div className="faq-container fade-up delay-200">
+        <div className="faq-list fade-up delay-200">
           {faqs.map((faq, i) => (
             <div
               key={i}
@@ -117,7 +117,7 @@ export function FAQSection() {
           <p style={{ color: "var(--text-muted)", fontSize: "0.925rem", marginBottom: "1.25rem" }}>
             Have a question not covered here?
           </p>
-          <a href="#contact" className="btn btn-primary">
+          <a href="/#contact" className="btn btn-primary">
             <i className="fa-solid fa-comment-dots" />
             Ask Us Directly
           </a>

@@ -90,11 +90,11 @@ export default function HeroSection() {
             </p>
 
             <div className="hero-ctas fade-up delay-300">
-              <a href="#contact" className="btn btn-primary btn-lg">
+              <a href="/#contact" className="btn btn-primary btn-lg">
                 <i className="fa-solid fa-calendar-check" />
                 Book Free Demo
               </a>
-              <a href="#case-studies" className="btn btn-outline-white btn-lg">
+              <a href="/solutions#case-studies" className="btn btn-outline-white btn-lg">
                 <i className="fa-solid fa-chart-line" />
                 View Case Studies
               </a>

@@ -25,21 +25,21 @@ export const Footer = () => {
   };
 
   const solutions = [
-    { label: "Smart Queue Management", href: "#solutions" },
-    { label: "Patient Checklist & Tracker", href: "#solutions" },
-    { label: "Staff Roster Automation", href: "#solutions" },
-    { label: "MeetTrack", href: "#solutions" },
-    { label: "Digital Attendance", href: "#solutions" },
-    { label: "Custom Hospital Software", href: "#solutions" },
+    { label: "Smart Queue Management", href: "/solutions" },
+    { label: "Patient Checklist & Tracker", href: "/solutions" },
+    { label: "Staff Roster Automation", href: "/solutions" },
+    { label: "MeetTrack", href: "/solutions" },
+    { label: "Digital Attendance", href: "/solutions" },
+    { label: "Custom Hospital Software", href: "/solutions" },
   ];
 
   const company = [
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "About Ankush Jha", href: "#about" },
-    { label: "Delivery Process", href: "#process" },
-    { label: "Packages & Pricing", href: "#packages" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Blog & Resources", href: "#blog" },
+    { label: "Case Studies", href: "/solutions#case-studies" },
+    { label: "About Ankush Jha", href: "/about" },
+    { label: "Delivery Process", href: "/pricing" },
+    { label: "Packages & Pricing", href: "/pricing" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact Us", href: "/#contact" },
   ];
 
   return (
