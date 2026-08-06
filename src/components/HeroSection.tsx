@@ -118,7 +118,7 @@ export default function HeroSection() {
           </div>
 
           {/* Visual - AI Bot */}
-          <div className="hero-visual scale-in delay-300" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', paddingRight: '2rem' }}>
+          <div className="hero-visual scale-in delay-300" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', marginTop: '-3rem' }}>
             <PihNexaBot />
           </div>
         </div>
