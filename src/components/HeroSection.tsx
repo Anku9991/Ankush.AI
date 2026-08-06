@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 interface CounterProps {
   end: number;
@@ -117,11 +118,13 @@ export default function HeroSection() {
 
           {/* Visual */}
           <div className="hero-visual scale-in delay-300">
-            <img
+            <Image
               src="/assets/saas-dashboard.png"
               alt="PihNexa Smart Healthcare Dashboard — Queue Management and Patient Tracking"
               className="hero-image float-anim"
-              loading="eager"
+              width={1200}
+              height={800}
+              priority
             />
           </div>
         </div>

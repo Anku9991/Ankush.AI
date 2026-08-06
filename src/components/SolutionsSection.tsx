@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const solutions = [
   {
     icon: "fa-users-viewfinder",
@@ -119,11 +121,12 @@ export default function SolutionsSection() {
               aria-label={s.title}
             >
               <div style={{ position: "relative" }}>
-                <img
+                <Image
                   src={s.image}
                   alt={`${s.title} — PihNexa Technologies`}
                   className="solution-card-img"
-                  loading="lazy"
+                  width={600}
+                  height={400}
                 />
                 {s.tag && (
                   <div

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 // Define the shape of Instagram Media objects
 interface InstagramMedia {
@@ -142,10 +143,12 @@ export default async function InstagramFeed() {
                   boxShadow: 'var(--shadow-card)'
                 }}
               >
-                <img
+                <Image
                   src={imageUrl}
                   alt={post.caption || 'Instagram Post'}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }}
+                  fill
+                  style={{ objectFit: 'cover', transition: 'transform 0.4s' }}
+                  unoptimized
                 />
                 <div
                   className="ig-overlay"

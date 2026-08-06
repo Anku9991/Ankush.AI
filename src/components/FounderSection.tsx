@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FounderSection() {
   return (
     <section id="about" style={{ padding: "6rem 0", background: "var(--bg-dark)" }}>
@@ -5,11 +7,12 @@ export default function FounderSection() {
         <div className="founder-grid">
           {/* Photo */}
           <div className="founder-img-wrapper slide-left">
-            <img
+            <Image
               src="/assets/founder.jpg"
               alt="Ankush Jha — Founder & Chief Technology Consultant, PihNexa Technologies"
               className="founder-img"
-              loading="lazy"
+              width={500}
+              height={500}
             />
             <div className="founder-img-badge" aria-hidden="true">
               <i className="fa-solid fa-hospital-user" style={{ marginRight: "0.4rem" }} />
