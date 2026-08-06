@@ -1,21 +1,24 @@
 import { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
-import ProblemsSection from "@/components/ProblemsSection";
-import SolutionsSection from "@/components/SolutionsSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import WhyPihNexaSection from "@/components/WhyPihNexaSection";
-import SecuritySection from "@/components/SecuritySection";
-import TechStackSection from "@/components/TechStackSection";
-import PackagesSection from "@/components/PackagesSection";
-import ProcessSection from "@/components/ProcessSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FounderSection from "@/components/FounderSection";
-import BlogTeaser from "@/components/BlogTeaser";
-import { FAQSection } from "@/components/FAQSection";
-import InstagramFeed from "@/components/InstagramFeed";
-import ContactForm from "@/components/ContactForm";
-import { Footer } from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+// Dynamically import everything below the fold to drastically reduce initial JS payload
+const ProblemsSection = dynamic(() => import("@/components/ProblemsSection"));
+const SolutionsSection = dynamic(() => import("@/components/SolutionsSection"));
+const CaseStudiesSection = dynamic(() => import("@/components/CaseStudiesSection"));
+const WhyPihNexaSection = dynamic(() => import("@/components/WhyPihNexaSection"));
+const SecuritySection = dynamic(() => import("@/components/SecuritySection"));
+const TechStackSection = dynamic(() => import("@/components/TechStackSection"));
+const PackagesSection = dynamic(() => import("@/components/PackagesSection"));
+const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
+const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
+const FounderSection = dynamic(() => import("@/components/FounderSection"));
+const BlogTeaser = dynamic(() => import("@/components/BlogTeaser"));
+const FAQSection = dynamic(() => import("@/components/FAQSection").then((mod) => mod.FAQSection));
+const InstagramFeed = dynamic(() => import("@/components/InstagramFeed"));
+const ContactForm = dynamic(() => import("@/components/ContactForm"));
+const Footer = dynamic(() => import("@/components/Footer").then((mod) => mod.Footer));
 
 export default function HomePage() {
   return (
