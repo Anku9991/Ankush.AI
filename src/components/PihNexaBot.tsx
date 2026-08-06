@@ -63,12 +63,10 @@ export default function PihNexaBot() {
         width: "100%",
         maxWidth: "600px",
         height: "500px",
-        background: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        border: "1px solid rgba(255, 255, 255, 0.15)",
+        background: "#FFFFFF",
+        border: "1px solid #E2E8F0",
         borderRadius: "1rem",
-        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+        boxShadow: "0 10px 40px -10px rgba(0, 0, 0, 0.15)",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
@@ -80,8 +78,8 @@ export default function PihNexaBot() {
       <div
         style={{
           padding: "1rem 1.5rem",
-          background: "rgba(255, 255, 255, 0.08)",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+          background: "#F8FAFC",
+          borderBottom: "1px solid #E2E8F0",
           display: "flex",
           alignItems: "center",
           gap: "0.75rem",
@@ -103,8 +101,8 @@ export default function PihNexaBot() {
           <i className="fa-solid fa-robot"></i>
         </div>
         <div>
-          <h3 style={{ margin: 0, fontSize: "1.1rem", color: "#FFF", fontWeight: 600 }}>PihNexa AI</h3>
-          <span style={{ fontSize: "0.8rem", color: "#2DD4BF" }}>Online &bull; Ready to help</span>
+          <h3 style={{ margin: 0, fontSize: "1.1rem", color: "#0F172A", fontWeight: 600 }}>PihNexa AI</h3>
+          <span style={{ fontSize: "0.8rem", color: "#0D9488" }}>Online &bull; Ready to help</span>
         </div>
       </div>
 
@@ -130,12 +128,12 @@ export default function PihNexaBot() {
               padding: "0.85rem 1.15rem",
               borderRadius: msg.role === "user" ? "1rem 1rem 0 1rem" : "1rem 1rem 1rem 0",
               background: msg.role === "user" 
-                ? "linear-gradient(135deg, #2DD4BF 0%, #14B8A6 100%)" 
-                : "rgba(255, 255, 255, 0.1)",
-              color: "#FFF",
+                ? "var(--teal-600, #0D9488)" 
+                : "#F1F5F9",
+              color: msg.role === "user" ? "#FFFFFF" : "#334155",
               fontSize: "0.95rem",
               lineHeight: 1.5,
-              border: msg.role === "model" ? "1px solid rgba(255, 255, 255, 0.05)" : "none",
+              border: msg.role === "model" ? "1px solid #E2E8F0" : "none",
             }}
           >
             {msg.text.split('\n').map((line, i) => (
@@ -153,9 +151,10 @@ export default function PihNexaBot() {
               maxWidth: "85%",
               padding: "0.85rem 1.15rem",
               borderRadius: "1rem 1rem 1rem 0",
-              background: "rgba(255, 255, 255, 0.1)",
-              color: "rgba(255,255,255,0.7)",
+              background: "#F1F5F9",
+              color: "#64748B",
               fontSize: "0.95rem",
+              border: "1px solid #E2E8F0",
               display: "flex",
               gap: "0.5rem",
               alignItems: "center",
@@ -168,16 +167,16 @@ export default function PihNexaBot() {
       </div>
 
       {/* Input Area */}
-      <div style={{ padding: "1rem", background: "rgba(0,0,0,0.15)" }}>
+      <div style={{ padding: "1rem", background: "#F8FAFC", borderTop: "1px solid #E2E8F0" }}>
         <form
           onSubmit={handleSend}
           style={{
             display: "flex",
             gap: "0.5rem",
-            background: "rgba(255,255,255,0.05)",
+            background: "#FFFFFF",
             borderRadius: "2rem",
             padding: "0.25rem",
-            border: "1px solid rgba(255,255,255,0.1)",
+            border: "1px solid #CBD5E1",
           }}
         >
           <input
@@ -190,7 +189,7 @@ export default function PihNexaBot() {
               background: "transparent",
               border: "none",
               outline: "none",
-              color: "#FFF",
+              color: "#0F172A",
               padding: "0.75rem 1rem",
               fontSize: "0.95rem",
             }}
@@ -199,7 +198,7 @@ export default function PihNexaBot() {
             type="submit"
             disabled={!input.trim() || isLoading}
             style={{
-              background: "#2DD4BF",
+              background: "#0D9488",
               border: "none",
               width: "40px",
               height: "40px",
@@ -209,7 +208,7 @@ export default function PihNexaBot() {
               justifyContent: "center",
               cursor: (!input.trim() || isLoading) ? "not-allowed" : "pointer",
               opacity: (!input.trim() || isLoading) ? 0.5 : 1,
-              color: "#0B1B3E",
+              color: "#FFFFFF",
               transition: "opacity 0.2s",
             }}
           >

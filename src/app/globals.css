@@ -626,7 +626,7 @@ section.section-alt  { background: var(--bg-alt); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 0 5rem;
+  padding: 12rem 0 6rem;
   position: relative;
   overflow: hidden;
 }
