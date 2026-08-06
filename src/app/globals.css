@@ -1429,84 +1429,82 @@ textarea.form-control { resize: vertical; min-height: 120px; }
    FLOATING ELEMENTS (WhatsApp & CTA)
    ============================================================ */
 .floating-wa {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  color: #FFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
-  z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  left: auto !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #25D366 !important;
+  color: #FFF !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2rem !important;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.4) !important;
+  z-index: 9999 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  text-decoration: none !important;
 }
 .floating-wa:hover {
-  transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 8px 24px rgba(37,211,102,0.6);
-  color: #FFF;
+  transform: scale(1.1) translateY(-5px) !important;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.6) !important;
+  color: #FFF !important;
 }
 
 .sticky-cta {
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  background-color: var(--teal-600);
-  color: #FFF;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--radius-full);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(13,148,136,0.4);
-  z-index: 1000;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  text-decoration: none;
+  position: fixed !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: auto !important;
+  width: max-content !important;
+  max-width: 90vw !important;
+  background-color: var(--teal-600) !important;
+  color: #FFF !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: var(--radius-full) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 4px 12px rgba(13,148,136,0.4) !important;
+  z-index: 9998 !important;
+  transition: transform 0.3s ease, background-color 0.3s ease !important;
+  text-decoration: none !important;
 }
 .sticky-cta:hover {
-  background-color: var(--teal-700);
-  transform: translateY(-3px);
-  color: #FFF;
+  background-color: var(--teal-700) !important;
+  transform: translateX(-50%) translateY(-3px) !important;
+  color: #FFF !important;
 }
 
 @media (max-width: 768px) {
   .floating-wa {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 50px;
-    height: 50px;
-    font-size: 1.6rem;
+    bottom: 6rem !important;
+    right: 1.5rem !important;
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 1.8rem !important;
   }
   .sticky-cta {
-    bottom: 1.5rem;
-    left: 1.5rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+    bottom: 1.5rem !important;
+    padding: 0.8rem 1.2rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .sticky-cta {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1rem;
-    width: max-content;
-  }
-  .sticky-cta:hover {
-    transform: translateX(-50%) translateY(-3px);
-  }
   .floating-wa {
-    bottom: 4.5rem; /* Avoid overlap with center CTA */
-    right: 1rem;
-    width: 45px;
-    height: 45px;
-    font-size: 1.4rem;
+    bottom: 6rem !important; 
+    right: 1rem !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.6rem !important;
+  }
+  .sticky-cta {
+    bottom: 1rem !important;
   }
 }
