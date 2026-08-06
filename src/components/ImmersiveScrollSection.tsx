@@ -79,7 +79,7 @@ const LiquidImageMaterial = shaderMaterial(
 
 extend({ LiquidImageMaterial });
 
-const ImagePlane = ({ url, position, globalZ }: { url: string; position: number[]; globalZ: React.MutableRefObject<number> }) => {
+const ImagePlane = ({ url, position, globalZ }: { url: string; position: [number, number, number]; globalZ: React.MutableRefObject<number> }) => {
   const meshRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<THREE.ShaderMaterial & { uTime: number; uDistortionOffset: number }>(null);
   const texture = useTexture(url);
@@ -143,7 +143,6 @@ const Scene = ({ images, setActiveIndex, scrollRef }: { images: string[]; setAct
       {images.map((url: string, index: number) => (
         <ImagePlane 
           key={index} 
-          index={index} 
           url={url} 
           position={[0, 0, -index * 20]} 
           globalZ={globalZ}
