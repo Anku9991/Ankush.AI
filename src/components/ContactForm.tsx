@@ -45,7 +45,7 @@ export default function ContactForm() {
 
   if (success) {
     return (
-      <div className="card glass" style={{ textAlign: 'center', padding: '3rem' }}>
+      <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
         <i className="fa-solid fa-circle-check" style={{ fontSize: '4rem', color: '#27ae60', marginBottom: '1rem' }}></i>
         <h3>Enquiry Submitted!</h3>
         <p style={{ color: 'var(--text-muted)' }}>Thank you for reaching out. Ankush will contact you shortly.</p>
@@ -57,7 +57,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="card glass">
+    <div className="card">
       <form className="contact-form" onSubmit={handleSubmit}>
         {error && (
           <div style={{ background: 'rgba(255,50,50,0.1)', border: '1px solid #ff4444', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem', color: '#ffaaaa' }}>

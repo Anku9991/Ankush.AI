@@ -1439,7 +1439,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .pulse-border { animation: pulse-glow 3s ease-in-out infinite; }
 
 /* ============================================================
-   FORM STYLES
+   FORM STYLES (Light Corporate)
    ============================================================ */
 .contact-form {
   display: flex;
@@ -1456,17 +1456,17 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 
 .form-group label {
   font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--teal-300);
+  font-weight: 600;
+  color: var(--slate-800);
 }
 
 .form-control {
   width: 100%;
-  padding: 1rem 1.25rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.85rem 1.25rem;
+  background-color: #F8FAFC;
+  border: 1px solid var(--slate-300);
   border-radius: var(--radius-md);
-  color: #FFF;
+  color: var(--slate-900);
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -1474,13 +1474,13 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 }
 
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--slate-400);
 }
 
 .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: var(--teal-400);
-  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.15);
+  background-color: #FFFFFF;
+  border-color: var(--teal-600);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
 }
 
 textarea.form-control {
