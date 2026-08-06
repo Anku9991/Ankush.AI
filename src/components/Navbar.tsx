@@ -2,10 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 60);
@@ -16,18 +19,18 @@ export const Navbar = () => {
   const close = () => setIsMobileMenuOpen(false);
 
   const links = [
-    { href: "#solutions", label: "Solutions" },
-    { href: "#case-studies", label: "Case Studies" },
-    { href: "#packages", label: "Pricing" },
-    { href: "#about", label: "About" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/solutions", label: "Solutions" },
+    { href: "/solutions#case-studies", label: "Case Studies" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/about", label: "About" },
+    { href: "/faq", label: "FAQ" },
   ];
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} id="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <a href="#" className="logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <Link href="/" className="logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Image
             src="/assets/logo.png"
             alt="PihNexa Technologies Logo"
@@ -51,31 +54,31 @@ export const Navbar = () => {
               TECHNOLOGIES
             </span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`} id="navLinks">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} onClick={close}>
+              <Link href={l.href} onClick={close} className={pathname === l.href.split('#')[0] ? "active" : ""}>
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         {/* Right side */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <a
-            href="#contact"
-            className="btn btn-primary btn-sm"
+          <Link
+            href="/#contact"
+            className="btn btn-primary btn-sm mobile-hide"
             id="navCta"
             onClick={close}
             style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}
           >
             <i className="fa-solid fa-calendar-check" style={{ fontSize: "0.85rem" }} />
             Book Free Demo
-          </a>
+          </Link>
           <div
             className="mobile-toggle"
             id="mobileToggle"

@@ -3,6 +3,11 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import ScrollButtons from "@/components/ScrollButtons";
 import ScrollAnimationInit from "@/components/ScrollAnimationInit";
+import { Navbar } from "@/components/Navbar";
+import dynamic from "next/dynamic";
+
+const ContactForm = dynamic(() => import("@/components/ContactForm"));
+const Footer = dynamic(() => import("@/components/Footer").then((mod) => mod.Footer));
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-display",
@@ -440,7 +445,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ScrollAnimationInit />
         <ScrollButtons />
+        <Navbar />
         {children}
+        <ContactForm />
+        <Footer />
       </body>
     </html>
   );

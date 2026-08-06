@@ -1,74 +1,19 @@
-import { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
 import dynamic from "next/dynamic";
 
-// Dynamically import everything below the fold to drastically reduce initial JS payload
-const ProblemsSection = dynamic(() => import("@/components/ProblemsSection"));
-const SolutionsSection = dynamic(() => import("@/components/SolutionsSection"));
-const CaseStudiesSection = dynamic(() => import("@/components/CaseStudiesSection"));
-const WhyPihNexaSection = dynamic(() => import("@/components/WhyPihNexaSection"));
-const SecuritySection = dynamic(() => import("@/components/SecuritySection"));
-const TechStackSection = dynamic(() => import("@/components/TechStackSection"));
-const PackagesSection = dynamic(() => import("@/components/PackagesSection"));
-const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
-const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
-const FounderSection = dynamic(() => import("@/components/FounderSection"));
-const BlogTeaser = dynamic(() => import("@/components/BlogTeaser"));
-const FAQSection = dynamic(() => import("@/components/FAQSection").then((mod) => mod.FAQSection));
 const InstagramFeed = dynamic(() => import("@/components/InstagramFeed"));
-const ContactForm = dynamic(() => import("@/components/ContactForm"));
-const Footer = dynamic(() => import("@/components/Footer").then((mod) => mod.Footer));
 
 export default function HomePage() {
   return (
     <main>
-      {/* ─── Navigation ─────────────────────────────────────────── */}
-      <Navbar />
-
       {/* ─── 1. Hero ─────────────────────────────────────────────── */}
       <HeroSection />
 
       {/* ─── 2. Trust Marquee Bar ────────────────────────────────── */}
       <TrustBar />
 
-      {/* ─── 3. Problems We Solve ────────────────────────────────── */}
-      <ProblemsSection />
-
-      {/* ─── 4. Solutions / Products ─────────────────────────────── */}
-      <SolutionsSection />
-
-      {/* ─── 5. Case Studies / Real Results ──────────────────────── */}
-      <CaseStudiesSection />
-
-      {/* ─── 6. Why PihNexa ──────────────────────────────────────── */}
-      <WhyPihNexaSection />
-
-      {/* ─── 7. Security & Compliance ────────────────────────────── */}
-      <SecuritySection />
-
-      {/* ─── 8. Technology Stack ─────────────────────────────────── */}
-      <TechStackSection />
-
-      {/* ─── 9. Packages / Pricing ───────────────────────────────── */}
-      <PackagesSection />
-
-      {/* ─── 10. Delivery Process ────────────────────────────────── */}
-      <ProcessSection />
-
-      {/* ─── 11. Testimonials ────────────────────────────────────── */}
-      <TestimonialsSection />
-
-      {/* ─── 12. Founder ─────────────────────────────────────────── */}
-      <FounderSection />
-
-      {/* ─── 13. Blog / Resources Teaser ─────────────────────────── */}
-      <BlogTeaser />
-
-      {/* ─── 14. FAQ ─────────────────────────────────────────────── */}
-      <FAQSection />
-
-      {/* ─── 15. Instagram Feed ───────────────────────────────────── */}
+      {/* ─── 3. Instagram Feed ───────────────────────────────────── */}
       <section
         id="instagram-feed"
         style={{ padding: "5rem 0", background: "var(--bg-alt)" }}
@@ -87,149 +32,6 @@ export default function HomePage() {
           <InstagramFeed />
         </div>
       </section>
-
-      {/* ─── 16. Promo Video ──────────────────────────────────────── */}
-      <section
-        id="promo-video"
-        style={{ padding: "5rem 0" }}
-      >
-        <div className="container" style={{ textAlign: "center" }}>
-          <div className="section-label">Featured Video</div>
-          <h2 className="section-heading" style={{ marginTop: "0.5rem", marginBottom: "2rem" }}>
-            See Our{" "}
-            <span className="gradient-text">Technology</span> in Action
-          </h2>
-          <div className="video-wrapper">
-            <video
-              src="/assets/promo.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              controls
-              preload="none"
-              style={{
-                width: "100%",
-                minHeight: "300px",
-                background: "var(--navy-950)",
-                objectFit: "cover",
-                display: "block",
-              }}
-              aria-label="PihNexa Technologies product demonstration video"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 17. Contact / Final CTA ──────────────────────────────── */}
-      <section
-        id="contact"
-        className="contact-section"
-      >
-        <div className="container">
-          <div className="contact-grid">
-            {/* Left: heading + contact info */}
-            <div>
-              <div
-                className="section-label"
-                style={{
-                  background: "rgba(13,148,136,0.15)",
-                  borderColor: "rgba(13,148,136,0.35)",
-                  color: "var(--teal-400)",
-                }}
-              >
-                Book Free Tech Audit
-              </div>
-              <h2
-                className="section-heading section-heading-white"
-                style={{ marginTop: "0.75rem", marginBottom: "1rem" }}
-              >
-                Ready to Transform Your Hospital&apos;s Operations?
-              </h2>
-              <p className="section-subheading section-subheading-white" style={{ marginBottom: "2.5rem" }}>
-                Book a free, no-obligation consultation. We will map your current workflows, identify
-                automation opportunities, and propose a solution with a clear ROI projection.
-              </p>
-
-              {/* Contact items */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                <a href="tel:+917992203671" className="contact-item" style={{ display: "flex" }}>
-                  <div className="contact-item-icon">
-                    <i className="fa-solid fa-phone" />
-                  </div>
-                  <div>
-                    <div className="contact-item-label">Call Us</div>
-                    <div className="contact-item-value">+91 7992203671</div>
-                  </div>
-                </a>
-                <a href="mailto:info@pihnexa.co.in" className="contact-item" style={{ display: "flex" }}>
-                  <div className="contact-item-icon">
-                    <i className="fa-solid fa-envelope" />
-                  </div>
-                  <div>
-                    <div className="contact-item-label">Email Us</div>
-                    <div className="contact-item-value">info@pihnexa.co.in</div>
-                  </div>
-                </a>
-                <a
-                  href="https://wa.me/917307852235?text=Hi%20PihNexa,%20I%20want%20to%20book%20a%20free%20Tech%20Audit."
-                  className="contact-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: "flex" }}
-                >
-                  <div className="contact-item-icon">
-                    <i className="fa-brands fa-whatsapp" />
-                  </div>
-                  <div>
-                    <div className="contact-item-label">WhatsApp</div>
-                    <div className="contact-item-value">Chat Directly on WhatsApp</div>
-                  </div>
-                </a>
-              </div>
-
-              {/* Trust signal */}
-              <div
-                style={{
-                  marginTop: "2rem",
-                  padding: "1.25rem",
-                  background: "rgba(13,148,136,0.1)",
-                  border: "1px solid rgba(13,148,136,0.25)",
-                  borderRadius: "var(--radius-lg)",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "0.82rem",
-                    fontWeight: "600",
-                    color: "var(--teal-400)",
-                    marginBottom: "0.35rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                  }}
-                >
-                  <i className="fa-solid fa-shield-halved" style={{ marginRight: "0.4rem" }} />
-                  Zero Obligation
-                </div>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", lineHeight: "1.55" }}>
-                  Our Tech Audit is 100% free and comes with no sales pressure. You will receive a clear
-                  written assessment regardless of whether we work together.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Contact Form */}
-            <div>
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Footer ──────────────────────────────────────────────── */}
-      <Footer />
     </main>
   );
 }

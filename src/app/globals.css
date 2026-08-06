@@ -1563,6 +1563,9 @@ textarea.form-control {
     height: 55px !important;
     font-size: 1.8rem !important;
   }
+  .mobile-hide {
+    display: none !important;
+  }
   .sticky-cta {
     display: none !important;
   }
