@@ -61,11 +61,11 @@ export default function FounderSection() {
             </div>
 
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href="#contact" className="btn btn-primary btn-lg">
+              <a href="/#contact" className="btn btn-primary btn-lg">
                 <i className="fa-solid fa-calendar-check" />
                 Book Free Consultation
               </a>
-              <a href="#case-studies" className="btn btn-secondary btn-lg">
+              <a href="/solutions#case-studies" className="btn btn-secondary btn-lg">
                 <i className="fa-solid fa-chart-line" />
                 View Case Studies
               </a>

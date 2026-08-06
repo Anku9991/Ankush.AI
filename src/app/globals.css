@@ -1518,3 +1518,167 @@ textarea.form-control {
   .ig-grid   { grid-template-columns: 1fr 1fr; }
   .cookie-consent { bottom: 1rem; }
 }
+
+/* ============================================================
+   MISSING COMPONENT CLASSES (Audit Pass 2)
+   ============================================================ */
+
+/* Testimonials grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+/* Founder section layout */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.founder-img-wrapper {
+  position: relative;
+}
+.founder-img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  box-shadow: var(--shadow-card-hover);
+}
+.founder-img-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(11, 27, 62, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-300);
+  text-align: center;
+}
+
+.founder-content {}
+.founder-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+}
+.founder-role {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--teal-600);
+  margin-bottom: 1.5rem;
+}
+.founder-bio {
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.founder-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.founder-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--teal-700);
+  background: var(--teal-50);
+  border: 1px solid var(--border-teal);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+/* Pricing supplemental classes */
+.pricing-target {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+.pricing-price-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.pricing-divider {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 1.5rem 0;
+}
+
+/* On dark pricing section, text overrides */
+#packages .pricing-name { color: var(--text-main); }
+#packages .pricing-target { color: rgba(255,255,255,0.45); }
+#packages .pricing-price { color: #FFFFFF; }
+#packages .pricing-price-note { color: rgba(255,255,255,0.4); }
+#packages .pricing-divider { border-top-color: rgba(255,255,255,0.08); }
+#packages .pricing-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+#packages .pricing-card:hover {
+  border-color: rgba(13,148,136,0.3);
+  background: rgba(255,255,255,0.06);
+}
+#packages .pricing-features li { color: rgba(255,255,255,0.7); }
+#packages .pricing-features li i { color: var(--teal-400); }
+
+/* Sticky CTA — hidden on mobile */
+.sticky-cta {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: calc(var(--z-float) - 1);
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px rgba(11,27,62,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sticky-cta:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 8px 28px rgba(11,27,62,0.5);
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .sticky-cta { display: none !important; }
+}
+
+/* Contact section wrapper (layout.tsx) */
+.contact-page-section {
+  padding: var(--section-py) 0;
+  background: var(--bg-alt);
+}

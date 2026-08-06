@@ -145,7 +145,7 @@ export default function PackagesSection() {
                 {pkg.desc}
               </p>
 
-              <a href="#contact" className={`btn ${pkg.ctaStyle}`} style={{ width: "100%", justifyContent: "center" }}>
+              <a href="/#contact" className={`btn ${pkg.ctaStyle}`} style={{ width: "100%", justifyContent: "center" }}>
                 <i className="fa-solid fa-arrow-right" style={{ fontSize: "0.85rem" }} />
                 {pkg.cta}
               </a>
@@ -162,7 +162,7 @@ export default function PackagesSection() {
           }}
         >
           All pricing is indicative. Final investment depends on scope, modules, and deployment complexity.{" "}
-          <a href="#contact" style={{ color: "var(--teal-400)" }}>
+          <a href="/#contact" style={{ color: "var(--teal-400)" }}>
             Contact us for a custom quote.
           </a>
         </p>

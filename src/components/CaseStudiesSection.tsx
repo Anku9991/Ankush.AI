@@ -185,7 +185,7 @@ export default function CaseStudiesSection() {
           className="text-center fade-up"
           style={{ marginTop: "3rem" }}
         >
-          <a href="#contact" className="btn btn-white btn-lg">
+          <a href="/#contact" className="btn btn-white btn-lg">
             <i className="fa-solid fa-handshake" />
             Discuss Your Requirements
           </a>

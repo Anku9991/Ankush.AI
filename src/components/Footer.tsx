@@ -210,7 +210,7 @@ export const Footer = () => {
       </a>
 
       {/* Sticky CTA */}
-      <a href="#contact" className="sticky-cta">
+      <a href="/#contact" className="sticky-cta">
         <i className="fa-solid fa-calendar-check" />
         Book Free Tech Audit
       </a>

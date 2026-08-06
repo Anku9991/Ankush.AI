@@ -159,7 +159,7 @@ export default function SolutionsSection() {
                     <li key={j}>{b}</li>
                   ))}
                 </ul>
-                <a href="#contact" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
+                <a href="/#contact" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
                   Request Demo
                   <i className="fa-solid fa-arrow-right" style={{ fontSize: "0.8rem" }} />
                 </a>

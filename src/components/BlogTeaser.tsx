@@ -62,7 +62,7 @@ export default function BlogTeaser() {
             </p>
           </div>
           <a
-            href="#contact"
+            href="/#contact"
             className="btn btn-secondary fade-up"
             style={{ flexShrink: 0 }}
           >
